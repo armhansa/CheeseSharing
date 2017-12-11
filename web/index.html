@@ -78,12 +78,13 @@
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<!-- Login -->
+					<form action="loginServlet" method="post">
 						<ul class="nav navbar-nav navbar-right">
 							<li class="call-to-action"><a href="#"><span>เข้าสู่ระบบ</span></a></li>
 						</ul>
 						<input class="input-bank" type="password" name="password" placeholder=" รหัสผ่าน">
 						<input class="input-bank" type="texts" name="username" placeholder=" ชื่อผู้ใช้งาน">
-
+					</form>
 				</div>
 			</nav>
 		</div>
@@ -99,6 +100,7 @@
 						  </div>
 						  <div class="col-sm-5 register">
 						  	<!-- Register -->
+						  	<form action="registerServlet" method="post">
 						  	<h1>Register</h1>
 						  	<input class="input-regis" type="texts" name="name" placeholder=" ชื่อ">
 						  	<input class="input-regis" type="texts" name="surname" placeholder=" นามสกุล">
@@ -112,7 +114,7 @@
 							  	<option>Relish</option>
 							</select>
 							<a href="index.html"><button type="button" class="btn btn-primary button-2 btn-lg">สร้างบัญชีผู้ใช้งาน</button></a>
-
+							</form>
 						  	
 						  </div>
 					</div>
