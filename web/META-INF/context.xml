@@ -1,2 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/CheeseSharing"/>
+<Context path="/CheeseSharing">
+  <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" maxActive="20" maxIdle="10" maxWait="-1" name="mysql" password="Evosp1r1t" type="javax.sql.DataSource" url="jdbc:mysql://161.246.49.11:3306/mysql?zeroDateTimeBehavior=convertToNull" username="root"/>
+  <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" maxActive="20" maxIdle="10" maxWait="-1" name="cheet_sharing" password="Evosp1r1t" type="javax.sql.DataSource" url="jdbc:mysql://161.246.49.11:3306/cheet_sharing?zeroDateTimeBehavior=convertToNull" username="root"/>
+</Context>
