@@ -22,7 +22,7 @@
 	
 }
 
-#long{
+.long.input-regis{
 	width: 370px;
 }
 
@@ -37,6 +37,7 @@
 	margin-bottom: 13px;
 }
 .btn.btn-primary{
+	letter-spacing: 0px;
 	background-color: #ffffff; 
 	color: rgba(0,0,0,0.6);
 	border: 2px solid #4CAF50 !important;
@@ -53,4 +54,25 @@
 
 #fh5co-header #navbar li.call-to-action a{
 	margin: 10px 0 0 15px;
+}
+#btn-login{
+	letter-spacing: 0px;
+	font-family: "PT Sans", Arial, serif;
+	float: right;
+	width: 90px;
+	font-size: 16px;
+	padding: 7px;
+    display: block;
+    background-color: #ffffff;
+    border: 2px solid red;
+    border-radius: 20px;
+    text-align: center; 
+    line-height: 18px;
+    margin: 10px 0px 8px 10px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-login.btn.btn-submit:hover {
+	background-color: red !important;
+	color: white !important;
 }

@@ -137,3 +137,14 @@
 .fileUpload{
     background-color: darkgrey;
 }
+
+#profile{
+    float: left;
+    margin: 15px;
+}
+/*pic profile page */
+#pic-profile{
+    float: right;
+    width: 200px;
+    height: 200px;
+}
