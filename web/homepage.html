@@ -84,7 +84,28 @@
 						<!-- Trigger/Open The Modal -->
 						<button id="button_win" class="btn btn-submit">Upload</button>
 
-						<!-- The Modal -->
+
+						<div class="dropdown">
+						    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="img-reponsive profile_yim" src="images/person4.jpg" alt="Roger Garfield"></a>
+					        <ul class="dropdown-menu">
+					            <li><a href="#">Profile</a></li>
+					            <li class="divider"></li>
+					            <li><a href="#">Logout</a></li>
+					        </ul>
+						</div>
+
+
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<section id="fh5co-home" data-section="home" style="background-image: url(images/full_image_3.jpg);" data-stellar-background-ratio="0.5">
+		<div class="gradient"></div>
+		<div class="container">
+			<div class="text-wrap">
+				<!-- The Modal -->
 						<div id="myModal" class="modal">
 
 						  <!-- Modal content -->
@@ -108,18 +129,27 @@
 								</div>
 
 								<div class="form-group">
-								  <label for="usr">Name:</label>
-								  <input type="text" class="form-control" id="usr">
+								  <input type="text" class="form-control" id="usr" placeholder="Name file">
 								</div>
 
 								<div class="form-group">
-								  <label for="pwd">University:</label>
-								  <input type="password" class="form-control" id="pwd">
-								</div>
-
-								<div class="form-group">
-								  <label for="sel1">Select Category:</label>
 								  <select class="form-control" id="sel1">
+								 	<option value="" disabled selected>เลือกคณะ</option>
+								    <option>Engineer</option>
+								    <option>วิทยา</option>
+								    <option>สถาปัต</option>
+								    <option>IT</option>
+								    <option>ครุ</option>
+								    <option>เกษตร</option>
+								    <option>นวัต</option>
+								    <option>นานา</option>
+								    <option>นาโน</option>
+								  </select>
+								</div>
+
+								<div class="form-group">
+								  <select class="form-control" id="sel1">
+								  	<option value="" disabled selected>เลือกหมวดหมู่</option>
 								    <option>Chemistry</option>
 								    <option>Physics</option>
 								    <option>Biology</option>
@@ -139,8 +169,7 @@
 								</div>
 
 								<div class="form-group">
-								  <label for="comment">Description</label>
-								  <textarea class="form-control" rows="5" id="comment"></textarea>
+								  <textarea class="form-control" rows="5" id="comment" placeholder="Description"></textarea>
 								</div>
 								<button id="button_win" class="btn btn-submit">Upload</button>
 								<br><br>
@@ -184,29 +213,8 @@
 							$(document).ready(function(){
 								$(".dropdown-toggle").dropdown();
 							});  
+							
 						</script>
-
-
-						<div class="dropdown">
-						    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="img-reponsive profile_yim" src="images/person4.jpg" alt="Roger Garfield"></a>
-					        <ul class="dropdown-menu">
-					            <li><a href="#">Profile</a></li>
-					            <li class="divider"></li>
-					            <li><a href="#">Logout</a></li>
-					        </ul>
-						</div>
-
-
-					</ul>
-				</div>
-			</nav>
-		</div>
-	</header>
-
-	<section id="fh5co-home" data-section="home" style="background-image: url(images/full_image_3.jpg);" data-stellar-background-ratio="0.5">
-		<div class="gradient"></div>
-		<div class="container">
-			<div class="text-wrap">
 				<div class="text-inner">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2">

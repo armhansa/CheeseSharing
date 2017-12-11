@@ -131,3 +131,9 @@
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     background-color: white;
 }
+
+
+/*button file upload*/
+.fileUpload{
+    background-color: darkgrey;
+}
