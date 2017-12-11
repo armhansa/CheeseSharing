@@ -106,6 +106,7 @@
 		<div class="container">
 			<div class="text-wrap">
 				<!-- The Modal -->
+				<form action="uploadServlet" method="POST">
 						<div id="myModal" class="modal">
 
 						  <!-- Modal content -->
@@ -150,12 +151,12 @@
 								<div class="form-group">
 								  <select class="form-control" id="sel1">
 								  	<option value="" disabled selected>เลือกหมวดหมู่</option>
-								    <option>Chemistry</option>
-								    <option>Physics</option>
-								    <option>Biology</option>
-								    <option>Astronomy</option>
-								    <option>Language</option>
-								    <option>Math</option>
+								    <option>เคมี</option>
+								    <option>ฟิสิกส์</option>
+								    <option>ชีวะ</option>
+								    <option>ดาราศาสตร์</option>
+								    <option>ภาษา</option>
+								    <option>คณิตศาสตร์</option>
 								    <option>Computer and Technology</option>
 								    <option>Human</option>
 								    <option>Social</option>
@@ -177,6 +178,7 @@
 						  </div>
 
 						</div>
+					</form>
 						<script>
 							// Get the modal
 							var modal = document.getElementById('myModal');
