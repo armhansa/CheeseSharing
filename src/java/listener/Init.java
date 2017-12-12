@@ -13,7 +13,7 @@ import javax.sql.DataSource;
 
 public class Init implements ServletContextListener {
     
-    Connection conn;
+    private Connection conn;
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
