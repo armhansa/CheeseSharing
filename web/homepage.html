@@ -47,17 +47,17 @@
                             
                             <div class="fileUpload btn btn-sm">
                                 <span>Choose file</span>
-                                <input id="uploadBtn" type="file" class="upload" />
+                                <input id="uploadBtn" type="file" class="upload" name="file_uploaded" accept=".pdf"/>
                             </div>
 
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-control" id="usr" placeholder="Name file">
+                            <input type="text" class="form-control" id="usr" placeholder="ชื่อไฟล์">
                         </div>
 
                         <div class="form-group">
-                            <select class="form-control" id="sel1" name="Faculty">
+                            <select class="form-control" id="sel1" name="faculty">
                                 <option value="" disabled selected>เลือกคณะ</option>
                                 <option value="คณะวิศวกรรมศาสตร์">คณะวิศวกรรมศาสตร์</option>
                                 <option value="คณะสถาปัตยกรรมศาสตร์">คณะสถาปัตยกรรมศาสตร์</option>
@@ -74,7 +74,7 @@
                         </div>
 
                         <div class="form-group">
-                            <select class="form-control" id="sel1" name="Category">
+                            <select class="form-control" id="sel1" name="category">
                                 <option value="" disabled selected>เลือกหมวดหมู่</option>
                                 <option value="วิทยาศาสตร์">วิทยาศาสตร์</option>
                                 <option value="ภาษา">ภาษา</option>
@@ -92,7 +92,7 @@
                         </div>
 
                         <div class="form-group">
-                            <textarea class="form-control" rows="5" id="comment" placeholder="Description"></textarea>
+                            <textarea class="form-control" rows="5" id="comment" placeholder="คำอธิบาย" name="description"></textarea>
                         </div>
                         <button id="button_win" class="btn btn-submit">Upload</button>
                         <br><br>
@@ -221,7 +221,7 @@
                     </a>
                 </div>
             </form>
-            <form action="">
+            <form action="#">
                 <div class="" style="padding-top: 10px; padding-bottom: 10px; background-color: #edb91f">
                     <h1>30 อันดับยอดนิยม</h1>
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
