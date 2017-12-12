@@ -39,15 +39,19 @@ public class RegisterServlet extends HttpServlet {
             String email = request.getParameter("email");
             String faculty = request.getParameter("faculty");
             
+            out.println("<h1>1</h1>");
             Statement stmt = conn.createStatement();
+            out.println("<h1>2</h1>");
             ResultSet rs = stmt.executeQuery("SELECT * FROM USERS "+
                     "WHERE Username = '"+username+"'");
             if(rs.next()) {
+                out.println("<h1>This username is already used!</h1>");
                 out.println("<script type=\"text/javascript\">");
                 out.println("alert('This username is already used!');");
                 out.println("location='index.html';");
                 out.println("</script>");
             } else {
+                
                 PreparedStatement prStmt = conn.prepareStatement(
                         "INSERT INTO USERS(Username, Password, FirstName, LastName, Email, Faculty) VALUES(?, ?, ?, ?, ?, ?)");
                 prStmt.setString(0, username);
@@ -56,14 +60,17 @@ public class RegisterServlet extends HttpServlet {
                 prStmt.setString(3, lastName);
                 prStmt.setString(4, email);
                 prStmt.setString(5, faculty);
-                
-                if(prStmt.executeUpdate() == 1) {
+                int row = prStmt.executeUpdate();
+                if(row > 0) {
+                    out.println("<h1>Sucessful</h1>");
+                    
                     request.setAttribute("username", username);
                     request.setAttribute("password", password);
                     
-                    RequestDispatcher dispatcher = request.getRequestDispatcher("LoginServlet");
-                    dispatcher.forward(request, response);
+//                    RequestDispatcher dispatcher = request.getRequestDispatcher("LoginServlet");
+//                    dispatcher.forward(request, response);
                 } else {
+                    out.println("<h1>Error : Update to Database</h1>");
                     out.println("<script type=\"text/javascript\">");
                     out.println("alert('Error : Update to Database');");
                     out.println("location='index.html';");
