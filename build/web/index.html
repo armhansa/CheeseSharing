@@ -79,13 +79,23 @@
 				<div id="navbar" class="navbar-collapse collapse">
 					<!-- Login -->
 					<form action="LoginServlet" method="post">
-                                            <!--<div class="form-group">-->
-                                                
-						<input class="input-bank" type="texts" name="username" placeholder=" ชื่อผู้ใช้งาน" required>
-                                                <input class="input-bank" type="password" name="password" placeholder=" รหัสผ่าน" required>
-						<button id="btn-login" class="btn-login btn btn-submit">เข้าสู่ระบบ</button>
-						
-                                            <!--</div>-->
+						<table class="nav navbar-nav navbar-right">
+							<tbody>
+								<tr>
+									<td>
+										<input class="input-bank" type="texts" name="username" placeholder=" ชื่อผู้ใช้งาน">
+									</td>
+									<td>
+										<input class="input-bank" type="password" name="password" placeholder=" รหัสผ่าน">
+									</td>
+									<td>
+										<ul class="nav navbar-nav navbar-right">
+											<button id="btn-login" class="btn-login btn btn-submit">เข้าสู่ระบบ</button>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
 					</form>
 				</div>
 			</nav>
@@ -98,28 +108,37 @@
 			<div class="text-wrap">
 				<div class="text-inner">
 					<div class="row">
-						  <div class="col-sm-7">
-						  </div>
-						  <div class="col-sm-5 register">
-						  	<!-- Register -->
-						  	<form action="RegisterServlet" method="post">
-                                                            <h1>Register</h1>
-                                                            <input class="input-regis" type="texts" name="firstName" placeholder=" ชื่อ" required>
-                                                            <input class="input-regis" type="texts" name="lastName" placeholder=" นามสกุล" required>
-                                                            <input class="long input-regis" type="texts" name="username" placeholder=" ชื่อผู้ใช้งาน" required>
-                                                            <input class="long input-regis" type="password" name="password" placeholder=" รหัสผ่าน" required>
-                                                            <input class="long input-regis" type="Email" name="email" placeholder=" อีเมล" required>
+						<div class="col-sm-7">
+						</div>
+						<div class="col-sm-5 register">
+							<!-- Register -->
+							<form action="RegisterServlet" method="post">
+								<h1>Register</h1>
+								<input class="input-regis" type="texts" name="firstName" placeholder=" ชื่อ" required>
+								<input class="input-regis" type="texts" name="lastName" placeholder=" นามสกุล" required>
+								<input class="long input-regis" type="texts" name="username" placeholder=" ชื่อผู้ใช้งาน" required>
+								<input class="long input-regis" type="password" name="password" placeholder=" รหัสผ่าน" required>
+								<input class="long input-regis" type="Email" name="email" placeholder=" อีเมล" required>
 
-                                                            <select style="width: 370px" class="input-regis">
-                                                                    <option>Mustard</option>
-                                                                    <option>Ketchup</option>
-                                                                    <option>Relish</option>
-                                                            </select>
-                                                            <br>
-                                                            <a href="index.html"><button type="submit" class="btn btn-primary button-2 btn-lg">สร้างบัญชีผู้ใช้งาน</button></a>
+								<select style="width: 370px" class="input-regis" name="Faculty">
+									<option value="" disabled selected>เลือกคณะ</option>
+								    <option value="คณะวิศวกรรมศาสตร์">คณะวิศวกรรมศาสตร์</option>
+								    <option value="คณะสถาปัตยกรรมศาสตร์">คณะสถาปัตยกรรมศาสตร์</option>
+								    <option value="คณะครุศาสตร์อุตสาหกรรม">คณะครุศาสตร์อุตสาหกรรม</option>
+								    <option value="คณะวิทยาศาสตร์">คณะวิทยาศาสตร์</option>
+								    <option value="คณะเทคโนโลยีการเกษตร">คณะเทคโนโลยีการเกษตร</option>
+								    <option value="คณะเทคโนโลยีสารสนเทศ">คณะเทคโนโลยีสารสนเทศ</option>
+								    <option value="คณะอุตสาหกรรมเกษตร">คณะอุตสาหกรรมเกษตร</option>
+								    <option value="คณะการบริหารและจัดการวิทยาลัยนวัตกรรมการผลิตขั้นสูง">คณะการบริหารและจัดการวิทยาลัยนวัตกรรมการผลิตขั้นสูง</option>
+								    <option value="วิทยาลัยนานาชาติ">วิทยาลัยนานาชาติ</option>
+								    <option value="วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง">วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง</option>
+								    <option value="วิทยาลัยอุตสาหกรรมการบินนานาชาติ">วิทยาลัยอุตสาหกรรมการบินนานาชาติ</option>
+								</select>
+								<br>
+								<a href="index.html"><button type="submit" class="btn btn-primary button-2 btn-lg">สร้างบัญชีผู้ใช้งาน</button></a>
 							</form>
-						  	
-						  </div>
+
+						</div>
 					</div>
 				</div>
 			</div>

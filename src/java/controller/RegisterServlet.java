@@ -31,6 +31,7 @@ public class RegisterServlet extends HttpServlet {
             throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            response.setContentType("text/html;charset=UTF-8");
             
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");
