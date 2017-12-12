@@ -80,8 +80,16 @@ section{
 .form-control:focus{
     color: #ffffff;
     background-color: #ffffff00;
-    border-color: #484848;
+    border-color: #484848
+    box-shadow: #343a4033 !important;
 }
+.login-input .form-control .mr-sm-2:focus{
+    color: #ffffff;
+    background-color: #ffffff00;
+    border-color: #edb91f
+    box-shadow: #343a4033 !important;
+        
+    }
 .bg-light{
     background-color: #484848 !important;
 }
