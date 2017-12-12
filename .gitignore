@@ -7,4 +7,5 @@ nbdist/
 nbactions.xml
 nb-configuration.xml
 /dist/
+
 .DS_Store
