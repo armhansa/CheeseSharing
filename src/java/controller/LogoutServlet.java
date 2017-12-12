@@ -25,7 +25,11 @@ public class LogoutServlet extends HttpServlet {
             HttpSession session = request.getSession();
             session.invalidate();
             
-            response.sendRedirect("index.html");
+            
+                out.println("<script type=\"text/javascript\">");
+                out.println("alert('Logout Successful!');");
+                out.println("location='index.html';");
+                out.println("</script>");
         }
     }
 

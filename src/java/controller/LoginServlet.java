@@ -30,19 +30,16 @@ public class LoginServlet extends HttpServlet {
             throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            response.setContentType("text/html;charset=UTF-8");
+            request.setCharacterEncoding("UTF-8");
             
             String username = request.getParameter("username");
             String password = request.getParameter("password");
-            out.println("<h1>1</h1>");
+            out.println(username+password);
             Statement stmt = conn.createStatement();
-            out.println("<h1>2</h1>");
             ResultSet rs = stmt.executeQuery("SELECT * FROM USERS "+
                     "WHERE Username = '"+username+
                     "' AND Password = '"+password+"'");
-            out.println("<h1>3</h1>");
             if(rs.next()) {
-                out.println("<h1>Successfull</h1>");
                 User user = new User();
                 user.setUserName(username);
                 user.setFirstName(rs.getString("FirstName"));
@@ -58,15 +55,11 @@ public class LoginServlet extends HttpServlet {
                 
                 response.sendRedirect("homepage.html");
             } else {
-                out.println("<h1>Failed</h1>");
                 
-//                out.println("<script type=\"text/javascript\">");
-//                out.println("alert('Not Complete');");
-//                out.println("location='index.html';");
-//                out.println("</script>");
-//                out.println("<h1>Not Complete</h1>");
-//                
-//                response.sendRedirect("index.html");
+                out.println("<script type=\"text/javascript\">");
+                out.println("location='index.html';");
+                out.println("alert('Not Complete');");
+                out.println("</script>");
             }
         }
     }
