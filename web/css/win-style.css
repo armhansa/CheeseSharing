@@ -5,3 +5,7 @@
 }
 .btn-outline-success:hover {
     cursor: pointer;
+}
+select.form-control:not([size]):not([multiple]) {
+    height: 35px;
+ }
