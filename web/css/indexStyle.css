@@ -1,0 +1,83 @@
+.login{
+    float: right !important;
+}
+	
+}
+.navbar-brand{
+	padding: 25px 20px
+}
+.register{
+
+    margin-bottom: 10%;
+}
+#fh5co-home .text-inner{
+	text-align: left;
+	vertical-align: top;
+	
+}
+
+.long.input-regis{
+	width: 370px;
+}
+
+.input-regis{
+	float: left;
+	color: #000000;
+	border: 1px solid white;
+	border-radius: 5px; 
+	width: 180px;
+	height: 40px;
+	margin-right: 10px;
+	margin-bottom: 13px;
+}
+.btn.btn-primary{
+	letter-spacing: 0px;
+	background-color: #ffffff00; 
+	color: #ffc039;
+	border: 2px solid #ffc039 !important;
+
+}
+.btn.btn-primary:hover {
+	background-color: #ffc039 !important;
+	color: #ffffff;
+}
+
+.navbar-collapse.collapse{
+	padding: 16px;
+}
+
+#fh5co-header #navbar li.call-to-action a{
+	margin: 10px 0 0 15px;
+}
+#btn-login{
+	letter-spacing: 0px;
+	font-family: "PT Sans", Arial, serif;
+	float: right;
+	width: 90px;
+	font-size: 16px;
+	padding: 7px;
+    display: block;
+    background-color: #ffffff;
+    border: 2px solid #ffc039;
+    border-radius: 20px;
+    text-align: center; 
+    line-height: 18px;
+    margin: 10px 0px 0px 10px;
+    color: #ffc039;
+}
+
+.btn-login.btn.btn-submit:hover {
+	background-color: #ffc039 !important;
+	color: white !important;
+}
+.login-btn.btn.btn-outline-success.my-2.my-sm-0{
+    border-color: #ffc039 !important;
+    color: #ffc039 !important;
+}
+.login-btn.btn.btn-outline-success.my-2.my-sm-0:hover{
+    color: #ffffff !important;
+    background-color:#ffc039 !important;
+}
+.form-group{
+    margin-bottom: 30px;
+}
