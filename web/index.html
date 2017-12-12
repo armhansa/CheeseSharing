@@ -21,16 +21,15 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <form action="LoginServlet" style="display: none" method="POST">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto"></ul>
-                <form class="form-inline my-2 my-lg-0">
+                <form action="LoginServlet" method="POST" class="form-inline my-2 my-lg-0">
                     <input class="login-input form-control mr-sm-2" name="username" type="text" placeholder="ชื่อผู้ใช้งาน" required>
                     <input class="login-input form-control mr-sm-2" name="password" type="password" placeholder="รหัสผ่าน" required>
                     <button class="login-btn btn btn-outline-success my-2 my-sm-0" type="submit">เข้าสู่ระบบ</button>
-
+                </form>
             </div>
-        </form>
+        
     </nav>
 
     <section id="fh5co-home" data-section="home" data-stellar-background-ratio="0.5">
