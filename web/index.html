@@ -19,17 +19,18 @@
             <a class="navbar-brand" href="index.html"><img src="images/logo.png" style="width: 50%"></a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-        <form action="LoginServlet" style="display: none" method="post"></form>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto"></ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="login-input form-control mr-sm-2" name="username" type="text" placeholder="ชื่อผู้ใช้งาน" required>
-                <input class="login-input form-control mr-sm-2" name="password" type="password" placeholder="รหัสผ่าน" required>
-                <button class="login-btn btn btn-outline-success my-2 my-sm-0" type="submit">เข้าสู่ระบบ</button>
-            </form>
-        </div>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <form action="LoginServlet" style="display: none" method="POST">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto"></ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="login-input form-control mr-sm-2" name="username" type="text" placeholder="ชื่อผู้ใช้งาน" required>
+                    <input class="login-input form-control mr-sm-2" name="password" type="password" placeholder="รหัสผ่าน" required>
+                    <button class="login-btn btn btn-outline-success my-2 my-sm-0" type="submit">เข้าสู่ระบบ</button>
+
+            </div>
+        </form>
     </nav>
 
     <section id="fh5co-home" data-section="home" data-stellar-background-ratio="0.5">
@@ -39,7 +40,7 @@
                 </div>
                 <div class="register col-md-6 col-lg-4">
                     <!-- Register -->
-                    <form action="RegisterServlet" method="post">
+                    <form action="RegisterServlet" method="POST">
                         <h1 style="margin-bottom: 10%">Register</h1>
                         <div class="">
                             <div class="row">
@@ -66,19 +67,19 @@
 
                         <div class="form-group">
                             <select class="form-control" name="faculty">
-									<option value="" disabled selected> เลือกคณะ</option>
-								    <option value="คณะวิศวกรรมศาสตร์">คณะวิศวกรรมศาสตร์</option>
-								    <option value="คณะสถาปัตยกรรมศาสตร์">คณะสถาปัตยกรรมศาสตร์</option>
-								    <option value="คณะครุศาสตร์อุตสาหกรรม">คณะครุศาสตร์อุตสาหกรรม</option>
-								    <option value="คณะวิทยาศาสตร์">คณะวิทยาศาสตร์</option>
-								    <option value="คณะเทคโนโลยีการเกษตร">คณะเทคโนโลยีการเกษตร</option>
-								    <option value="คณะเทคโนโลยีสารสนเทศ">คณะเทคโนโลยีสารสนเทศ</option>
-								    <option value="คณะอุตสาหกรรมเกษตร">คณะอุตสาหกรรมเกษตร</option>
-								    <option value="คณะการบริหารและจัดการวิทยาลัยนวัตกรรมการผลิตขั้นสูง">คณะการบริหารและจัดการวิทยาลัยนวัตกรรมการผลิตขั้นสูง</option>
-								    <option value="วิทยาลัยนานาชาติ">วิทยาลัยนานาชาติ</option>
-								    <option value="วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง">วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง</option>
-								    <option value="วิทยาลัยอุตสาหกรรมการบินนานาชาติ">วิทยาลัยอุตสาหกรรมการบินนานาชาติ</option>
-								</select>
+				<option value="" disabled selected> เลือกคณะ</option>
+                                <option value="คณะวิศวกรรมศาสตร์">คณะวิศวกรรมศาสตร์</option>
+                                <option value="คณะสถาปัตยกรรมศาสตร์">คณะสถาปัตยกรรมศาสตร์</option>
+                                <option value="คณะครุศาสตร์อุตสาหกรรม">คณะครุศาสตร์อุตสาหกรรม</option>
+                                <option value="คณะวิทยาศาสตร์">คณะวิทยาศาสตร์</option>
+                                <option value="คณะเทคโนโลยีการเกษตร">คณะเทคโนโลยีการเกษตร</option>
+                                <option value="คณะเทคโนโลยีสารสนเทศ">คณะเทคโนโลยีสารสนเทศ</option>
+                                <option value="คณะอุตสาหกรรมเกษตร">คณะอุตสาหกรรมเกษตร</option>
+                                <option value="คณะการบริหารและจัดการวิทยาลัยนวัตกรรมการผลิตขั้นสูง">คณะการบริหารและจัดการวิทยาลัยนวัตกรรมการผลิตขั้นสูง</option>
+                                <option value="วิทยาลัยนานาชาติ">วิทยาลัยนานาชาติ</option>
+                                <option value="วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง">วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง</option>
+                                <option value="วิทยาลัยอุตสาหกรรมการบินนานาชาติ">วิทยาลัยอุตสาหกรรมการบินนานาชาติ</option>
+                            </select>
                         </div>
 
                         <div class="form-group" style="margin-top: 20px">

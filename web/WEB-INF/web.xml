@@ -10,15 +10,8 @@
         </session-timeout>
     </session-config>
     <resource-ref>
-        <description>jdbc:mysql://161.246.49.11:3306/mysql?zeroDateTimeBehavior=convertToNull</description>
-        <res-ref-name>mysql</res-ref-name>
-        <res-type>javax.sql.DataSource</res-type>
-        <res-auth>Container</res-auth>
-        <res-sharing-scope>Shareable</res-sharing-scope>
-    </resource-ref>
-    <resource-ref>
-        <description>jdbc:mysql://161.246.49.11:3306/cheet_sharing?zeroDateTimeBehavior=convertToNull</description>
-        <res-ref-name>cheet_sharing</res-ref-name>
+        <description>jdbc:mysql://161.246.49.11:3306/cheet_sharing?zeroDateTimeBehavior=convertToNull&amp;characterEncoding=UTF-8</description>
+        <res-ref-name>cheese_sharing</res-ref-name>
         <res-type>javax.sql.DataSource</res-type>
         <res-auth>Container</res-auth>
         <res-sharing-scope>Shareable</res-sharing-scope>

@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.User;
+import tool.Reaction;
 
 @WebServlet(name = "RegisterServlet", urlPatterns = {"/RegisterServlet"})
 public class RegisterServlet extends HttpServlet {
@@ -40,15 +41,14 @@ public class RegisterServlet extends HttpServlet {
             String email = request.getParameter("email");
             String faculty = request.getParameter("faculty");
             
-            out.println(firstName+lastName+username+password+email+faculty);
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM USERS "+
                     "WHERE Username = '"+username+"'");
-            if(rs.next()) {
-                out.println("<script type=\"text/javascript\">");
-                out.println("alert('This username is already used!');");
-                out.println("location='index.html';");
-                out.println("</script>");
+            
+            Reaction reac = Reaction.getInstance();
+            
+            if(rs.next()) {                
+                reac.alert(out, "This username is already used!!!", 0);
             } else {
                 PreparedStatement prStmt = conn.prepareStatement(
                         "INSERT INTO USERS(Username, Password, FirstName, LastName, Email, Faculty) VALUES(?, ?, ?, ?, ?, ?)");
@@ -61,7 +61,6 @@ public class RegisterServlet extends HttpServlet {
                 int row = prStmt.executeUpdate();
                 
                 if(row > 0) {
-                    out.println("<h1>Sucessful</h1>");
                     
                     request.setAttribute("username", username);
                     request.setAttribute("password", password);
@@ -69,13 +68,9 @@ public class RegisterServlet extends HttpServlet {
                     RequestDispatcher dispatcher = request.getRequestDispatcher("LoginServlet");
                     dispatcher.forward(request, response);
                 } else {
-                    out.println("<h1>Error : Update to Database</h1>");
-                    out.println("<script type=\"text/javascript\">");
-                    out.println("alert('Error : Update to Database');");
-                    out.println("location='index.html';");
-                    out.println("</script>");
+                    reac.alert(out, "Error : Update to Database!!!", 0);
                 }
-                   
+            
             }
             
         }

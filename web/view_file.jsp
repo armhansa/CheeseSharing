@@ -1,6 +1,5 @@
 <%@page import="java.util.logging.Logger"%>
 <%@page import="java.util.logging.Level"%>
-<%@page import="database.Db_Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*"%>
 <%@ page import="java.io.*"%>
@@ -20,20 +19,17 @@
 
             try
             {    
-                Db_Connection dbconn=new Db_Connection();
-                Connection conn= dbconn.Connection();
+                Connection conn = (Connection) getServletContext().getAttribute("Connection");
             
-                String sqlString = "SELECT file FROM files WHERE id = '"+id+"'";
+                String sqlString = "SELECT file FROM SHEETS WHERE idSheet = '"+id+"'";
                 Statement myStatement = conn.createStatement();
                 
-                ResultSet rs=myStatement.executeQuery(sqlString);
+                ResultSet rs = myStatement.executeQuery(sqlString);
                 
-                if (rs.next()) 
-                {
-                    file = rs.getBlob("file");
+                if (rs.next()) {
+                    file = rs.getBlob("File");
                     fileData = file.getBytes(1,(int)file.length());
-                } else 
-                {
+                } else {
                     out.println("file not found!");
                     return;
                 }
