@@ -78,12 +78,10 @@
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<!-- Login -->
-					<form action="loginServlet" method="post">
-						<ul class="nav navbar-nav navbar-right">
-							<li class="call-to-action"><a href="#"><span>เข้าสู่ระบบ</span></a></li>
-						</ul>
-						<input class="input-bank" type="password" name="password" placeholder=" รหัสผ่าน">
-						<input class="input-bank" type="texts" name="username" placeholder=" ชื่อผู้ใช้งาน">
+					<form action="LoginServlet" method="post">
+						<button id="btn-login" class="btn-login btn btn-submit">เข้าสู่ระบบ</button>
+						<input class="input-bank" type="password" name="password" placeholder=" รหัสผ่าน" required>
+						<input class="input-bank" type="texts" name="username" placeholder=" ชื่อผู้ใช้งาน" required>
 					</form>
 				</div>
 			</nav>
@@ -100,20 +98,21 @@
 						  </div>
 						  <div class="col-sm-5 register">
 						  	<!-- Register -->
-						  	<form action="registerServlet" method="post">
+						  	<form action="RegisterServlet" method="post">
 						  	<h1>Register</h1>
-						  	<input class="input-regis" type="texts" name="name" placeholder=" ชื่อ">
-						  	<input class="input-regis" type="texts" name="surname" placeholder=" นามสกุล">
-						  	<input id="long" class="input-regis" type="texts" name="username" placeholder=" ชื่อผู้ใช้งาน">
-						  	<input id="long" class="input-regis" type="password" name="password" placeholder=" รหัสผ่าน">
-						  	<input id="long" class="input-regis" type="Email" name="email" placeholder=" อีเมล">
+						  	<input class="input-regis" type="texts" name="name" placeholder=" ชื่อ" required>
+						  	<input class="input-regis" type="texts" name="surname" placeholder=" นามสกุล" required>
+						  	<input class="long input-regis" type="texts" name="username" placeholder=" ชื่อผู้ใช้งาน" required>
+						  	<input class="long input-regis" type="password" name="password" placeholder=" รหัสผ่าน" required>
+						  	<input class="long input-regis" type="Email" name="email" placeholder=" อีเมล" required>
 
-							<select id="long" class="input-regis">
+							<select style="width: 370px" class="input-regis">
 							  	<option>Mustard</option>
 							  	<option>Ketchup</option>
 							  	<option>Relish</option>
 							</select>
-							<a href="index.html"><button type="button" class="btn btn-primary button-2 btn-lg">สร้างบัญชีผู้ใช้งาน</button></a>
+							<br>
+							<a href="index.html"><button type="submit" class="btn btn-primary button-2 btn-lg">สร้างบัญชีผู้ใช้งาน</button></a>
 							</form>
 						  	
 						  </div>

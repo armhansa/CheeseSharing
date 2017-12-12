@@ -3,20 +3,23 @@ package controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import model.User;
 
-public class LoginServlet extends HttpServlet {
-    
+@WebServlet(name = "RegisterServlet", urlPatterns = {"/RegisterServlet"})
+public class RegisterServlet extends HttpServlet {
+
     private Connection conn;
     
     @Override
@@ -29,39 +32,46 @@ public class LoginServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             
+            String firstName = request.getParameter("firstName");
+            String lastName = request.getParameter("lastName");
             String username = request.getParameter("username");
             String password = request.getParameter("password");
+            String email = request.getParameter("email");
+            String faculty = request.getParameter("faculty");
             
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM USERS "+
-                    "WHERE Username = '"+username+
-                    "' AND Password = '"+password+"'");
-            
+                    "WHERE Username = '"+username+"'");
             if(rs.next()) {
-                out.println("<h1>Complete</h1>");
-                User user = new User();
-                user.setUserName(username);
-                user.setFirstName(rs.getString("FirstName"));
-                user.setLastName(rs.getString("LastName"));
-                user.setEmail(rs.getString("Email"));
-                user.setFaculty(rs.getString("Faculty"));
-                user.setStatus(rs.getString("Status"));
-                user.setProfile(rs.getString("Profile"));
-                
-                HttpSession session = request.getSession();
-                session.setAttribute("Username", username);
-                session.setAttribute("User", user);
-                
-                response.sendRedirect("homepage.html");
-            } else {
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert('Not Complete');");
+                out.println("alert('This username is already used!');");
                 out.println("location='index.html';");
                 out.println("</script>");
-//                out.println("<h1>Not Complete</h1>");
-//                
-//                response.sendRedirect("index.html");
+            } else {
+                PreparedStatement prStmt = conn.prepareStatement(
+                        "INSERT INTO USERS(Username, Password, FirstName, LastName, Email, Faculty) VALUES(?, ?, ?, ?, ?, ?)");
+                prStmt.setString(0, username);
+                prStmt.setString(1, password);
+                prStmt.setString(2, firstName);
+                prStmt.setString(3, lastName);
+                prStmt.setString(4, email);
+                prStmt.setString(5, faculty);
+                
+                if(prStmt.executeUpdate() == 1) {
+                    request.setAttribute("username", username);
+                    request.setAttribute("password", password);
+                    
+                    RequestDispatcher dispatcher = request.getRequestDispatcher("LoginServlet");
+                    dispatcher.forward(request, response);
+                } else {
+                    out.println("<script type=\"text/javascript\">");
+                    out.println("alert('Error : Update to Database');");
+                    out.println("location='index.html';");
+                    out.println("</script>");
+                }
+                   
             }
+            
         }
     }
 
@@ -80,7 +90,7 @@ public class LoginServlet extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(RegisterServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -98,7 +108,7 @@ public class LoginServlet extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(RegisterServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
