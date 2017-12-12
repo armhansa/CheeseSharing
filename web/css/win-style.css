@@ -1,0 +1,7 @@
+.user_profile{
+	width: 65px;
+	height: 65px;
+	border-radius: 35px; 
+}
+.btn-outline-success:hover {
+    cursor: pointer;
