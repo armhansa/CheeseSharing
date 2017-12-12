@@ -16,12 +16,12 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div style="text-align: center">
-            <a class="navbar-brand" href="#"><h3 style="color: #ffc039">SHEET</h3>sharing</a>
+            <a class="navbar-brand" href="index.html"><img src="images/logo.png" style="width: 50%"></a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-        <form action="LoginServlet" method="post"></form>
+        <form action="LoginServlet" style="display: none" method="post"></form>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto"></ul>
             <form class="form-inline my-2 my-lg-0">
@@ -41,12 +41,12 @@
                     <!-- Register -->
                     <form action="RegisterServlet" method="post">
                         <h1 style="margin-bottom: 10%">Register</h1>
-                        <div class="form-group">
+                        <div class="">
                             <div class="row">
-                                <div class="col-md-6 col-lg-6" style="padding-right: 5px">
+                                <div class="col-md-6 col-lg-6" style="margin-bottom: 30px">
                                     <input class="form-control" type="texts" name="firstName" placeholder=" ชื่อ" required>
                                 </div>
-                                <div class="col-md-6 col-lg-6" style="padding-left: 5px">
+                                <div class="col-md-6 col-lg-6" style="margin-bottom: 30px">
                                     <input class="form-control" type="texts" name="lastName" placeholder=" นามสกุล" required>
                                 </div>
                             </div>

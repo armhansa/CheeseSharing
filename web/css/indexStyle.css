@@ -61,11 +61,13 @@ section{
 }
 .login-btn.btn.btn-outline-success.my-2.my-sm-0{
     border-color: #ffffff !important;
-    color: #edb91f !important;
+    background-color: #ffffff;
+    color: #edb91f!important;
 }
 .login-btn.btn.btn-outline-success.my-2.my-sm-0:hover{
     color: #ffffff !important;
-    background-color:#484848 !important;
+    border-color: #edb91f!important;
+    background-color:#edb91f!important;
 }
 .form-group{
     margin-bottom: 30px;
@@ -82,4 +84,16 @@ section{
 }
 .bg-light{
     background-color: #484848 !important;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white!important;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: white!important;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: white!important;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: white!important;
 }
