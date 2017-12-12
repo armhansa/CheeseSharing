@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import model.User;
+import tool.Reaction;
 
 @WebServlet(name = "LoginServlet", urlPatterns = {"/LoginServlet"})
 public class LoginServlet extends HttpServlet {
@@ -34,32 +35,34 @@ public class LoginServlet extends HttpServlet {
             
             String username = request.getParameter("username");
             String password = request.getParameter("password");
-            out.println(username+password);
+
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM USERS "+
-                    "WHERE Username = '"+username+
-                    "' AND Password = '"+password+"'");
+                    "WHERE Username = '"+username+"'");
+            
+            Reaction reaction = Reaction.getInstance();
+            
             if(rs.next()) {
-                User user = new User();
-                user.setUserName(username);
-                user.setFirstName(rs.getString("FirstName"));
-                user.setLastName(rs.getString("LastName"));
-                user.setEmail(rs.getString("Email"));
-                user.setFaculty(rs.getString("Faculty"));
-                user.setStatus(rs.getString("Status"));
-                user.setProfile(rs.getString("Profile"));
-                
-                HttpSession session = request.getSession();
-                session.setAttribute("Username", username);
-                session.setAttribute("User", user);
-                
-                response.sendRedirect("homepage.html");
+                if(password.equals(rs.getString("Password"))) {
+                    User user = new User();
+                    user.setUserName(username);
+                    user.setFirstName(rs.getString("FirstName"));
+                    user.setLastName(rs.getString("LastName"));
+                    user.setEmail(rs.getString("Email"));
+                    user.setFaculty(rs.getString("Faculty"));
+                    user.setStatus(rs.getString("Status"));
+                    user.setProfile(rs.getString("Profile"));
+
+                    HttpSession session = request.getSession();
+                    session.setAttribute("Username", username);
+                    session.setAttribute("User", user);
+
+                    response.sendRedirect("homepage.html");
+                } else {
+                    reaction.alert(out, "Password is not correct!!!", 0);
+                }
             } else {
-                
-                out.println("<script type=\"text/javascript\">");
-                out.println("location='index.html';");
-                out.println("alert('Not Complete');");
-                out.println("</script>");
+                reaction.alert(out, "Username is invalid!!!", 0);
             }
         }
     }

@@ -6,7 +6,6 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
+import tool.Reaction;
 
 @WebServlet(name = "UploadServlet", urlPatterns = {"/UploadServlet"})
 public class UploadServlet extends HttpServlet {
@@ -23,13 +23,6 @@ public class UploadServlet extends HttpServlet {
     @Override
     public void init() {
         conn = (Connection) getServletContext().getAttribute("Connection");
-    }
-    
-    private void alert(PrintWriter out, String alert) {
-        out.println("<script type=\"text/javascript\">");
-        out.println("alert('Couldn't upload your file!!!');");
-        out.println("location='homepage.html';");
-        out.println("</script>");
     }
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -47,6 +40,7 @@ public class UploadServlet extends HttpServlet {
             String description = request.getParameter("description");
             String username = (String) session.getAttribute("Username");            
             
+            Reaction reaction = Reaction.getInstance();
             if (filePart != null && "application/pdf".equals(filePart.getContentType())) {
                 out.println(filePart.getName());
                 out.println(filePart.getSize());
@@ -68,23 +62,23 @@ public class UploadServlet extends HttpServlet {
                         prStmt.setBinaryStream(2, inputStream, (int) filePart.getSize());
                         int row = prStmt.executeUpdate();
                         if (row > 0) {
-                            alert(out, "File uploaded!!!");
+                            reaction.alert(out, "File uploaded!!!", 1);
                         } else {
-                            alert(out, "Couldn't upload your file!!!");
+                            reaction.alert(out, "Couldn't upload your file!!!", 1);
                         }
                     } else {
-                        alert(out, "Couldn't upload your file!!!");
+                        reaction.alert(out, "Couldn't upload your file!!!", 1);
                     }                    
                 } catch(SQLException e) {
-                    alert(out, "Couldn't upload your file!!!");
+                    reaction.alert(out, "Couldn't upload your file!!!", 1);
                 }
             } else {
-                alert(out, "Please select PDF file.");
+                reaction.alert(out, "Please select PDF file.", 1);
             }
             
         }
     }
-
+    
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
