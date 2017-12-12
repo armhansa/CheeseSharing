@@ -61,8 +61,11 @@ img {
 .logo_size{
     width: 50%;
 }
-.edit_mid{
-    
+.margin_form{
+    margin-left: 9%
+}
+.bg_color{
+    background-color: #edb91f;
 }
 @keyframes colorize {
     0% {
