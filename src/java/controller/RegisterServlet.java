@@ -15,7 +15,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.User;
+import tool.DBConnection;
 import tool.Reaction;
 
 @WebServlet(name = "RegisterServlet", urlPatterns = {"/RegisterServlet"})
@@ -25,7 +25,7 @@ public class RegisterServlet extends HttpServlet {
     
     @Override
     public void init() {
-        conn = (Connection) getServletContext().getAttribute("Connection");
+        conn = DBConnection.getInstance().getConnection();
     }
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)

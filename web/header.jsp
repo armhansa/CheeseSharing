@@ -57,17 +57,17 @@
                         <div class="form-group">
                             <select class="form-control" id="sel1" name="faculty" required>
                                 <option value="" disabled selected>เลือกคณะ</option>
-                                <option value="คณะวิศวกรรมศาสตร์">คณะวิศวกรรมศาสตร์</option>
-                                <option value="คณะสถาปัตยกรรมศาสตร์">คณะสถาปัตยกรรมศาสตร์</option>
-                                <option value="คณะครุศาสตร์อุตสาหกรรม">คณะครุศาสตร์อุตสาหกรรม</option>
-                                <option value="คณะวิทยาศาสตร์">คณะวิทยาศาสตร์</option>
-                                <option value="คณะเทคโนโลยีการเกษตร">คณะเทคโนโลยีการเกษตร</option>
-                                <option value="คณะเทคโนโลยีสารสนเทศ">คณะเทคโนโลยีสารสนเทศ</option>
-                                <option value="คณะอุตสาหกรรมเกษตร">คณะอุตสาหกรรมเกษตร</option>
-                                <option value="คณะการบริหารและจัดการวิทยาลัยนวัตกรรมการผลิตขั้นสูง">คณะการบริหารและจัดการวิทยาลัยนวัตกรรมการผลิตขั้นสูง</option>
-                                <option value="วิทยาลัยนานาชาติ">วิทยาลัยนานาชาติ</option>
-                                <option value="วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง">วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง</option>
-                                <option value="วิทยาลัยอุตสาหกรรมการบินนานาชาติ">วิทยาลัยอุตสาหกรรมการบินนานาชาติ</option>
+                                <option value="1">คณะวิศวกรรมศาสตร์</option>
+                                <option value="2">คณะสถาปัตยกรรมศาสตร์</option>
+                                <option value="3">คณะครุศาสตร์อุตสาหกรรม</option>
+                                <option value="4">คณะวิทยาศาสตร์</option>
+                                <option value="5">คณะเทคโนโลยีการเกษตร</option>
+                                <option value="6">คณะเทคโนโลยีสารสนเทศ</option>
+                                <option value="7">คณะอุตสาหกรรมเกษตร</option>
+                                <option value="8">คณะการบริหารและจัดการวิทยาลัยนวัตกรรมการผลิตขั้นสูง</option>
+                                <option value="9">วิทยาลัยนานาชาติ</option>
+                                <option value="10">วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง</option>
+                                <option value="11">วิทยาลัยอุตสาหกรรมการบินนานาชาติ</option>
                             </select>
                         </div>
 

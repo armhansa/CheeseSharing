@@ -14,6 +14,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
+import model.Sheets;
+import tool.DBConnection;
 import tool.Reaction;
 
 @MultipartConfig(maxFileSize = 999999999) // config file size 
@@ -24,7 +26,7 @@ public class UploadServlet extends HttpServlet {
     
     @Override
     public void init() {
-        conn = (Connection) getServletContext().getAttribute("Connection");
+        conn = DBConnection.getInstance().getConnection();
     }
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -32,8 +34,6 @@ public class UploadServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             request.setCharacterEncoding("UTF-8");
-            
-            
             
             HttpSession session = request.getSession();
             
@@ -92,7 +92,8 @@ public class UploadServlet extends HttpServlet {
                         out.println(row);
                         out.println("<h1>8</h1>");
                         if (row > 0) {
-                            out.println("<h1>Success</h1>");
+                            Sheets sheets = Sheets.getInstance();
+                            sheets.update();
                             reaction.alert(out, "File uploaded!!!", 1);
                         } else {
                             out.println("<h1>Upload Failed</h1>");

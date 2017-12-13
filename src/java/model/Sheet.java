@@ -69,4 +69,8 @@ public class Sheet {
         this.usersUsername = usersUsername;
     }
     
+    public void updateSheets() {
+        Sheets.getInstance().addSheet(this);
+    }
+    
 }

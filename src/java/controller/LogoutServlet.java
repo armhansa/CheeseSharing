@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controller;
 
 import java.io.IOException;
@@ -13,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import tool.Reaction;
 
 @WebServlet(name = "LogoutServlet", urlPatterns = {"/LogoutServlet"})
 public class LogoutServlet extends HttpServlet {
@@ -25,11 +21,7 @@ public class LogoutServlet extends HttpServlet {
             HttpSession session = request.getSession();
             session.invalidate();
             
-            
-                out.println("<script type=\"text/javascript\">");
-                out.println("alert('Logout Successful!');");
-                out.println("location='index.html';");
-                out.println("</script>");
+            Reaction.getInstance().alert(out, "Logout Successful!", 0);
         }
     }
 

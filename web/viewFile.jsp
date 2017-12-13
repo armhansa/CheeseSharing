@@ -10,50 +10,52 @@
         <title>View File</title>
     </head>
     <body>
-        
-        <%  
+
+        <%
             String id = request.getParameter("id");
-            
+
             Blob file = null;
-            byte[] fileData = null ;
+            byte[] fileData = null;
 
             try {
                 Connection conn = (Connection) getServletContext().getAttribute("Connection");
-            
-                String sqlString = "SELECT File FROM SHEETS WHERE idSheet = "+id;
+
+                String sqlString = "SELECT File FROM SHEETS WHERE idSheet = " + id;
                 out.println(sqlString);
                 Statement myStatement = conn.createStatement();
-                
+
                 ResultSet rs = myStatement.executeQuery(sqlString);
-                
+
                 if (rs.next()) {
                     file = rs.getBlob("File");
-                    fileData = file.getBytes(1,(int)file.length());
+                    fileData = file.getBytes(1, (int) file.length());
                 } else {
                     out.println("file not found!");
                     return;
                 }
-                
+
                 response.setContentType("application/pdf");
                 response.setHeader("Content-Disposition", "inline");
                 response.setContentLength(fileData.length);
-                
+
                 OutputStream output = response.getOutputStream();
                 output.write(fileData);
-                
+
                 output.flush();
-                
-            } catch (SQLException ex) {Logger.getLogger(Logger.class.getName()).log(Level.SEVERE, null, ex);} 
+
+            } catch (SQLException ex) {
+                Logger.getLogger(Logger.class.getName()).log(Level.SEVERE, null, ex);
+            }
         %>
-        
+
         <br><br>
         <a href="main_page.jsp">Go to Main Page...</a>        
-                
+
         <div style="position: relative">
             <div style="position: fixed ; bottom: 0 ; width:100% ; text-align:center ">
                 <p><a href="https://www.youtube.com/user/TechWorld3g?sub_confirmation=1">CLICK HERE TO SUBSCRIBE</a></p>
             </div>
         </div>
-        
+
     </body>
 </html>

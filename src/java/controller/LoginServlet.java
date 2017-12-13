@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import model.User;
+import tool.DBConnection;
 import tool.Reaction;
 
 @WebServlet(name = "LoginServlet", urlPatterns = {"/LoginServlet"})
@@ -24,7 +25,7 @@ public class LoginServlet extends HttpServlet {
     
     @Override
     public void init() {
-        conn = (Connection) getServletContext().getAttribute("Connection");
+        conn = DBConnection.getInstance().getConnection();
     }
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -36,6 +37,7 @@ public class LoginServlet extends HttpServlet {
             String username = request.getParameter("username");
             String password = request.getParameter("password");
 
+//            Statement stmt = conn.createStatement();
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM USERS "+
                     "WHERE Username = '"+username+"'");
