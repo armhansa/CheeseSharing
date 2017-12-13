@@ -12,106 +12,12 @@
         <title>CheeseSharing</title>
         <!-- Required meta tags -->
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        
+    <link href="https://fonts.googleapis.com/css?family=Kanit:300" rel="stylesheet">
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-brand ">
-                    <a class="" href="homepage.html" style="margin-right: 0">
-                        <img src="images/logo.png" class="logo_size"></a>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Trigger the modal with a button -->
-                        <button type="button" class="btn btn_upload" data-toggle="modal" data-target="#myModal">Upload</button>
-                        <div class="dropdown">
-                            <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown"> --><img class="user_profile dropdown-toggle" data-toggle="dropdown" src="images/person2.jpg"></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Profile</a></li>
-                                <li class="divider"></li>
-                                <li><a href="LogoutServlet">Logout</a></li>
-                            </ul>
-                        </div>
-
-                    </ul>
-                </div>
-            </nav>
-            <form action="UploadServlet" method="POST" enctype="multipart/form-data">
-                <!-- Modal -->
-                <div class="modal fade" id="myModal" role="dialog">
-                    <div class="modal-dialog">
-
-                      <!-- Modal content-->
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h4 class="modal-title">Upload here!!</h4>
-                          <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-                      </div>
-                      <div class="modal-body">
-                          <div class="form-group">
-                            <br>
-                            <input class="inputupload_win" id="uploadFile" placeholder="Choose File" disabled="disabled" />
-
-                            <div class="fileUpload btn btn-sm" >
-                                <span>Choose file</span>
-                                    <input id="uploadBtn" type="file" class="upload" name="file_uploaded" accept=".pdf" required />
-                            </div>
-
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="usr" placeholder="ชื่อไฟล์" name="title">
-                        </div>
-
-                        <div class="form-group">
-                            <select class="form-control" id="sel1" name="faculty" required>
-                                <option value="" disabled selected>เลือกคณะ</option>
-                                <option value="1">คณะวิศวกรรมศาสตร์</option>
-                                <option value="2">คณะสถาปัตยกรรมศาสตร์</option>
-                                <option value="3">คณะครุศาสตร์อุตสาหกรรม</option>
-                                <option value="4">คณะวิทยาศาสตร์</option>
-                                <option value="5">คณะเทคโนโลยีการเกษตร</option>
-                                <option value="6">คณะเทคโนโลยีสารสนเทศ</option>
-                                <option value="7">คณะอุตสาหกรรมเกษตร</option>
-                                <option value="8">คณะการบริหารและจัดการวิทยาลัยนวัตกรรมการผลิตขั้นสูง</option>
-                                <option value="9">วิทยาลัยนานาชาติ</option>
-                                <option value="10">วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง</option>
-                                <option value="11">วิทยาลัยอุตสาหกรรมการบินนานาชาติ</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <select class="form-control" id="sel1" name="category" required>
-                                <option value="" disabled selected>เลือกหมวดหมู่</option>
-                                <option value="วิทยาศาสตร์">วิทยาศาสตร์</option>
-                                <option value="ภาษา">ภาษา</option>
-                                <option value="คณิตศาสตร์">คณิตศาสตร์</option>
-                                <option value="Computer and Technology">Computer and Technology</option>
-                                <option value="มนุษยศาสตร์">มนุษยศาสตร์</option>
-                                <option value="สังคม,การเมืองและการปกครอง">สังคม,การเมืองและการปกครอง</option>
-                                <option value="ศิลปะ">ศิลปะ</option>
-                                <option value="ธุรกิจ">ธุรกิจ</option>
-                                <option value="ประวัติศาสตร์">ประวัติศาสตร์</option>
-                                <option value="วิศวกรรมศาสตร์">วิศวกรรมศาสตร์</option>
-                                <option value="เศรษฐศาสตร์">เศรษฐศาสตร์</option>
-                                <option value="อื่นๆ">อื่นๆ</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <textarea class="form-control" rows="5" id="comment" placeholder="คำอธิบาย" name="description"></textarea>
-                        </div>
-                        <button id="button_win" class="btn btn-submit">Upload</button>
-                        <br>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-
-    </form>
-
+        <%@include file="header.jsp" %>
 
     <img class="img-fluid" src="images/background1.jpg">
     <div class="" style="padding-top: 10px; padding-bottom: 10px; background-color:  white">
@@ -124,142 +30,6 @@
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner">
-                    <div class="carousel-item active" style="color: #edb91f">
-                        <div class="row" style="padding-left: 5%;padding-top: 2%; padding-bottom: 2%">
-
-                            <a class="col-3" style="text-align: center;" href="homepage.html">
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-sceince.png">
-                                <br>
-                                <label style="color: #edb91f">วิทยาศาสตร์</label>
-                            </a>
-
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-math.png">
-                                <br>
-                                <label style="color: #edb91f">คณิตศาสตร์</label>
-
-                            </a>
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-lang.png">
-                                <br>
-                                <label style="color: #edb91f">ภาษา</label>
-
-                            </a>
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-human.png">
-                                <br>
-                                <label style="color: #edb91f">มนุษย์ศาสตร์</label>
-
-                            </a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row" style="padding-left: 5%;padding-top: 2%; padding-bottom: 2%">
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-law.png">
-                                <br>
-                                <label style="color: #edb91f">สังคมการเมือง การปกครอง</label>
-
-                            </a>
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-econ.png">
-                                <br>
-                                <label style="color: #edb91f">เศรษฐศาสตร์</label>
-
-                            </a>
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-business.png">
-                                <br>
-                                <label style="color: #edb91f">ธุรกิจ</label>
-
-                            </a>
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-history.png">
-                                <br>
-                                <label style="color: #edb91f">ประวัติศาสตร์</label>
-
-                            </a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row" style="padding-left: 5%;padding-top: 2%; padding-bottom: 2%">
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-art.png">
-                                <br>
-                                <label style="color: #edb91f">ศิลปะ</label>
-
-                            </a>
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-com.png">
-                                <br>
-                                <label style="color: #edb91f">คอมพิวเตอรืและเทคโนโลยี</label>
-
-                            </a>
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-eng.png">
-                                <br>
-                                <label style="color: #edb91f">วิศวะกรรมศาสตร์</label>
-
-                            </a>
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-etc.png">
-                                <br>
-                                <label style="color: #edb91f">อื่นๆ</label>
-
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </form>
-        
-        <div class="" style="padding-top: 10px; padding-bottom: 10px; background-color: #f1f1f1">
-            <div class="row">
-                <div class="col-5">
-                    <img  style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-etc.png">
-                </div>
-                <div class="col-7">
-                    <h3>เคล็ดลับการพักสายตา</h3>
-                    <p> 
-                        หลับตา 5-10 นาที<br>
-                        ใช้มือสองข้างถูกันจนอุ่น หลับตา แล้วนำมือมาประคบที่ตาทิ้งไว้สักพัก<br>
-                        สลับไปมองสีโทนเย็น เช่นสีเขียว,สีฟ้า<br>
-                        กระพริบตา เพื่อให้น้ำตามาหล่อเลี้ยงดวงตาของเรา<br>
-                    </p>
-                </div>
-                
-            </div>
-            
-        </div>
-        <form action="">
-            <div class="" style="padding-top: 10px; padding-bottom: 10px; background-color: ">
-                <h1>หมวดหมู่วิชา</h1>
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="row" style="padding: 10%;">
                                 <div class="col-3">
@@ -309,12 +79,145 @@
                             </div>
                         </div>
                     </div>
+                
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <!--<span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <!--<span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </form>
+        
+        <div class="" style="padding-top: 10px; padding-bottom: 10px; background-color: #ffffff00">
+            <div class="row">
+                <div class="col-5">
+                    <img  style="width: 150px; height: 150px; float: right" src="images/icon-black/black-etc.png">
+                </div>
+                <div class="col-7" >
+                    <h3>เคล็ดลับการพักสายตา</h3>
+                    <p> 
+                        หลับตา 5-10 นาที<br>
+                        ใช้มือสองข้างถูกันจนอุ่น หลับตา แล้วนำมือมาประคบที่ตาทิ้งไว้สักพัก<br>
+                        สลับไปมองสีโทนเย็น เช่นสีเขียว,สีฟ้า<br>
+                        กระพริบตา เพื่อให้น้ำตามาหล่อเลี้ยงดวงตาของเรา<br>
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+        <form action="">
+            <div class="" style="padding-top: 10px; padding-bottom: 10px">
+                <h1>หมวดหมู่วิชา</h1>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                    <div class="carousel-item active" style="color: #edb91f">
+                        <div class="row" style="padding-left: 5%;padding-top: 2%; padding-bottom: 2%">
+
+                            <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(1)">
+                                <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-science.png">
+                                <br>
+                                <label style="color: #bbb">วิทยาศาสตร์</label>
+                            </a>
+
+                            <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(2)">
+
+                                <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-math.png">
+                                <br>
+                                <label style="color: #bbb">คณิตศาสตร์</label>
+
+                            </a>
+                            <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(3)">
+
+                                <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-lang.png">
+                                <br>
+                                <label style="color: #bbb">ภาษา</label>
+
+                            </a>
+                            <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(4)">
+
+                                <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-human.png">
+                                <br>
+                                <label style="color: #bbb">มนุษย์ศาสตร์</label>
+
+                            </a>
+                            <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(5)">
+
+                                <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-law.png">
+                                <br>
+                                <label style="color: #bbb">สังคม การเมือง <br>และการปกครอง</label>
+
+                            </a>
+                            <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(6)">
+
+                                <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-econ.png">
+                                <br>
+                                <label style="color: #bbb">เศรษฐศาสตร์</label>
+
+                            </a>
+                        </div>
+                    </div>
+                 
+                    <div class="carousel-item">
+                        <div class="row" style="padding-left: 5%;padding-top: 2%; padding-bottom: 2%">
+                            <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(7)">
+
+                                <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-business.png">
+                                <br>
+                                <label style="color: #bbb">ธุรกิจ</label>
+
+                            </a>
+                            <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(8)">
+
+                                <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-history.png">
+                                <br>
+                                <label style="color: #bbb">ประวัติศาสตร์</label>
+
+                            </a>
+                            <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(9)">
+
+                                <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-art.png">
+                                <br>
+                                <label style="color: #bbb">ศิลปะ</label>
+
+                            </a>
+                            <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(10)">
+
+                                <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-com.png">
+                                <br>
+                                <label style="color: #bbb">คอมพิวเตอร์<br>และเทคโนโลยี</label>
+
+                            </a>
+                            <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(11)">
+
+                                <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-eng.png">
+                                <br>
+                                <label style="color: #bbb">วิศวะกรรมศาสตร์</label>
+
+                            </a>
+                            <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(12)">
+
+                                <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-etc.png">
+                                <br>
+                                <label style="color: #bbb">อื่นๆ</label>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                    
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <!--<span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
                         <span class="sr-only">Previous</span>
                     </a>
                     <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <!--<span class="carousel-control-next-icon" aria-hidden="true"></span>-->
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
