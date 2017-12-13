@@ -45,7 +45,7 @@ public class UploadServlet extends HttpServlet {
             switch(Integer.parseInt(request.getParameter("faculty"))) {
                 case 1:
                     faculty = "";break;
-                case 2;
+//                case 2;
             }
             String description = request.getParameter("description");
             String username = (String) session.getAttribute("Username");

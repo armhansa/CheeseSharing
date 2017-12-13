@@ -115,7 +115,7 @@
 
     <img class="img-fluid" src="images/background1.jpg">
     <div class="" style="padding-top: 10px; padding-bottom: 10px; background-color:  white">
-        <h1>30 อันดับยอดนิยม</h1>
+        <h1>ใหม่ล่าสุด</h1>
         <form action="">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -231,80 +231,28 @@
                 </a>
             </div>
         </form>
-        <form action="">
-            <div class="" style="padding-top: 10px; padding-bottom: 10px; background-color: #edb91f">
-                <h1>30 อันดับยอดนิยม</h1>
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row" style="padding: 10%;">
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row" style="padding: 10%;">
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row" style="padding: 10%;">
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+        
+        <div class="" style="padding-top: 10px; padding-bottom: 10px; background-color: #f1f1f1">
+            <div class="row">
+                <div class="col-5">
+                    <img  style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-etc.png">
                 </div>
-
+                <div class="col-7">
+                    <h3>เคล็ดลับการพักสายตา</h3>
+                    <p> 
+                        หลับตา 5-10 นาที<br>
+                        ใช้มือสองข้างถูกันจนอุ่น หลับตา แล้วนำมือมาประคบที่ตาทิ้งไว้สักพัก<br>
+                        สลับไปมองสีโทนเย็น เช่นสีเขียว,สีฟ้า<br>
+                        กระพริบตา เพื่อให้น้ำตามาหล่อเลี้ยงดวงตาของเรา<br>
+                    </p>
+                </div>
+                
             </div>
-        </form>
+            
+        </div>
         <form action="">
             <div class="" style="padding-top: 10px; padding-bottom: 10px; background-color: ">
-                <h1>30 อันดับยอดนิยม</h1>
+                <h1>หมวดหมู่วิชา</h1>
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -373,6 +321,79 @@
 
             </div>
         </form>
+        
+        <form action="">
+            <div class="" style="padding-top: 10px; padding-bottom: 10px; background-color: #edb91f">
+                <h1>คณะ</h1>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row" style="padding: 10%;">
+                                <div class="col-3">
+                                    <button class="btn btn-light">Test</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn btn-light">Test</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn btn-light">Test</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn btn-light">Test</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row" style="padding: 10%;">
+                                <div class="col-3">
+                                    <button class="btn btn-light">Test</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn btn-light">Test</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn btn-light">Test</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn btn-light">Test</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row" style="padding: 10%;">
+                                <div class="col-3">
+                                    <button class="btn btn-light">Test</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn btn-light">Test</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn btn-light">Test</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn btn-light">Test</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+            </div>
+        </form>
+        
     </div>
 
 
