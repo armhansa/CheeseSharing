@@ -25,8 +25,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto"></ul>
                 <form action="LoginServlet" method="POST" class="form-inline my-2 my-lg-0">
-                    <input class="login-input form-control mr-sm-2" name="username" type="text" placeholder="ชื่อผู้ใช้งาน" required>
-                    <input class="login-input form-control mr-sm-2" name="password" type="password" placeholder="รหัสผ่าน" required>
+                    <input class="login-input form-control mr-sm-2" name="username" type="text" placeholder="ชื่อผู้ใช้งาน" pattern=".{2,20}" required title="กรอก username 2 ถึง 20 ตัวอักษร" maxlength="20">
+                    <input class="login-input form-control mr-sm-2" name="password" type="password" placeholder="รหัสผ่าน" pattern=".{6,}" required title="กรอก password 6 ตัวอักษรขึ้นไป" maxlength="20">
                     <button class="login-btn btn btn-outline-success my-2 my-sm-0" type="submit">เข้าสู่ระบบ</button>
                 </form>
         </div>
@@ -47,24 +47,24 @@
                         <div class="">
                             <div class="row">
                                 <div class="col-md-6 col-lg-6" style="margin-bottom: 30px">
-                                    <input class="form-control" type="texts" name="firstName" placeholder=" ชื่อ" required>
+                                    <input class="form-control" type="texts" name="firstName" placeholder=" ชื่อ" required title="กรุณากรอกข้อมูล" maxlength="20">
                                 </div>
                                 <div class="col-md-6 col-lg-6" style="margin-bottom: 30px">
-                                    <input class="form-control" type="texts" name="lastName" placeholder=" นามสกุล" required>
+                                    <input class="form-control" type="texts" name="lastName" placeholder=" นามสกุล" required title="กรุณากรอกข้อมูล" maxlength="20">
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <input class="form-control" type="texts" name="username" placeholder=" ชื่อผู้ใช้งาน" required>
+                            <input class="form-control" type="texts" name="username" placeholder=" ชื่อผู้ใช้งาน" pattern=".{2,20}" required title="กรอก username 2 ถึง 20 ตัวอักษร" maxlength="20">
                         </div>
 
                         <div class="form-group">
-                            <input class="form-control" type="password" name="password" placeholder=" รหัสผ่าน" required>
+                            <input class="form-control" type="password" name="password" placeholder=" รหัสผ่าน" pattern=".{6,}" required title="กรอก password 6 ตัวอักษรขึ้นไป" maxlength="20">
                         </div>
 
                         <div class="form-group">
-                            <input class="form-control" type="Email" name="email" placeholder=" อีเมล" required>
+                            <input class="form-control" type="Email" name="email" placeholder=" อีเมล" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required title="กรอกอีเมลไม่ถูกต้อง">
                         </div>
 
                         <div class="form-group">
