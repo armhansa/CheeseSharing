@@ -15,6 +15,7 @@ select.form-control:not([size]):not([multiple]) {
     position: relative;
     overflow: hidden;
     margin: 10px;
+    background-color: #edb91f;
 }
 .fileUpload input.upload {
     position: absolute;
@@ -49,4 +50,21 @@ select.form-control:not([size]):not([multiple]) {
 	text-transform: uppercase;
 	transition: 0.3s;
 	margin-right: 20px;
+	background-color: #edb91f;
+}
+.btn-submit{
+	background-color: #edb91f;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	transition: 0.3s;
+}
+.modal-header{
+	background-color: #edb91f;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	transition: 0.3s;
+
+}
+.navbar{
+    margin-bottom: 0px;
 }
