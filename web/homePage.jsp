@@ -53,7 +53,7 @@
                             <input class="inputupload_win" id="uploadFile" placeholder="Choose File" disabled="disabled" />
 
                             <div class="fileUpload btn btn-sm">
-                                <span>Choose file</span>
+                                <span>Choose filedsfsdfsdfs</span>
                                 <form action="UploadServlet" method="POST" enctype="multipart/form-data">
                                     <% request.setAttribute("title", "test"); %>
                                     <input id="uploadBtn" type="file" class="upload" name="file_uploaded" />

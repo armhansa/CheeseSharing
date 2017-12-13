@@ -33,3 +33,4 @@ document.getElementById("uploadBtn").onchange = function () {
 $(document).ready(function(){
 	$(".dropdown-toggle").dropdown();
 });
+//$('.stop-carousel').carousel({ pause: true, interval: false });
