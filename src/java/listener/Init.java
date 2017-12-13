@@ -18,7 +18,7 @@ public class Init implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         try {
-            conn = getCheese_sharing().getConnection();
+            conn = getCheets_sharing().getConnection();
             sce.getServletContext().setAttribute("Connection", conn);
         } catch (NamingException | SQLException ex) {
             Logger.getLogger(Init.class.getName()).log(Level.SEVERE, null, ex);
@@ -35,10 +35,12 @@ public class Init implements ServletContextListener {
         }
     }
 
-    private DataSource getCheese_sharing() throws NamingException {
+    private DataSource getCheets_sharing() throws NamingException {
         Context c = new InitialContext();
-        return (DataSource) c.lookup("java:comp/env/cheese_sharing");
+        return (DataSource) c.lookup("java:comp/env/cheets_sharing");
     }
+
+    
 
     
     

@@ -35,7 +35,7 @@
                     </ul>
                 </div>
             </nav>
-<!--            <form action="UploadServlet" method="POST" enctype="multipart/form-data">-->
+            <form action="UploadServlet" method="POST" enctype="multipart/form-data">
                 <!-- Modal -->
                 <div class="modal fade" id="myModal" role="dialog">
                     <div class="modal-dialog">
@@ -54,12 +54,7 @@
 
                             <div class="fileUpload btn btn-sm">
                                 <span>Choose file</span>
-                                <form action="UploadServlet" method="POST" enctype="multipart/form-data">
-                                    <% request.setAttribute("title", "test"); %>
-                                    <input id="uploadBtn" type="file" class="upload" name="file_uploaded" />
-                                    1234 <br>
-                                    <input type="submit" value="Login" />
-                                </form>
+                                    <input id="uploadBtn" type="file" class="upload" name="file_uploaded" accept=".pdf" />
                             </div>
 
                         </div>
