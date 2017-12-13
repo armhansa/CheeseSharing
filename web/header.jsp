@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-control" id="usr" placeholder="ชื่อไฟล์" name="title">
+                            <input type="text" class="form-control" id="usr" placeholder="ชื่อไฟล์" name="title" required maxlength="45">
                         </div>
 
                         <div class="form-group">
@@ -90,7 +90,7 @@
                         </div>
 
                         <div class="form-group">
-                            <textarea class="form-control" rows="5" id="comment" placeholder="คำอธิบาย" name="description"></textarea>
+                            <textarea class="form-control" rows="5" id="comment" placeholder="คำอธิบาย" name="description" maxlength="200"></textarea>
                         </div>
                         <button id="button_win" class="btn btn-submit">Upload</button>
                         <br>
