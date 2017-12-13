@@ -6,7 +6,7 @@ section{
     float: right !important;
 }
 	
-}
+
 .navbar-brand{
 	padding: 25px 20px
 }
@@ -81,15 +81,15 @@ section{
     border: 2px solid white;
 }
 .form-control:focus{
-    color: #ffffff;
+    color: #aaa;
     background-color: #ffffff00;
-    border-color: #484848
+    border-color: #484848;
     box-shadow: #343a4033 !important;
 }
 .login-input .form-control .mr-sm-2:focus{
-    color: #ffffff;
+    color: #fff;
     background-color: #ffffff00;
-    border-color: #edb91f
+    border-color: #edb91f;
     box-shadow: #343a4033 !important;
         
     }
