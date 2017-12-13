@@ -52,9 +52,9 @@
                             <br>
                             <input class="inputupload_win" id="uploadFile" placeholder="Choose File" disabled="disabled" />
 
-                            <div class="fileUpload btn btn-sm">
+                            <div class="fileUpload btn btn-sm" >
                                 <span>Choose file</span>
-                                    <input id="uploadBtn" type="file" class="upload" name="file_uploaded" accept=".pdf" />
+                                    <input id="uploadBtn" type="file" class="upload" name="file_uploaded" accept=".pdf" required />
                             </div>
 
                         </div>
@@ -64,7 +64,7 @@
                         </div>
 
                         <div class="form-group">
-                            <select class="form-control" id="sel1" name="faculty">
+                            <select class="form-control" id="sel1" name="faculty" required>
                                 <option value="" disabled selected>เลือกคณะ</option>
                                 <option value="คณะวิศวกรรมศาสตร์">คณะวิศวกรรมศาสตร์</option>
                                 <option value="คณะสถาปัตยกรรมศาสตร์">คณะสถาปัตยกรรมศาสตร์</option>
@@ -81,7 +81,7 @@
                         </div>
 
                         <div class="form-group">
-                            <select class="form-control" id="sel1" name="category">
+                            <select class="form-control" id="sel1" name="category" required>
                                 <option value="" disabled selected>เลือกหมวดหมู่</option>
                                 <option value="วิทยาศาสตร์">วิทยาศาสตร์</option>
                                 <option value="ภาษา">ภาษา</option>
