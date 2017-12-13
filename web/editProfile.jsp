@@ -4,7 +4,19 @@
     Author     : student
 --%>
 
+<%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+
+<sql:setDataSource var="dataSource" driver="com.mysql.jdbc.Driver"
+url="jdbc:mysql://161.246.49.11:3306/cheet_sharing?autoReconnect=true&characterEncoding=UTF-8&useSSL=false"
+scope="session" user="root" password="Evosp1r1t"/>
+
+<sql:query var="query_profile" dataSource="${dataSource}">
+    SELECT * FROM USERS WHERE Username = '<%= request.getParameter("filter") %>';
+</sql:query>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,11 +28,11 @@
         
         <div class="row edit-mid edit_margin-top">
         <span class="col-6 Absolute-Center">
-            <div style="color: #edb91f; text-align: center">
-                <h1 style="" class="col-11 header-edit">USERNAME</h1>
+            <div style="color: #edb91f; text-align: center" var="list" item="query_profile.rows">
+                <h1 style="" class="col-11 header-edit">${list.Username}</h1>
             <div  style="display: inline-flex;color: #868686;text-align:  center;margin: 2%;">
-                <h3 class="col-6" style="margin: 0;" >Piyachanin</h3>
-                <h3 class="col-6" style="margin: 0;">Tadmorn</h3>
+                <h3 class="col-6" style="margin: 0;" >${list.FirstName}</h3>
+                <h3 class="col-6" style="margin: 0;">${list.LastName}</h3>
             </div>
             </div>
             <div class="img-profile">
@@ -30,16 +42,16 @@
         </span>
         <span class="col-5 bg_color edit_margin-top">
             <div class="bg_color">
-                <form action="" method="post">
-                    <div class="name-margin" style="margin-top: 10%">
-                        <input type="text" name="firstname" placeholder="ชื่อ" class="col-10 form-control margin_form"><br>
-                        <input type="text" name="lastname" placeholder="นามสกุล"  class="col-10 form-control margin_form">
+                <form action="" method="post" var="list" item="query_profile.rows">
+                    <div class="name-margin" style="margin-top: 10%" >
+                        <input type="text" name="firstname" placeholder=${list.FirstName} class="col-10 form-control margin_form"><br>
+                        <input type="text" name="lastname" placeholder=${list.LastName}  class="col-10 form-control margin_form">
                     </div>
-                    <input type="password" name="pasword" placeholder="รหัสผ่าน" class="col-10 form-control margin_form" pattern=".{6,}" title="กรุณากรอกรหัสผ่านมากกว่า 6 ตัว"><br>
-                    <input type="password" name="repassword" placeholder="ยืนยันรหัสผ่านอีกครั้ง" class="col-10 form-control margin_form" pattern=".{6,}" title="กรุณากรอกรหัสผ่านมากกว่า 6 ตัว"><br>
-                    <input type="Email" name="email" placeholder="อีเมล" class="col-10 form-control margin_form" disabled><br>
+                    <input type="password" name="pasword" placeholder=${list.Password} class="col-10 form-control margin_form" pattern=".{6,}" title="กรุณากรอกรหัสผ่านมากกว่า 6 ตัว"><br>
+                    <input type="password" name="repassword" placeholder=${list.Password} class="col-10 form-control margin_form" pattern=".{6,}" title="กรุณากรอกรหัสผ่านมากกว่า 6 ตัว"><br>
+                    <input type="Email" name="email" placeholder="${list.Email}" class="col-10 form-control margin_form" disabled><br>
                     <select style="height: 35px" class="col-10 form-control margin_form" name="faculty">
-                                <option value="" disabled selected>เลือกคณะ</option>
+                                <option value="" disabled selected>${list.Faculty}</option>
                                 <option value="1">คณะวิศวกรรมศาสตร์</option>
                                 <option value="2">คณะสถาปัตยกรรมศาสตร์</option>
                                 <option value="3">คณะครุศาสตร์อุตสาหกรรม</option>
