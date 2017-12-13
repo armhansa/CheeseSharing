@@ -29,29 +29,37 @@ public class UploadServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            request.setCharacterEncoding("UTF-8");
             
-            InputStream inputStream = null;
+            out.println("<h1>1</h1>");
+            
             HttpSession session = request.getSession();
             
             String title = request.getParameter("title");
+            out.println("<h1>2</h1>");
             Part filePart = request.getPart("file_uploaded");
+            out.println("<h1>3</h1>");
             String category = request.getParameter("category");
             String faculty = request.getParameter("faculty");
             String description = request.getParameter("description");
-            String username = (String) session.getAttribute("Username");            
+            String username = (String) session.getAttribute("Username");
             
             Reaction reaction = Reaction.getInstance();
+            
+            InputStream inputStream = null;
             if (filePart != null && "application/pdf".equals(filePart.getContentType())) {
+                out.println("<h1>has file path</h1>");
                 out.println(filePart.getName());
                 out.println(filePart.getSize());
                 out.println(filePart.getContentType());
 
                 inputStream = filePart.getInputStream();
                 try {
+                    out.println("<h1>4</h1>");
                     String sql = "INSERT INTO SHEETS(Title, File, Faculty, Category, Description, USERS_Username) VALUES(?, ?, ?, ?, ?, ?)";
                     
                     PreparedStatement prStmt = conn.prepareStatement(sql);
-                    
+                    out.println("<h1>5</h1>");
                     prStmt.setString(1, title);
                     prStmt.setString(3, faculty);
                     prStmt.setString(4, category);
