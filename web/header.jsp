@@ -16,7 +16,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <!-- Trigger the modal with a button -->
-            <button type="button" class="btn btn_upload" data-toggle="modal" data-target="#myModal">Upload</button>
+            <button id="btn_upload_test" type="button" class="btn btn_upload" data-toggle="modal" data-target="#myModal">Upload</button>
             <div class="dropdown">
                 <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown"> -->
                 <img class="user_profile dropdown-toggle" data-toggle="dropdown" src="images/person2.jpg"></a>
