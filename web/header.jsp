@@ -8,7 +8,7 @@
 <nav class="navbar navbar-expand-lg bg-light">
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-brand ">
-                    <a class="" href="homepage.html" style="margin-right: 0">
+                    <a class="" href="homePage.jsp" style="margin-right: 0">
                         <img src="images/logo.png" class="logo_size"></a>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
