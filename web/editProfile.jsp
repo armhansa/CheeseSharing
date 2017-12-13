@@ -32,13 +32,26 @@
             <div class="bg_color">
                 <form action="" method="post">
                     <div class="name-margin" style="margin-top: 10%">
-                        <input type="text" name="firstname" placeholder="name" class="col-10 form-control margin_form"><br>
-                        <input type="text" name="lastname" placeholder="lastname"  class="col-10 form-control margin_form">
+                        <input type="text" name="firstname" placeholder="ชื่อ" class="col-10 form-control margin_form"><br>
+                        <input type="text" name="lastname" placeholder="นามสกุล"  class="col-10 form-control margin_form">
                     </div>
-                    <input type="text" name="username" placeholder="username" class="col-10 form-control margin_form"><br>
-                    <input type="password" name="pasword" placeholder="password" class="col-10 form-control margin_form"><br>
-                    <input type="Email" name="email" placeholder="E-mail" class="col-10 form-control margin_form"><br>
-                    <input type="text" name="faculty" placeholder="Facalty"  class="col-10 form-control margin_form">
+                    <input type="password" name="pasword" placeholder="รหัสผ่าน" class="col-10 form-control margin_form" pattern=".{6,}" title="กรุณากรอกรหัสผ่านมากกว่า 6 ตัว"><br>
+                    <input type="password" name="repassword" placeholder="ยืนยันรหัสผ่านอีกครั้ง" class="col-10 form-control margin_form" pattern=".{6,}" title="กรุณากรอกรหัสผ่านมากกว่า 6 ตัว"><br>
+                    <input type="Email" name="email" placeholder="อีเมล" class="col-10 form-control margin_form" disabled><br>
+                    <select style="height: 35px" class="col-10 form-control margin_form" name="faculty">
+                                <option value="" disabled selected>เลือกคณะ</option>
+                                <option value="1">คณะวิศวกรรมศาสตร์</option>
+                                <option value="2">คณะสถาปัตยกรรมศาสตร์</option>
+                                <option value="3">คณะครุศาสตร์อุตสาหกรรม</option>
+                                <option value="4">คณะวิทยาศาสตร์</option>
+                                <option value="5">คณะเทคโนโลยีการเกษตร</option>
+                                <option value="6">คณะเทคโนโลยีสารสนเทศ</option>
+                                <option value="7">คณะอุตสาหกรรมเกษตร</option>
+                                <option value="8">คณะการบริหารและจัดการวิทยาลัยนวัตกรรมการผลิตขั้นสูง</option>
+                                <option value="9">วิทยาลัยนานาชาติ</option>
+                                <option value="10">วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง</option>
+                                <option value="11">วิทยาลัยอุตสาหกรรมการบินนานาชาติ</option>
+                    </select>
                     <button class="btn col-7" style="margin: 20%">Submit</button>
                 </form>
             </div>
