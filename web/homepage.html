@@ -17,9 +17,16 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Trigger the modal with a button -->
-                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Upload</button>
+                    <button type="button" class="btn btn_upload" data-toggle="modal" data-target="#myModal">Upload</button>
+                    <div class="dropdown">
+                            <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown"> --><img class="user_profile dropdown-toggle" data-toggle="dropdown" src="images/person2.jpg"></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Profile</a></li>
+                                <li class="divider"></li>
+                                <li><a href="/../LogoutServlet">Logout</a></li>
+                            </ul>
+                        </div>
 
-                    <img class="user_profile" src="images/person2.jpg">
                 </ul>
             </div>
         </nav>
@@ -31,8 +38,9 @@
                   <!-- Modal content-->
                   <div class="modal-content">
                     <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
                       <h4 class="modal-title">Upload here!!</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+
                   </div>
                   <div class="modal-body">
                       <div class="form-group">
@@ -41,7 +49,7 @@
 
                         <div class="fileUpload btn btn-sm">
                             <span>Choose file</span>
-                            <input id="uploadBtn" type="file" class="upload" name="file_uploaded" accept=".pdf"/>
+                            <input id="uploadBtn" type="file" class="upload" />
                         </div>
 
                     </div>
@@ -89,15 +97,13 @@
                         <textarea class="form-control" rows="5" id="comment" placeholder="คำอธิบาย" name="description"></textarea>
                     </div>
                     <button id="button_win" class="btn btn-submit">Upload</button>
-                    <br><br>
+                    <br>
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
-          </div>
 
-      </div>
-  </div>
+            </div>
+
+        </div>
+    </div>
 
 </form>
 
