@@ -39,7 +39,9 @@
                                     <img src="images/icon_yellow/yellow-law.png"> <br>
                                     <p><%= sheets.get(index).getDescription()%></p>
                                 </a>
-                                <% if(sheets.size()-index == 4 || sheets.size()-index == 8) { %>
+                                    <% if((sheets.size()-index) % 4 == 0
+                                            && sheets.size()-index != 12
+                                            && index != 0) { %>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -83,33 +85,33 @@
                         <div class="carousel-item active" style="color: #edb91f">
                             <div class="row row-set">
 
-                                <a class="item col-2" href="listSheet.jsp?type='category'&value=1">
+                                <a class="item col-2" href="listSheet.jsp?type=category&value=1">
                                     <img src="images/icon-gray/gray-science.png">
                                     <br>
                                     <label >วิทยาศาสตร์</label>
                                 </a>
 
-                                <a class="item col-2" href="listSheet.jsp?type='category'&value=2">
+                                <a class="item col-2" href="listSheet.jsp?type=category&value=2">
                                     <img  src="images/icon-gray/gray-math.png">
                                     <br>
                                     <label >คณิตศาสตร์</label>
                                 </a>
-                                <a class="item col-2" href="listSheet.jsp?type='category'&value=3">
+                                <a class="item col-2" href="listSheet.jsp?type=category&value=3">
                                     <img src="images/icon-gray/gray-lang.png">
                                     <br>
                                     <label >ภาษา</label>
                                 </a>
-                                <a class="item col-2" href="listSheet.jsp?type='category'&value=4">
+                                <a class="item col-2" href="listSheet.jsp?type=category&value=4">
                                     <img src="images/icon-gray/gray-human.png">
                                     <br>
                                     <label >มนุษย์ศาสตร์</label>
                                 </a>
-                                <a class="item col-2" href="listSheet.jsp?type='category'&value=5">
+                                <a class="item col-2" href="listSheet.jsp?type=category&value=5">
                                     <img src="images/icon-gray/gray-law.png">
                                     <br>
                                     <label >สังคม การเมือง <br>และการปกครอง</label>
                                 </a>
-                                <a class="item col-2" href="listSheet.jsp?type='category'&value=6">
+                                <a class="item col-2" href="listSheet.jsp?type=category&value=6">
                                     <img src="images/icon-gray/gray-econ.png">
                                     <br>
                                     <label >เศรษฐศาสตร์</label>
@@ -119,33 +121,33 @@
 
                         <div class="carousel-item">
                             <div class="row row-set">
-                                <a class="item col-2" href="listSheet.jsp?type=('category')&value=(7)">
+                                <a class="item col-2" href="listSheet.jsp?type=category&value=7">
                                     <img src="images/icon-gray/gray-business.png">
                                     <br>
                                     <label>ธุรกิจ</label>
                                 </a>
-                                <a class="item col-2" href="listSheet.jsp?type=('category')&value=(8)">
+                                <a class="item col-2" href="listSheet.jsp?type=category&value=8">
                                     <img src="images/icon-gray/gray-history.png">
                                     <br>
                                     <label>ประวัติศาสตร์</label>
                                 </a>
-                                <a class="item col-2" href="listSheet.jsp?type=('category')&value=(9)">
+                                <a class="item col-2" href="listSheet.jsp?type=category&value=9">
 
                                     <img src="images/icon-gray/gray-art.png">
                                     <br>
                                     <label>ศิลปะ</label>
                                 </a>
-                                <a class="item col-2" href="listSheet.jsp?type=('category')&value=(10)">
+                                <a class="item col-2" href="listSheet.jsp?type=category&value=10">
                                     <img src="images/icon-gray/gray-com.png">
                                     <br>
                                     <label>คอมพิวเตอร์<br>และเทคโนโลยี</label>
                                 </a>
-                                <a class="item col-2" href="listSheet.jsp?type=('category')&value=(11)">
+                                <a class="item col-2" href="listSheet.jsp?type=category&value=11">
                                     <img src="images/icon-gray/gray-eng.png">
                                     <br>
                                     <label>วิศวะกรรมศาสตร์</label>
                                 </a>
-                                <a class="item col-2" href="listSheet.jsp?type=('category')&value=(12)">
+                                <a class="item col-2" href="listSheet.jsp?type=category&value=12">
                                     <img src="images/icon-gray/gray-etc.png">
                                     <br>
                                     <label>อื่นๆ</label>
@@ -173,32 +175,32 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="row row-set">
-                                <a class="item-f col-2" href="listSheet.jsp?type='faculty'&value=1">
+                                <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=1">
                                     <img  src="images/logo-faculty/logo-egn.png">
                                     <br>
                                     <label >คณะวิศวกรรมศาสตร์</label>
                                 </a>
-                                <a class="item-f col-2" href="listSheet.jsp?type='faculty'&value=2">
+                                <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=2">
                                     <img src="images/logo-faculty/logo-arch.png">
                                     <br>
                                     <label>คณะสถาปัตยกรรมศาสตร์</label>
                                 </a>
-                                <a class="item-f col-2" href="listSheet.jsp?type='faculty'&value=3">
+                                <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=3">
                                     <img src="images/logo-faculty/logo-sci.png">
                                     <br>
                                     <label>คณะวิทยาศาสตร์</label>
                                 </a>
-                                <a class="item-f col-2" href="listSheet.jsp?type='faculty'&value=4">
+                                <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=4">
                                     <img src="images/logo-faculty/logo-kras.png">
                                     <br>
                                     <label>คณะเทคโนโลยีการเกษตร</label>
                                 </a>
-                                <a class="item-f col-2" href="listSheet.jsp?type='faculty'&value=5">
+                                <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=5">
                                     <img src="images/logo-faculty/logo-kharu.png">
                                     <br>
                                     <label>คณะครุศาสตร์<br>อุตสาหกรรม</label>
                                 </a>
-                                <a class="item-f col-2" href="listSheet.jsp?type='faculty'&value=6">
+                                <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=6">
                                     <img src="images/logo-faculty/logo-argo.png">
                                     <br>
                                     <label>คณะอุตสาหกรรมเกษตร</label>
@@ -208,27 +210,27 @@
                         </div>
                         <div class="carousel-item">
                             <div class="row row-set" style="padding-left: 15%">
-                                <a class="item-f col-2" href="listSheet.jsp?type='faculty'&value=7">
+                                <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=7">
                                     <img  src="images/logo-faculty/logo-it.png">
                                     <br>
                                     <label>คณะเทคโนโลยีสารสนเทศ</label>
                                 </a>
-                                <a class="item-f col-2" href="listSheet.jsp?type='faculty'&value=8">
+                                <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=8">
                                     <img src="images/logo-faculty/logo-amc.png">
                                     <br>
                                     <label>คณะการบริหารและจัดการ</label>
                                 </a>
-                                <a class="item-f col-2" href="listSheet.jsp?type='faculty'&value=9">
+                                <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=9">
                                     <img src="images/logo-faculty/logo-inno.png">
                                     <br>
                                     <label>วิทยาลัยนวัตกรรม<br>การผลิตขั้นสูง</label>
                                 </a>
-                                <a class="item-f col-2" href="listSheet.jsp?type='faculty'&value=10">
+                                <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=10">
                                     <img src="images/logo-faculty/logo-inter.png">
                                     <br>
                                     <label>วิทยาลัยนานาชาติ</label>
                                 </a>
-                                <a class="item-f col-2" href="listSheet.jsp?type='faculty'&value=11">
+                                <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=11">
                                     <img src="images/logo-faculty/logo-nano.png">
                                     <br>
                                     <label>วิทยาลัยนาโนเทคโนโลยี</label>
