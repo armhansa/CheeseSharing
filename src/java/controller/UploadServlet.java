@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,6 +16,7 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 import tool.Reaction;
 
+@MultipartConfig(maxFileSize = 999999999) // config file size 
 @WebServlet(name = "UploadServlet", urlPatterns = {"/UploadServlet"})
 public class UploadServlet extends HttpServlet {
 
@@ -31,23 +33,28 @@ public class UploadServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             request.setCharacterEncoding("UTF-8");
             
-            out.println("<h1>1</h1>");
+            
             
             HttpSession session = request.getSession();
             
             String title = request.getParameter("title");
             out.println("<h1>2</h1>");
             Part filePart = request.getPart("file_uploaded");
-            out.println("<h1>3</h1>");
             String category = request.getParameter("category");
             String faculty = request.getParameter("faculty");
+            switch(Integer.parseInt(request.getParameter("faculty"))) {
+                case 1:
+                    faculty = "";break;
+//                case 2;
+            }
             String description = request.getParameter("description");
             String username = (String) session.getAttribute("Username");
             
             Reaction reaction = Reaction.getInstance();
             
             InputStream inputStream = null;
-            if (filePart != null && "application/pdf".equals(filePart.getContentType())) {
+            if (filePart != null) {
+                out.println("<h1>"+filePart.getName()+"</h1>");
                 out.println("<h1>has file path</h1>");
                 out.println(filePart.getName());
                 out.println(filePart.getSize());
@@ -56,28 +63,39 @@ public class UploadServlet extends HttpServlet {
                 inputStream = filePart.getInputStream();
                 try {
                     out.println("<h1>4</h1>");
-                    String sql = "INSERT INTO SHEETS(Title, File, Faculty, Category, Description, USERS_Username) VALUES(?, ?, ?, ?, ?, ?)";
+                    String sql = "INSERT INTO SHEETS (Title, Faculty, Category, Description, USERS_Username) VALUES(?, ?, ?, ?, ?)";
                     
                     PreparedStatement prStmt = conn.prepareStatement(sql);
                     out.println("<h1>5</h1>");
                     prStmt.setString(1, title);
-                    prStmt.setString(3, faculty);
-                    prStmt.setString(4, category);
-                    prStmt.setString(5, description);
-                    prStmt.setString(6, username);
+                    prStmt.setString(2, faculty);
+                    prStmt.setString(3, category);
+                    prStmt.setString(4, description);
+                    prStmt.setString(5, username);
+                    
+                    prStmt.executeUpdate();
                     
                     if (inputStream != null) {
-                        prStmt.setBinaryStream(2, inputStream, (int) filePart.getSize());
+                        out.println("<h1>6</h1>");
+                        prStmt.setBlob(2, inputStream);
+                        out.println("<h1>7</h1>");
+                        out.println(title+filePart.getName()+faculty+category+description+username);
                         int row = prStmt.executeUpdate();
+                        out.println(row);
+                        out.println("<h1>8</h1>");
                         if (row > 0) {
+                            out.println("<h1>Success</h1>");
                             reaction.alert(out, "File uploaded!!!", 1);
                         } else {
+                            out.println("<h1>Upload Failed</h1>");
                             reaction.alert(out, "Couldn't upload your file!!!", 1);
                         }
                     } else {
+                        out.println("<h1>inputStream is null</h1>");
                         reaction.alert(out, "Couldn't upload your file!!!", 1);
                     }                    
                 } catch(SQLException e) {
+                    e.printStackTrace();
                     reaction.alert(out, "Couldn't upload your file!!!", 1);
                 }
             } else {

@@ -57,7 +57,7 @@ public class LoginServlet extends HttpServlet {
                     session.setAttribute("Username", username);
                     session.setAttribute("User", user);
 
-                    response.sendRedirect("homepage.html");
+                    response.sendRedirect("homePage.jsp");
                 } else {
                     reaction.alert(out, "Password is not correct!!!", 0);
                 }

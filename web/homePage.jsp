@@ -35,7 +35,7 @@
                     </ul>
                 </div>
             </nav>
-<!--            <form action="UploadServlet" method="POST" enctype="multipart/form-data">-->
+            <form action="UploadServlet" method="POST" enctype="multipart/form-data">
                 <!-- Modal -->
                 <div class="modal fade" id="myModal" role="dialog">
                     <div class="modal-dialog">
@@ -52,14 +52,9 @@
                             <br>
                             <input class="inputupload_win" id="uploadFile" placeholder="Choose File" disabled="disabled" />
 
-                            <div class="fileUpload btn btn-sm">
+                            <div class="fileUpload btn btn-sm" >
                                 <span>Choose file</span>
-                                <form action="UploadServlet" method="POST" enctype="multipart/form-data">
-                                    <% request.setAttribute("title", "test"); %>
-                                    <input id="uploadBtn" type="file" class="upload" name="file_uploaded" />
-                                    1234 <br>
-                                    <input type="submit" value="Login" />
-                                </form>
+                                    <input id="uploadBtn" type="file" class="upload" name="file_uploaded" accept=".pdf" required />
                             </div>
 
                         </div>
@@ -69,7 +64,7 @@
                         </div>
 
                         <div class="form-group">
-                            <select class="form-control" id="sel1" name="faculty">
+                            <select class="form-control" id="sel1" name="faculty" required>
                                 <option value="" disabled selected>เลือกคณะ</option>
                                 <option value="คณะวิศวกรรมศาสตร์">คณะวิศวกรรมศาสตร์</option>
                                 <option value="คณะสถาปัตยกรรมศาสตร์">คณะสถาปัตยกรรมศาสตร์</option>
@@ -86,7 +81,7 @@
                         </div>
 
                         <div class="form-group">
-                            <select class="form-control" id="sel1" name="category">
+                            <select class="form-control" id="sel1" name="category" required>
                                 <option value="" disabled selected>เลือกหมวดหมู่</option>
                                 <option value="วิทยาศาสตร์">วิทยาศาสตร์</option>
                                 <option value="ภาษา">ภาษา</option>
@@ -120,7 +115,7 @@
 
     <img class="img-fluid" src="images/background1.jpg">
     <div class="" style="padding-top: 10px; padding-bottom: 10px; background-color:  white">
-        <h1>30 อันดับยอดนิยม</h1>
+        <h1>ใหม่ล่าสุด</h1>
         <form action="">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -236,80 +231,28 @@
                 </a>
             </div>
         </form>
-        <form action="">
-            <div class="" style="padding-top: 10px; padding-bottom: 10px; background-color: #edb91f">
-                <h1>30 อันดับยอดนิยม</h1>
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row" style="padding: 10%;">
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row" style="padding: 10%;">
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row" style="padding: 10%;">
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+        
+        <div class="" style="padding-top: 10px; padding-bottom: 10px; background-color: #f1f1f1">
+            <div class="row">
+                <div class="col-5">
+                    <img  style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-etc.png">
                 </div>
-
+                <div class="col-7">
+                    <h3>เคล็ดลับการพักสายตา</h3>
+                    <p> 
+                        หลับตา 5-10 นาที<br>
+                        ใช้มือสองข้างถูกันจนอุ่น หลับตา แล้วนำมือมาประคบที่ตาทิ้งไว้สักพัก<br>
+                        สลับไปมองสีโทนเย็น เช่นสีเขียว,สีฟ้า<br>
+                        กระพริบตา เพื่อให้น้ำตามาหล่อเลี้ยงดวงตาของเรา<br>
+                    </p>
+                </div>
+                
             </div>
-        </form>
+            
+        </div>
         <form action="">
             <div class="" style="padding-top: 10px; padding-bottom: 10px; background-color: ">
-                <h1>30 อันดับยอดนิยม</h1>
+                <h1>หมวดหมู่วิชา</h1>
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -378,6 +321,79 @@
 
             </div>
         </form>
+        
+        <form action="">
+            <div class="" style="padding-top: 10px; padding-bottom: 10px; background-color: #edb91f">
+                <h1>คณะ</h1>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row" style="padding: 10%;">
+                                <div class="col-3">
+                                    <button class="btn btn-light">Test</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn btn-light">Test</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn btn-light">Test</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn btn-light">Test</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row" style="padding: 10%;">
+                                <div class="col-3">
+                                    <button class="btn btn-light">Test</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn btn-light">Test</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn btn-light">Test</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn btn-light">Test</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row" style="padding: 10%;">
+                                <div class="col-3">
+                                    <button class="btn btn-light">Test</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn btn-light">Test</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn btn-light">Test</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn btn-light">Test</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+            </div>
+        </form>
+        
     </div>
 
 
