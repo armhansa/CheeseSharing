@@ -33,6 +33,10 @@ public class Sheets {
         sheets.add(sheet);
     }
     
+    public Sheet getSheet(int index) {
+        return sheets.get(index);
+    }
+    
     public List<Sheet> getSheets() {
         return sheets;
     }

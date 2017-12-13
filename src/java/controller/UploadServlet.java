@@ -6,6 +6,7 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Statement;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -73,6 +74,9 @@ public class UploadServlet extends HttpServlet {
                 try {
                     out.println("<h1>4</h1>");
                     String sql = "INSERT INTO SHEETS (Title, File, Faculty, Category, Description, USERS_Username) VALUES(?, ?, ?, ?, ?, ?)";
+                    
+                    Statement stmt = conn.createStatement();
+                    stmt.execute("SET GLOBAL max_allowed_packet = 1024*1024*14;");
                     
                     PreparedStatement prStmt = conn.prepareStatement(sql);
                     out.println("<h1>5</h1>");
