@@ -12,172 +12,8 @@
         <title>CheeseSharing</title>
         <!-- Required meta tags -->
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<<<<<<< HEAD
     </head>
-    <body>
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-brand ">
-                    <a class="" href="homepage.html" style="margin-right: 0">
-                        <img src="images/logo.png" class="logo_size"></a>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Trigger the modal with a button -->
-                        <button type="button" class="btn btn_upload" data-toggle="modal" data-target="#myModal">Upload</button>
-                        <div class="dropdown">
-                            <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown"> --><img class="user_profile dropdown-toggle" data-toggle="dropdown" src="images/person2.jpg"></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Profile</a></li>
-                                <li class="divider"></li>
-                                <li><a href="LogoutServlet">Logout</a></li>
-                            </ul>
-                        </div>
 
-                    </ul>
-                </div>
-            </nav>
-<!--            <form action="UploadServlet" method="POST" enctype="multipart/form-data">-->
-                <!-- Modal -->
-                <div class="modal fade" id="myModal" role="dialog">
-                    <div class="modal-dialog">
-
-                      <!-- Modal content-->
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h4 class="modal-title">Upload here!!</h4>
-                          <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-                      </div>
-                      <div class="modal-body">
-                          <div class="form-group">
-                            <br>
-                            <input class="inputupload_win" id="uploadFile" placeholder="Choose File" disabled="disabled" />
-
-                            <div class="fileUpload btn btn-sm">
-                                <span>Choose filedsfsdfsdfs</span>
-                                <form action="UploadServlet" method="POST" enctype="multipart/form-data">
-                                    <% request.setAttribute("title", "test"); %>
-                                    <input id="uploadBtn" type="file" class="upload" name="file_uploaded" />
-                                    1234 <br>
-                                    <input type="submit" value="Login" />
-                                </form>
-                            </div>
-
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="usr" placeholder="ชื่อไฟล์" name="title">
-                        </div>
-
-                        <div class="form-group">
-                            <select class="form-control" id="sel1" name="faculty">
-                                <option value="" disabled selected>เลือกคณะ</option>
-                                <option value="คณะวิศวกรรมศาสตร์">คณะวิศวกรรมศาสตร์</option>
-                                <option value="คณะสถาปัตยกรรมศาสตร์">คณะสถาปัตยกรรมศาสตร์</option>
-                                <option value="คณะครุศาสตร์อุตสาหกรรม">คณะครุศาสตร์อุตสาหกรรม</option>
-                                <option value="คณะวิทยาศาสตร์">คณะวิทยาศาสตร์</option>
-                                <option value="คณะเทคโนโลยีการเกษตร">คณะเทคโนโลยีการเกษตร</option>
-                                <option value="คณะเทคโนโลยีสารสนเทศ">คณะเทคโนโลยีสารสนเทศ</option>
-                                <option value="คณะอุตสาหกรรมเกษตร">คณะอุตสาหกรรมเกษตร</option>
-                                <option value="คณะการบริหารและจัดการวิทยาลัยนวัตกรรมการผลิตขั้นสูง">คณะการบริหารและจัดการวิทยาลัยนวัตกรรมการผลิตขั้นสูง</option>
-                                <option value="วิทยาลัยนานาชาติ">วิทยาลัยนานาชาติ</option>
-                                <option value="วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง">วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง</option>
-                                <option value="วิทยาลัยอุตสาหกรรมการบินนานาชาติ">วิทยาลัยอุตสาหกรรมการบินนานาชาติ</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <select class="form-control" id="sel1" name="category">
-                                <option value="" disabled selected>เลือกหมวดหมู่</option>
-                                <option value="วิทยาศาสตร์">วิทยาศาสตร์</option>
-                                <option value="ภาษา">ภาษา</option>
-                                <option value="คณิตศาสตร์">คณิตศาสตร์</option>
-                                <option value="Computer and Technology">Computer and Technology</option>
-                                <option value="มนุษยศาสตร์">มนุษยศาสตร์</option>
-                                <option value="สังคม,การเมืองและการปกครอง">สังคม,การเมืองและการปกครอง</option>
-                                <option value="ศิลปะ">ศิลปะ</option>
-                                <option value="ธุรกิจ">ธุรกิจ</option>
-                                <option value="ประวัติศาสตร์">ประวัติศาสตร์</option>
-                                <option value="วิศวกรรมศาสตร์">วิศวกรรมศาสตร์</option>
-                                <option value="เศรษฐศาสตร์">เศรษฐศาสตร์</option>
-                                <option value="อื่นๆ">อื่นๆ</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <textarea class="form-control" rows="5" id="comment" placeholder="คำอธิบาย" name="description"></textarea>
-                        </div>
-                        <button id="button_win" class="btn btn-submit">Upload</button>
-                        <br>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-
-    </form>
-
-
-    <img class="img-fluid" src="images/background1.jpg">
-    <div class="" style="padding-top: 10px; padding-bottom: 10px; background-color:  white">
-        <h1>30 อันดับยอดนิยม</h1>
-        <form action="">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active" style="color: #edb91f">
-                        <div class="row" style="padding-left: 5%;padding-top: 2%; padding-bottom: 2%">
-
-                            <a class="col-3" style="text-align: center;" href="homepage.html">
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-sceince.png">
-                                <br>
-                                <label style="color: #edb91f">วิทยาศาสตร์</label>
-                            </a>
-
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-math.png">
-                                <br>
-                                <label style="color: #edb91f">คณิตศาสตร์</label>
-
-                            </a>
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-lang.png">
-                                <br>
-                                <label style="color: #edb91f">ภาษา</label>
-
-                            </a>
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-human.png">
-                                <br>
-                                <label style="color: #edb91f">มนุษย์ศาสตร์</label>
-
-                            </a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row" style="padding-left: 5%;padding-top: 2%; padding-bottom: 2%">
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-law.png">
-                                <br>
-                                <label style="color: #edb91f">สังคมการเมือง การปกครอง</label>
-
-                            </a>
-                            <a class="col-3" style="text-align: center;" href="#">
-=======
->>>>>>> cf95839572e444973051dbf91d45cc935f7a4e60
-
-
-        <link href="https://fonts.googleapis.com/css?family=Kanit:300" rel="stylesheet">
-    </head>
     <body>
         <%@include file="header.jsp" %>
 
@@ -255,10 +91,10 @@
 
             <div class="" style="padding-top: 2%; padding-bottom: 2%; background-color: #f1f1f1">
                 <div class="row">
-                    <div class="col-5">
+                    <div class="col-4">
                         <img  style="width: 150px; height: 150px; float: right" src="images/icon-reading.png">
                     </div>
-                    <div class="col-7" >
+                    <div class="col-8" >
                         <h3>เคล็ดลับดูแลสายตาขณะอ่านหนังสือ</h3>
                         <p> 
                             หลับตา 5-10 นาที ให้แสงผ่านหนังตาเพื่อการไหลเวียนของโลหิตรอบดวงตา และเป็นการผ่อนคลายกล้ามเนื้อ<br>
@@ -274,7 +110,7 @@
                 <div class="" style="padding-top: 10px; padding-bottom: 10px">
                     <h1 style="margin-left: 5%; margin-top: 3%; color: #aaa">หมวดหมู่วิชา</h1>
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        
+
                         <div class="carousel-inner">
                             <div class="carousel-item active" style="color: #edb91f">
                                 <div class="row" style="padding-left: 5%;padding-right:5%;padding-top: 2%; padding-bottom: 2%">
@@ -388,7 +224,7 @@
                 <div class="" style="padding-top: 10px; padding-bottom: 10px; background-color: #edb91f">
                     <h1 style="margin-left: 5%; margin-right:5%; margin-top: 2%; color: white">คณะ</h1>
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        
+
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="row" style="padding-left: 5%;padding-right: 5%;padding-top: 1%; padding-bottom: 2%">
@@ -422,7 +258,7 @@
                                         <br>
                                         <label style="color: #fff; margin-top: 1%">คณะอุตสาหกรรมเกษตร</label>
                                     </a>
-                                    
+
                                 </div>
                             </div>
                             <div class="carousel-item">
@@ -452,10 +288,10 @@
                                         <br>
                                         <label style="color: #fff; margin-top: 1%">วิทยาลัยนาโนเทคโนโลยี</label>
                                     </a>
-                                    
+
                                 </div>
                             </div>
-                          
+
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                             <!--<span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
