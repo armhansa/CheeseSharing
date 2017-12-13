@@ -1,0 +1,50 @@
+.row-set{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+
+.col-2{
+    text-align: center;
+}
+
+.col-2 img{
+    width: 120px;
+    height: 120px;
+}
+
+.col-3{
+    text-align: center;
+}
+
+.col-3 img{
+    width: 120px;
+    height: 120px;
+}
+
+
+.item label{
+    color: #bbb;
+    margin-top: 1%;
+}
+
+.item-f label{
+    color: white;
+    margin-top: 1%;
+}
+
+.faculty{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #edb91f;
+}
+
+.col-3 h2{
+    margin-top: 2% !important;
+    color: #edb91f;
+}
+
+.col-3 p{
+    color: #edb91f;
+}

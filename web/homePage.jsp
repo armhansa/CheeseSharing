@@ -29,51 +29,99 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <div class="row" style="padding: 10%;">
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
+                            <div class="row row-set">
+                                <a class="item col-3" href="listSheet.jsp?type=('faculty')&value=(1)">
+                                    <h2>ชื่อเอกสาร</h2>
+                                    <img  src="images/icon_yellow/yellow-law.png">
+                                    <br>
+                                    <p>description description<br> description description<br> description description</p>
+
+                                </a>
+                                <a class="item col-3" href="listSheet.jsp?type=('faculty')&value=(1)">
+                                    <h2>ชื่อเอกสาร</h2>
+                                    <img  src="images/icon_yellow/yellow-law.png">
+                                    <br>
+                                    <p>description description<br> description description<br> description description</p>
+
+                                </a>
+                                <a class="item col-3" href="listSheet.jsp?type=('faculty')&value=(1)">
+                                    <h2>ชื่อเอกสาร</h2>
+                                    <img  src="images/icon_yellow/yellow-law.png">
+                                    <br>
+                                    <p>description description<br> description description<br> description description</p>
+
+                                </a>
+                                <a class="item col-3" href="listSheet.jsp?type=('faculty')&value=(1)">
+                                    <h2>ชื่อเอกสาร</h2>
+                                    <img  src="images/icon_yellow/yellow-law.png">
+                                    <br>
+                                    <p>description description<br> description description<br> description description</p>
+
+                                </a>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <div class="row" style="padding: 10%;">
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
+                            <div class="row row-set">
+                                <a class="item col-3" href="listSheet.jsp?type=('faculty')&value=(1)">
+                                    <h2>ชื่อเอกสาร</h2>
+                                    <img  src="images/icon_yellow/yellow-law.png">
+                                    <br>
+                                    <p>description description<br> description description<br> description description</p>
+
+                                </a>
+                                <a class="item col-3" href="listSheet.jsp?type=('faculty')&value=(1)">
+                                    <h2>ชื่อเอกสาร</h2>
+                                    <img  src="images/icon_yellow/yellow-law.png">
+                                    <br>
+                                    <p>description description<br> description description<br> description description</p>
+
+                                </a>
+                                <a class="item col-3" href="listSheet.jsp?type=('faculty')&value=(1)">
+                                    <h2>ชื่อเอกสาร</h2>
+                                    <img  src="images/icon_yellow/yellow-law.png">
+                                    <br>
+                                    <p>description description<br> description description<br> description description</p>
+
+                                </a>
+                                <a class="item col-3" href="listSheet.jsp?type=('faculty')&value=(1)">
+                                    <h2>ชื่อเอกสาร</h2>
+                                    <img  src="images/icon_yellow/yellow-law.png">
+                                    <br>
+                                    <p>description description<br> description description<br> description description</p>
+
+                                </a>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <div class="row" style="padding: 10%;">
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-light">Test</button>
-                                </div>
+                            <div class="row row-set">
+                                <a class="item col-3" href="listSheet.jsp?type=('faculty')&value=(1)">
+                                    <h2>ชื่อเอกสาร</h2>
+                                    <img  src="images/icon_yellow/yellow-law.png">
+                                    <br>
+                                    <p>description description<br> description description<br> description description</p>
+
+                                </a>
+                                <a class="item col-3" href="listSheet.jsp?type=('faculty')&value=(1)">
+                                    <h2>ชื่อเอกสาร</h2>
+                                    <img  src="images/icon_yellow/yellow-law.png">
+                                    <br>
+                                    <p>description description<br> description description<br> description description</p>
+
+                                </a>
+                                <a class="item col-3" href="listSheet.jsp?type=('faculty')&value=(1)">
+                                    <h2>ชื่อเอกสาร</h2>
+                                    <img  src="images/icon_yellow/yellow-law.png">
+                                    <br>
+                                    <p>description description<br> description description<br> description description</p>
+
+                                </a>
+                                <a class="item col-3" href="listSheet.jsp?type=('faculty')&value=(1)">
+                                    <h2>ชื่อเอกสาร</h2>
+                                    <img  src="images/icon_yellow/yellow-law.png">
+                                    <br>
+                                    <p>description description<br> description description<br> description description</p>
+
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -90,7 +138,7 @@
             </form>
 
             <div class="" style="padding-top: 2%; padding-bottom: 2%; background-color: #f1f1f1">
-                <div class="row">
+                <div class="row" style="align-items: center">
                     <div class="col-4">
                         <img  style="width: 150px; height: 150px; float: right" src="images/icon-reading.png">
                     </div>
@@ -104,8 +152,8 @@
                         </p>
                     </div>
                 </div>
-
             </div>
+
             <form action="">
                 <div class="" style="padding-top: 10px; padding-bottom: 10px">
                     <h1 style="margin-left: 5%; margin-top: 3%; color: #aaa">หมวดหมู่วิชา</h1>
@@ -113,95 +161,74 @@
 
                         <div class="carousel-inner">
                             <div class="carousel-item active" style="color: #edb91f">
-                                <div class="row" style="padding-left: 5%;padding-right:5%;padding-top: 2%; padding-bottom: 2%">
+                                <div class="row row-set">
 
-                                    <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(1)">
-                                        <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-science.png">
+                                    <a class="item col-2"href="listSheet.jsp?type=('category')&value=(1)">
+                                        <img src="images/icon-gray/gray-science.png">
                                         <br>
-                                        <label style="color: #bbb; margin-top: 1%">วิทยาศาสตร์</label>
+                                        <label >วิทยาศาสตร์</label>
                                     </a>
 
-                                    <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(2)">
-
-                                        <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-math.png">
+                                    <a class="item col-2" href="listSheet.jsp?type=('category')&value=(2)">
+                                        <img  src="images/icon-gray/gray-math.png">
                                         <br>
-                                        <label style="color: #bbb; margin-top: 1%">คณิตศาสตร์</label>
-
+                                        <label >คณิตศาสตร์</label>
                                     </a>
-                                    <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(3)">
-
-                                        <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-lang.png">
+                                    <a class="item col-2" href="listSheet.jsp?type=('category')&value=(3)">
+                                        <img src="images/icon-gray/gray-lang.png">
                                         <br>
-                                        <label style="color: #bbb; margin-top: 1%">ภาษา</label>
-
+                                        <label >ภาษา</label>
                                     </a>
-                                    <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(4)">
-
-                                        <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-human.png">
+                                    <a class="item col-2" href="listSheet.jsp?type=('category')&value=(4)">
+                                        <img src="images/icon-gray/gray-human.png">
                                         <br>
-                                        <label style="color: #bbb; margin-top: 1%">มนุษย์ศาสตร์</label>
-
+                                        <label >มนุษย์ศาสตร์</label>
                                     </a>
-                                    <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(5)">
-
-                                        <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-law.png">
+                                    <a class="item col-2" href="listSheet.jsp?type=('category')&value=(5)">
+                                        <img src="images/icon-gray/gray-law.png">
                                         <br>
-                                        <label style="color: #bbb; margin-top: 1%">สังคม การเมือง <br>และการปกครอง</label>
-
+                                        <label >สังคม การเมือง <br>และการปกครอง</label>
                                     </a>
-                                    <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(6)">
-
-                                        <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-econ.png">
+                                    <a class="item col-2" href="listSheet.jsp?type=('category')&value=(6)">
+                                        <img src="images/icon-gray/gray-econ.png">
                                         <br>
-                                        <label style="color: #bbb; margin-top: 1%">เศรษฐศาสตร์</label>
-
+                                        <label >เศรษฐศาสตร์</label>
                                     </a>
                                 </div>
                             </div>
 
                             <div class="carousel-item">
-                                <div class="row" style="padding-left: 5%;padding-right: 5%;padding-top: 2%; padding-bottom: 2%">
-                                    <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(7)">
-
-                                        <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-business.png">
+                                <div class="row row-set">
+                                    <a class="item col-2" href="listSheet.jsp?type=('category')&value=(7)">
+                                        <img src="images/icon-gray/gray-business.png">
                                         <br>
-                                        <label style="color: #bbb; margin-top: 1%">ธุรกิจ</label>
-
+                                        <label>ธุรกิจ</label>
                                     </a>
-                                    <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(8)">
-
-                                        <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-history.png">
+                                    <a class="item col-2" href="listSheet.jsp?type=('category')&value=(8)">
+                                        <img src="images/icon-gray/gray-history.png">
                                         <br>
-                                        <label style="color: #bbb; margin-top: 1%">ประวัติศาสตร์</label>
-
+                                        <label>ประวัติศาสตร์</label>
                                     </a>
-                                    <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(9)">
+                                    <a class="item col-2" href="listSheet.jsp?type=('category')&value=(9)">
 
-                                        <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-art.png">
+                                        <img src="images/icon-gray/gray-art.png">
                                         <br>
-                                        <label style="color: #bbb; margin-top: 1%">ศิลปะ</label>
-
+                                        <label>ศิลปะ</label>
                                     </a>
-                                    <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(10)">
-
-                                        <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-com.png">
+                                    <a class="item col-2" href="listSheet.jsp?type=('category')&value=(10)">
+                                        <img src="images/icon-gray/gray-com.png">
                                         <br>
-                                        <label style="color: #bbb; margin-top: 1%">คอมพิวเตอร์<br>และเทคโนโลยี</label>
-
+                                        <label>คอมพิวเตอร์<br>และเทคโนโลยี</label>
                                     </a>
-                                    <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(11)">
-
-                                        <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-eng.png">
+                                    <a class="item col-2" href="listSheet.jsp?type=('category')&value=(11)">
+                                        <img src="images/icon-gray/gray-eng.png">
                                         <br>
-                                        <label style="color: #bbb; margin-top: 1%">วิศวะกรรมศาสตร์</label>
-
+                                        <label>วิศวะกรรมศาสตร์</label>
                                     </a>
-                                    <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(12)">
-
-                                        <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-etc.png">
+                                    <a class="item col-2" href="listSheet.jsp?type=('category')&value=(12)">
+                                        <img src="images/icon-gray/gray-etc.png">
                                         <br>
-                                        <label style="color: #bbb; margin-top: 1%">อื่นๆ</label>
-
+                                        <label>อื่นๆ</label>
                                     </a>
                                 </div>
                             </div>
@@ -215,78 +242,78 @@
                             <!--<span class="carousel-control-next-icon" aria-hidden="true"></span>-->
                             <span class="sr-only">Next</span>
                         </a>
-                    </div>
 
+                    </div>
                 </div>
             </form>
 
             <form action="">
-                <div class="" style="padding-top: 10px; padding-bottom: 10px; background-color: #edb91f">
+                <div class="faculty" >
                     <h1 style="margin-left: 5%; margin-right:5%; margin-top: 2%; color: white">คณะ</h1>
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <div class="row" style="padding-left: 5%;padding-right: 5%;padding-top: 1%; padding-bottom: 2%">
-                                    <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('faculty')&value=(1)">
-                                        <img style="width: 120px; height: 120px;" src="images/logo-faculty/logo-egn.png">
+                                <div class="row row-set">
+                                    <a class="item-f col-2" href="listSheet.jsp?type=('faculty')&value=(1)">
+                                        <img  src="images/logo-faculty/logo-egn.png">
                                         <br>
-                                        <label style="color: #fff; margin-top: 1%">คณะวิศวกรรมศาสตร์</label>
+                                        <label >คณะวิศวกรรมศาสตร์</label>
                                     </a>
-                                    <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('faculty')&value=(2)">
-                                        <img style="width: 120px; height: 120px;" src="images/logo-faculty/logo-arch.png">
+                                    <a class="item-f col-2" href="listSheet.jsp?type=('faculty')&value=(2)">
+                                        <img src="images/logo-faculty/logo-arch.png">
                                         <br>
-                                        <label style="color: #fff; margin-top: 1%">คณะสถาปัตยกรรมศาสตร์</label>
+                                        <label>คณะสถาปัตยกรรมศาสตร์</label>
                                     </a>
-                                    <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('faculty')&value=(3)">
-                                        <img style="width: 120px; height: 120px;" src="images/logo-faculty/logo-arch.png">
+                                    <a class="item-f col-2" href="listSheet.jsp?type=('faculty')&value=(3)">
+                                        <img src="images/logo-faculty/logo-sci.png">
                                         <br>
-                                        <label style="color: #fff; margin-top: 1%">คณะวิทยาศาสตร์</label>
+                                        <label>คณะวิทยาศาสตร์</label>
                                     </a>
-                                    <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('faculty')&value=(4)">
-                                        <img style="width: 120px; height: 120px;" src="images/logo-faculty/logo-arch.png">
+                                    <a class="item-f col-2" href="listSheet.jsp?type=('faculty')&value=(4)">
+                                        <img src="images/logo-faculty/logo-kras.png">
                                         <br>
-                                        <label style="color: #fff; margin-top: 1%">คณะเทคโนโลยีการเกษตร</label>
+                                        <label>คณะเทคโนโลยีการเกษตร</label>
                                     </a>
-                                    <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('faculty')&value=(5)">
-                                        <img style="width: 120px; height: 120px;" src="images/logo-faculty/logo-arch.png">
+                                    <a class="item-f col-2" href="listSheet.jsp?type=('faculty')&value=(5)">
+                                        <img src="images/logo-faculty/logo-kharu.png">
                                         <br>
-                                        <label style="color: #fff; margin-top: 1%">คณะครุศาสตร์<br>อุตสาหกรรม</label>
+                                        <label>คณะครุศาสตร์<br>อุตสาหกรรม</label>
                                     </a>
-                                    <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('faculty')&value=(6)">
-                                        <img style="width: 120px; height: 120px;" src="images/logo-faculty/logo-arch.png">
+                                    <a class="item-f col-2" href="listSheet.jsp?type=('faculty')&value=(6)">
+                                        <img src="images/logo-faculty/logo-argo.png">
                                         <br>
-                                        <label style="color: #fff; margin-top: 1%">คณะอุตสาหกรรมเกษตร</label>
+                                        <label>คณะอุตสาหกรรมเกษตร</label>
                                     </a>
 
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <div class="row" style="padding-left: 20%;padding-right: 10%;padding-top: 1%; padding-bottom: 2%">
-                                    <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('faculty')&value=(7)">
-                                        <img style="width: 120px; height: 120px;" src="images/logo-faculty/logo-arch.png">
+                                <div class="row row-set" style="padding-left: 15%" >
+                                    <a class="item-f col-2" href="listSheet.jsp?type=('faculty')&value=(7)">
+                                        <img  src="images/logo-faculty/logo-it.png">
                                         <br>
-                                        <label style="color: #fff; margin-top: 1%">คณะเทคโนโลยีสารสนเทศ</label>
+                                        <label>คณะเทคโนโลยีสารสนเทศ</label>
                                     </a>
-                                    <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('faculty')&value=(8)">
-                                        <img style="width: 120px; height: 120px;" src="images/logo-faculty/gray-science.png">
+                                    <a class="item-f col-2"  href="listSheet.jsp?type=('faculty')&value=(8)">
+                                        <img src="images/logo-faculty/logo-amc.png">
                                         <br>
-                                        <label style="color: #fff; margin-top: 1%">คณะการบริหารและจัดการ</label>
+                                        <label>คณะการบริหารและจัดการ</label>
                                     </a>
-                                    <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('faculty')&value=(9)">
-                                        <img style="width: 120px; height: 120px;" src="images/logo-faculty/gray-science.png">
+                                    <a class="item-f col-2" href="listSheet.jsp?type=('faculty')&value=(9)">
+                                        <img src="images/logo-faculty/logo-inno.png">
                                         <br>
-                                        <label style="color: #fff; margin-top: 1%">วิทยาลัยนวัตกรรม<br>การผลิตขั้นสูง</label>
+                                        <label>วิทยาลัยนวัตกรรม<br>การผลิตขั้นสูง</label>
                                     </a>
-                                    <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('faculty')&value=(10)">
-                                        <img style="width: 120px; height: 120px;" src="images/logo-faculty/gray-science.png">
+                                    <a class="item-f col-2"  href="listSheet.jsp?type=('faculty')&value=(10)">
+                                        <img src="images/logo-faculty/logo-inter.png">
                                         <br>
-                                        <label style="color: #fff; margin-top: 1%">วิทยาลัยนานาชาติ</label>
+                                        <label>วิทยาลัยนานาชาติ</label>
                                     </a>
-                                    <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('faculty')&value=(11)">
-                                        <img style="width: 120px; height: 120px;" src="images/logo-faculty/gray-science.png">
+                                    <a class="item-f col-2" href="listSheet.jsp?type=('faculty')&value=(11)">
+                                        <img src="images/logo-faculty/logo-nano.png">
                                         <br>
-                                        <label style="color: #fff; margin-top: 1%">วิทยาลัยนาโนเทคโนโลยี</label>
+                                        <label>วิทยาลัยนาโนเทคโนโลยี</label>
                                     </a>
 
                                 </div>
@@ -328,6 +355,7 @@
         <!-- css -->
         <link rel="stylesheet" type="" href="css/yim_style.css">
         <link rel="stylesheet" type="" href="css/win-style.css">
+        <link rel="stylesheet" type="" href="css/homePageStyle.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </body>
