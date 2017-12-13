@@ -188,10 +188,10 @@
             </div>
         </form>
         
-        <div class="" style="padding-top: 10px; padding-bottom: 10px; background-color: #f1f1f1">
+        <div class="" style="padding-top: 10px; padding-bottom: 10px; background-color: #ffffff00">
             <div class="row">
                 <div class="col-5">
-                    <img  style="width: 150px; height: 150px;" src="images/icon-black/black-etc.png">
+                    <img  style="width: 150px; height: 150px; float: right" src="images/icon-black/black-etc.png">
                 </div>
                 <div class="col-7" >
                     <h3>เคล็ดลับการพักสายตา</h3>
@@ -218,44 +218,44 @@
                         <div class="row" style="padding-left: 5%;padding-top: 2%; padding-bottom: 2%">
 
                             <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(1)">
-                                <img style="width: 120px; height: 120px;" src="images/icon_gray/yellow-sceince.png">
+                                <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-science.png">
                                 <br>
-                                <label style="color: #edb91f">วิทยาศาสตร์</label>
+                                <label style="color: #bbb">วิทยาศาสตร์</label>
                             </a>
 
                             <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(2)">
 
-                                <img style="width: 120px; height: 120px;" src="images/icon_gray/yellow-math.png">
+                                <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-math.png">
                                 <br>
-                                <label style="color: #edb91f">คณิตศาสตร์</label>
+                                <label style="color: #bbb">คณิตศาสตร์</label>
 
                             </a>
                             <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(3)">
 
-                                <img style="width: 120px; height: 120px;" src="images/icon_gray/yellow-lang.png">
+                                <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-lang.png">
                                 <br>
-                                <label style="color: #edb91f">ภาษา</label>
+                                <label style="color: #bbb">ภาษา</label>
 
                             </a>
                             <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(4)">
 
-                                <img style="width: 120px; height: 120px;" src="images/icon_gray/yellow-human.png">
+                                <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-human.png">
                                 <br>
-                                <label style="color: #edb91f">มนุษย์ศาสตร์</label>
+                                <label style="color: #bbb">มนุษย์ศาสตร์</label>
 
                             </a>
                             <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(5)">
 
-                                <img style="width: 120px; height: 120px;" src="images/icon_gray/yellow-law.png">
+                                <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-law.png">
                                 <br>
-                                <label style="color: #edb91f">สังคม การเมือง <br>และการปกครอง</label>
+                                <label style="color: #bbb">สังคม การเมือง <br>และการปกครอง</label>
 
                             </a>
                             <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(6)">
 
-                                <img style="width: 120px; height: 120px;" src="images/icon_gray/yellow-econ.png">
+                                <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-econ.png">
                                 <br>
-                                <label style="color: #edb91f">เศรษฐศาสตร์</label>
+                                <label style="color: #bbb">เศรษฐศาสตร์</label>
 
                             </a>
                         </div>
@@ -265,44 +265,44 @@
                         <div class="row" style="padding-left: 5%;padding-top: 2%; padding-bottom: 2%">
                             <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(7)">
 
-                                <img style="width: 120px; height: 120px;" src="images/icon_gray/yellow-business.png">
+                                <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-business.png">
                                 <br>
-                                <label style="color: #edb91f">ธุรกิจ</label>
+                                <label style="color: #bbb">ธุรกิจ</label>
 
                             </a>
                             <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(8)">
 
-                                <img style="width: 120px; height: 120px;" src="images/icon_gray/yellow-history.png">
+                                <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-history.png">
                                 <br>
-                                <label style="color: #edb91f">ประวัติศาสตร์</label>
+                                <label style="color: #bbb">ประวัติศาสตร์</label>
 
                             </a>
                             <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(9)">
 
-                                <img style="width: 120px; height: 120px;" src="images/icon_gray/yellow-art.png">
+                                <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-art.png">
                                 <br>
-                                <label style="color: #edb91f">ศิลปะ</label>
+                                <label style="color: #bbb">ศิลปะ</label>
 
                             </a>
                             <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(10)">
 
-                                <img style="width: 120px; height: 120px;" src="images/icon_gray/yellow-com.png">
+                                <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-com.png">
                                 <br>
-                                <label style="color: #edb91f">คอมพิวเตอร์<br>และเทคโนโลยี</label>
+                                <label style="color: #bbb">คอมพิวเตอร์<br>และเทคโนโลยี</label>
 
                             </a>
                             <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(11)">
 
-                                <img style="width: 120px; height: 120px;" src="images/icon_gray/yellow-eng.png">
+                                <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-eng.png">
                                 <br>
-                                <label style="color: #edb91f">วิศวะกรรมศาสตร์</label>
+                                <label style="color: #bbb">วิศวะกรรมศาสตร์</label>
 
                             </a>
                             <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(12)">
 
-                                <img style="width: 120px; height: 120px;" src="images/icon_gray/yellow-etc.png">
+                                <img style="width: 120px; height: 120px;" src="images/icon-gray/gray-etc.png">
                                 <br>
-                                <label style="color: #edb91f">อื่นๆ</label>
+                                <label style="color: #bbb">อื่นๆ</label>
 
                             </a>
                         </div>
