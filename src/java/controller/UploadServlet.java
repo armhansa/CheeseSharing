@@ -41,11 +41,21 @@ public class UploadServlet extends HttpServlet {
             out.println("<h1>2</h1>");
             Part filePart = request.getPart("file_uploaded");
             String category = request.getParameter("category");
-            String faculty = request.getParameter("faculty");
+            String faculty = null;
             switch(Integer.parseInt(request.getParameter("faculty"))) {
-                case 1:
-                    faculty = "";break;
-//                case 2;
+                case 1: faculty = "คณะวิศวกรรมศาสตร์";break;
+                case 2: faculty = "คณะสถาปัตยกรรมศาสตร์";break;
+                case 3: faculty = "คณะครุศาสตร์อุตสาหกรรม";break;
+                case 4: faculty = "คณะวิทยาศาสตร์";break;
+                case 5: faculty = "คณะเทคโนโลยีการเกษตร";break;
+                case 6: faculty = "คณะเทคโนโลยีสารสนเทศ";break;
+                case 7: faculty = "คณะอุตสาหกรรมเกษตร";break;
+                case 8: faculty = "คณะการบริหารและจัดการวิทยาลัยนวัตกรรมการผลิตขั้นสูง";break;
+                case 9: faculty = "วิทยาลัยนานาชาติ";break;
+                case 10: faculty = "วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง";break;
+                case 11: faculty = "วิทยาลัยอุตสาหกรรมการบินนานาชาติ";break;
+                default: faculty = "";
+                
             }
             String description = request.getParameter("description");
             String username = (String) session.getAttribute("Username");
@@ -54,7 +64,6 @@ public class UploadServlet extends HttpServlet {
             
             InputStream inputStream = null;
             if (filePart != null) {
-                out.println("<h1>"+filePart.getName()+"</h1>");
                 out.println("<h1>has file path</h1>");
                 out.println(filePart.getName());
                 out.println(filePart.getSize());
@@ -63,17 +72,16 @@ public class UploadServlet extends HttpServlet {
                 inputStream = filePart.getInputStream();
                 try {
                     out.println("<h1>4</h1>");
-                    String sql = "INSERT INTO SHEETS (Title, Faculty, Category, Description, USERS_Username) VALUES(?, ?, ?, ?, ?)";
+                    String sql = "INSERT INTO SHEETS (Title, File, Faculty, Category, Description, USERS_Username) VALUES(?, ?, ?, ?, ?, ?)";
                     
                     PreparedStatement prStmt = conn.prepareStatement(sql);
                     out.println("<h1>5</h1>");
                     prStmt.setString(1, title);
-                    prStmt.setString(2, faculty);
-                    prStmt.setString(3, category);
-                    prStmt.setString(4, description);
-                    prStmt.setString(5, username);
                     
-                    prStmt.executeUpdate();
+                    prStmt.setString(3, faculty);
+                    prStmt.setString(4, category);
+                    prStmt.setString(5, description);
+                    prStmt.setString(6, username);
                     
                     if (inputStream != null) {
                         out.println("<h1>6</h1>");
@@ -93,7 +101,7 @@ public class UploadServlet extends HttpServlet {
                     } else {
                         out.println("<h1>inputStream is null</h1>");
                         reaction.alert(out, "Couldn't upload your file!!!", 1);
-                    }                    
+                    }
                 } catch(SQLException e) {
                     e.printStackTrace();
                     reaction.alert(out, "Couldn't upload your file!!!", 1);
