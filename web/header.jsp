@@ -17,7 +17,7 @@
                         <div class="dropdown">
                             <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown"> --><img class="user_profile dropdown-toggle" data-toggle="dropdown" src="images/person2.jpg"></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Profile</a></li>
+                                <li><a href="editProfile.jsp">Profile</a></li>
                                 <li class="divider"></li>
                                 <li><a href="LogoutServlet">Logout</a></li>
                             </ul>
