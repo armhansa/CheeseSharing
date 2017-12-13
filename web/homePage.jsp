@@ -12,6 +12,9 @@
         <title>CheeseSharing</title>
         <!-- Required meta tags -->
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        
+    <link href="https://fonts.googleapis.com/css?family=Kanit:300" rel="stylesheet">
     </head>
     <body>
         <nav class="navbar navbar-expand-lg bg-light">
@@ -26,7 +29,7 @@
                         <div class="dropdown">
                             <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown"> --><img class="user_profile dropdown-toggle" data-toggle="dropdown" src="images/person2.jpg"></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Profile</a></li>
+                                <li><a href="EditProfile.html">Profile</a></li>
                                 <li class="divider"></li>
                                 <li><a href="LogoutServlet">Logout</a></li>
                             </ul>
@@ -124,142 +127,6 @@
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner">
-                    <div class="carousel-item active" style="color: #edb91f">
-                        <div class="row" style="padding-left: 5%;padding-top: 2%; padding-bottom: 2%">
-
-                            <a class="col-3" style="text-align: center;" href="homepage.html">
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-sceince.png">
-                                <br>
-                                <label style="color: #edb91f">วิทยาศาสตร์</label>
-                            </a>
-
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-math.png">
-                                <br>
-                                <label style="color: #edb91f">คณิตศาสตร์</label>
-
-                            </a>
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-lang.png">
-                                <br>
-                                <label style="color: #edb91f">ภาษา</label>
-
-                            </a>
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-human.png">
-                                <br>
-                                <label style="color: #edb91f">มนุษย์ศาสตร์</label>
-
-                            </a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row" style="padding-left: 5%;padding-top: 2%; padding-bottom: 2%">
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-law.png">
-                                <br>
-                                <label style="color: #edb91f">สังคมการเมือง การปกครอง</label>
-
-                            </a>
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-econ.png">
-                                <br>
-                                <label style="color: #edb91f">เศรษฐศาสตร์</label>
-
-                            </a>
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-business.png">
-                                <br>
-                                <label style="color: #edb91f">ธุรกิจ</label>
-
-                            </a>
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-history.png">
-                                <br>
-                                <label style="color: #edb91f">ประวัติศาสตร์</label>
-
-                            </a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row" style="padding-left: 5%;padding-top: 2%; padding-bottom: 2%">
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-art.png">
-                                <br>
-                                <label style="color: #edb91f">ศิลปะ</label>
-
-                            </a>
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-com.png">
-                                <br>
-                                <label style="color: #edb91f">คอมพิวเตอรืและเทคโนโลยี</label>
-
-                            </a>
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-eng.png">
-                                <br>
-                                <label style="color: #edb91f">วิศวะกรรมศาสตร์</label>
-
-                            </a>
-                            <a class="col-3" style="text-align: center;" href="#">
-
-                                <img style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-etc.png">
-                                <br>
-                                <label style="color: #edb91f">อื่นๆ</label>
-
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </form>
-        
-        <div class="" style="padding-top: 10px; padding-bottom: 10px; background-color: #f1f1f1">
-            <div class="row">
-                <div class="col-5">
-                    <img  style="width: 150px; height: 150px;" src="images/icon_yellow/yellow-etc.png">
-                </div>
-                <div class="col-7">
-                    <h3>เคล็ดลับการพักสายตา</h3>
-                    <p> 
-                        หลับตา 5-10 นาที<br>
-                        ใช้มือสองข้างถูกันจนอุ่น หลับตา แล้วนำมือมาประคบที่ตาทิ้งไว้สักพัก<br>
-                        สลับไปมองสีโทนเย็น เช่นสีเขียว,สีฟ้า<br>
-                        กระพริบตา เพื่อให้น้ำตามาหล่อเลี้ยงดวงตาของเรา<br>
-                    </p>
-                </div>
-                
-            </div>
-            
-        </div>
-        <form action="">
-            <div class="" style="padding-top: 10px; padding-bottom: 10px; background-color: ">
-                <h1>หมวดหมู่วิชา</h1>
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="row" style="padding: 10%;">
                                 <div class="col-3">
@@ -309,12 +176,145 @@
                             </div>
                         </div>
                     </div>
+                
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <!--<span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <!--<span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </form>
+        
+        <div class="" style="padding-top: 10px; padding-bottom: 10px; background-color: #f1f1f1">
+            <div class="row">
+                <div class="col-5">
+                    <img  style="width: 150px; height: 150px;" src="images/icon-black/black-etc.png">
+                </div>
+                <div class="col-7" >
+                    <h3>เคล็ดลับการพักสายตา</h3>
+                    <p> 
+                        หลับตา 5-10 นาที<br>
+                        ใช้มือสองข้างถูกันจนอุ่น หลับตา แล้วนำมือมาประคบที่ตาทิ้งไว้สักพัก<br>
+                        สลับไปมองสีโทนเย็น เช่นสีเขียว,สีฟ้า<br>
+                        กระพริบตา เพื่อให้น้ำตามาหล่อเลี้ยงดวงตาของเรา<br>
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+        <form action="">
+            <div class="" style="padding-top: 10px; padding-bottom: 10px">
+                <h1>หมวดหมู่วิชา</h1>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                    <div class="carousel-item active" style="color: #edb91f">
+                        <div class="row" style="padding-left: 5%;padding-top: 2%; padding-bottom: 2%">
+
+                            <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(1)">
+                                <img style="width: 120px; height: 120px;" src="images/icon_gray/yellow-sceince.png">
+                                <br>
+                                <label style="color: #edb91f">วิทยาศาสตร์</label>
+                            </a>
+
+                            <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(2)">
+
+                                <img style="width: 120px; height: 120px;" src="images/icon_gray/yellow-math.png">
+                                <br>
+                                <label style="color: #edb91f">คณิตศาสตร์</label>
+
+                            </a>
+                            <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(3)">
+
+                                <img style="width: 120px; height: 120px;" src="images/icon_gray/yellow-lang.png">
+                                <br>
+                                <label style="color: #edb91f">ภาษา</label>
+
+                            </a>
+                            <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(4)">
+
+                                <img style="width: 120px; height: 120px;" src="images/icon_gray/yellow-human.png">
+                                <br>
+                                <label style="color: #edb91f">มนุษย์ศาสตร์</label>
+
+                            </a>
+                            <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(5)">
+
+                                <img style="width: 120px; height: 120px;" src="images/icon_gray/yellow-law.png">
+                                <br>
+                                <label style="color: #edb91f">สังคม การเมือง <br>และการปกครอง</label>
+
+                            </a>
+                            <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(6)">
+
+                                <img style="width: 120px; height: 120px;" src="images/icon_gray/yellow-econ.png">
+                                <br>
+                                <label style="color: #edb91f">เศรษฐศาสตร์</label>
+
+                            </a>
+                        </div>
+                    </div>
+                 
+                    <div class="carousel-item">
+                        <div class="row" style="padding-left: 5%;padding-top: 2%; padding-bottom: 2%">
+                            <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(7)">
+
+                                <img style="width: 120px; height: 120px;" src="images/icon_gray/yellow-business.png">
+                                <br>
+                                <label style="color: #edb91f">ธุรกิจ</label>
+
+                            </a>
+                            <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(8)">
+
+                                <img style="width: 120px; height: 120px;" src="images/icon_gray/yellow-history.png">
+                                <br>
+                                <label style="color: #edb91f">ประวัติศาสตร์</label>
+
+                            </a>
+                            <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(9)">
+
+                                <img style="width: 120px; height: 120px;" src="images/icon_gray/yellow-art.png">
+                                <br>
+                                <label style="color: #edb91f">ศิลปะ</label>
+
+                            </a>
+                            <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(10)">
+
+                                <img style="width: 120px; height: 120px;" src="images/icon_gray/yellow-com.png">
+                                <br>
+                                <label style="color: #edb91f">คอมพิวเตอร์<br>และเทคโนโลยี</label>
+
+                            </a>
+                            <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(11)">
+
+                                <img style="width: 120px; height: 120px;" src="images/icon_gray/yellow-eng.png">
+                                <br>
+                                <label style="color: #edb91f">วิศวะกรรมศาสตร์</label>
+
+                            </a>
+                            <a class="col-2" style="text-align: center;" href="listSheet.jsp?type=('category')&value=(12)">
+
+                                <img style="width: 120px; height: 120px;" src="images/icon_gray/yellow-etc.png">
+                                <br>
+                                <label style="color: #edb91f">อื่นๆ</label>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                    
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <!--<span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
                         <span class="sr-only">Previous</span>
                     </a>
                     <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <!--<span class="carousel-control-next-icon" aria-hidden="true"></span>-->
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
