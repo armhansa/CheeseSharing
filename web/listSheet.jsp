@@ -20,9 +20,11 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <link href="https://fonts.googleapis.com/css?family=Kanit:300" rel="stylesheet">
 
     </head>
-    <body>
+    <body style="font-family: 'Kanit'">
         <%@include file="header.jsp" %>
 
         <div class="type-subject">
@@ -30,6 +32,8 @@
         </div>
         <div class="list-sheet">
             <!--  loop very loop  -->
+            
+            <div class="h-line"></div>
             <c:forEach var="list" items="${filter.rows}">
                 <div class="sheet">
                     <div class="detail">
@@ -38,7 +42,7 @@
                     </div>
                     <div class="open-file">
                         ผู้เข้าชม ${list.ViewCount} คน
-                        <a href="viewFile.jsp?id=${list.idSheet}" class="open-btn btn btn-warning" type="submit" style="margin-left: 20px; width: 70px;" >เปิด</a>
+                        <a href="viewFile.jsp?id=${list.idSheet}" class="btn click-open" style="margin-left: 20px; width: 70px;" >เปิด</a>
                     </div>
                 </div>
             </c:forEach>

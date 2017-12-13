@@ -8,7 +8,7 @@
 <nav class="navbar navbar-expand-lg bg-light">
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-brand ">
-                    <a class="" href="homepage.html" style="margin-right: 0">
+                    <a class="" href="homePage.jsp" style="margin-right: 0">
                         <img src="images/logo.png" class="logo_size"></a>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
@@ -17,7 +17,7 @@
                         <div class="dropdown">
                             <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown"> --><img class="user_profile dropdown-toggle" data-toggle="dropdown" src="images/person2.jpg"></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Profile</a></li>
+                                <li><a href="editProfile.jsp">Profile</a></li>
                                 <li class="divider"></li>
                                 <li><a href="LogoutServlet">Logout</a></li>
                             </ul>
@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-control" id="usr" placeholder="ชื่อไฟล์" name="title">
+                            <input type="text" class="form-control" id="usr" placeholder="ชื่อไฟล์" name="title" required maxlength="45">
                         </div>
 
                         <div class="form-group">
@@ -90,7 +90,7 @@
                         </div>
 
                         <div class="form-group">
-                            <textarea class="form-control" rows="5" id="comment" placeholder="คำอธิบาย" name="description"></textarea>
+                            <textarea class="form-control" rows="5" id="comment" placeholder="คำอธิบาย" name="description" maxlength="200"></textarea>
                         </div>
                         <button id="button_win" class="btn btn-submit">Upload</button>
                         <br>
