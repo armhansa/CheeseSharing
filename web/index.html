@@ -10,9 +10,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="css/indexStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Kanit:300" rel="stylesheet">
 </head>
 
-<body>
+<body style="font-family: 'Kanit'">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div style="text-align: center">
@@ -28,19 +29,21 @@
                     <input class="login-input form-control mr-sm-2" name="password" type="password" placeholder="รหัสผ่าน" required>
                     <button class="login-btn btn btn-outline-success my-2 my-sm-0" type="submit">เข้าสู่ระบบ</button>
                 </form>
-            </div>
-        
+        </div>
     </nav>
 
-    <section id="fh5co-home" data-section="home" data-stellar-background-ratio="0.5">
+    <section id="fh5co-home" data-section="home" data-stellar-background-ratio="0.5" >
         <div style="padding: 75px">
-            <div class="row">
-                <div class="col-md-6 col-lg-7">
+            <div style="display: inline-flex">
+            
+            <div class="row crop">
+                <div class=" col-md-6 col-lg-7" style="overflow: hidden">
+                <div class="img" style="background: url('images/index-img1.jpg') no-repeat;background-size: cover; width:100%;height: 200px"></div>
                 </div>
-                <div class="register col-md-6 col-lg-4">
+                <div class="register col-md-6 col-lg-5">
                     <!-- Register -->
                     <form action="RegisterServlet" method="POST">
-                        <h1 style="margin-bottom: 10%">สมัครสมาชิกผู้ใช้ใหม่</h1>
+                        <h1 style="margin-bottom: 10%">สมัครสมาชิก</h1>
                         <div class="">
                             <div class="row">
                                 <div class="col-md-6 col-lg-6" style="margin-bottom: 30px">
@@ -82,12 +85,14 @@
                         </div>
 
                         <div class="form-group" style="margin-top: 20px">
-                            <a href="index.html"><button type="submit" class="btn btn-primary button-2 btn-lg">สร้างบัญชีผู้ใช้งาน</button></a>
+                            <a href="index.html"><button type="submit" class="btn button-2 btn-lg">สร้างบัญชีผู้ใช้งาน</button></a>
                         </div>
 
                     </form>
                 </div>
             </div>
+            </div>
+            
         </div>
     </section>
     <!-- Optional JavaScript -->
