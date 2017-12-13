@@ -42,7 +42,7 @@
 <link rel="shortcut icon" href="favicon.ico">
 
 <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 <!-- Animate.css -->
 <link rel="stylesheet" href="css/animate.css">
 <!-- Icomoon Icon Fonts-->
@@ -70,36 +70,103 @@
 
 </head>
 <body>
-	<header role="banner" id="fh5co-header">
-		<div class="fluid-container">
-			<nav class="navbar navbar-default">
-				<div class="navbar-header">
-					<!-- Mobile Toggle Menu Button -->
-					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-					<a class="navbar-brand" href="index.html" style="margin-right: 0"><span>Sheet</span><h5 style="margin: 0">Sharing</h5></a> 
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-right">
+	 <nav class="navbar navbar-expand-lg bg-light">
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-brand ">
+                <a class="" href="homepage.html" style="margin-right: 0">
+                    <img src="images/logo.png" class="logo_size"></a>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Trigger the modal with a button -->
+                    <button type="button" class="btn btn_upload" data-toggle="modal" data-target="#myModal">Upload</button>
+                    <div class="dropdown">
+                        <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown"> --><img class="user_profile dropdown-toggle" data-toggle="dropdown" src="images/person2.jpg"></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Profile</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/../LogoutServlet">Logout</a></li>
+                        </ul>
+                    </div>
 
-						<!-- Trigger/Open The Modal -->
-						<button id="button_win" class="btn btn-submit">Upload</button>
+                </ul>
+            </div>
+        </nav>
+        <form action="UploadServlet" method="POST">
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
 
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">Upload here!!</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
 
-						<div class="dropdown">
-						    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="img-reponsive profile_yim" src="images/person4.jpg" alt="Roger Garfield"></a>
-					        <ul class="dropdown-menu">
-					            <li><a href="#">Profile</a></li>
-					            <li class="divider"></li>
-					            <li><a href="#">Logout</a></li>
-					        </ul>
-						</div>
+                  </div>
+                  <div class="modal-body">
+                      <div class="form-group">
+                        <br>
+                        <input class="inputupload_win" id="uploadFile" placeholder="Choose File" disabled="disabled" />
 
+                        <div class="fileUpload btn btn-sm">
+                            <span>Choose file</span>
+                            <input id="uploadBtn" type="file" class="upload" />
+                        </div>
 
-					</ul>
-				</div>
-			</nav>
-		</div>
-	</header>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="usr" placeholder="ชื่อไฟล์" name="title">
+                    </div>
+
+                    <div class="form-group">
+                        <select class="form-control" id="sel1" name="faculty">
+                            <option value="" disabled selected>เลือกคณะ</option>
+                            <option value="คณะวิศวกรรมศาสตร์">คณะวิศวกรรมศาสตร์</option>
+                            <option value="คณะสถาปัตยกรรมศาสตร์">คณะสถาปัตยกรรมศาสตร์</option>
+                            <option value="คณะครุศาสตร์อุตสาหกรรม">คณะครุศาสตร์อุตสาหกรรม</option>
+                            <option value="คณะวิทยาศาสตร์">คณะวิทยาศาสตร์</option>
+                            <option value="คณะเทคโนโลยีการเกษตร">คณะเทคโนโลยีการเกษตร</option>
+                            <option value="คณะเทคโนโลยีสารสนเทศ">คณะเทคโนโลยีสารสนเทศ</option>
+                            <option value="คณะอุตสาหกรรมเกษตร">คณะอุตสาหกรรมเกษตร</option>
+                            <option value="คณะการบริหารและจัดการวิทยาลัยนวัตกรรมการผลิตขั้นสูง">คณะการบริหารและจัดการวิทยาลัยนวัตกรรมการผลิตขั้นสูง</option>
+                            <option value="วิทยาลัยนานาชาติ">วิทยาลัยนานาชาติ</option>
+                            <option value="วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง">วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง</option>
+                            <option value="วิทยาลัยอุตสาหกรรมการบินนานาชาติ">วิทยาลัยอุตสาหกรรมการบินนานาชาติ</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <select class="form-control" id="sel1" name="category">
+                            <option value="" disabled selected>เลือกหมวดหมู่</option>
+                            <option value="วิทยาศาสตร์">วิทยาศาสตร์</option>
+                            <option value="ภาษา">ภาษา</option>
+                            <option value="คณิตศาสตร์">คณิตศาสตร์</option>
+                            <option value="Computer and Technology">Computer and Technology</option>
+                            <option value="มนุษยศาสตร์">มนุษยศาสตร์</option>
+                            <option value="สังคม,การเมืองและการปกครอง">สังคม,การเมืองและการปกครอง</option>
+                            <option value="ศิลปะ">ศิลปะ</option>
+                            <option value="ธุรกิจ">ธุรกิจ</option>
+                            <option value="ประวัติศาสตร์">ประวัติศาสตร์</option>
+                            <option value="วิศวกรรมศาสตร์">วิศวกรรมศาสตร์</option>
+                            <option value="เศรษฐศาสตร์">เศรษฐศาสตร์</option>
+                            <option value="อื่นๆ">อื่นๆ</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea class="form-control" rows="5" id="comment" placeholder="คำอธิบาย" name="description"></textarea>
+                    </div>
+                    <button id="button_win" class="btn btn-submit">Upload</button>
+                    <br>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</form>
 
 	<section id="fh5co-pricing" data-section="pricing">
 
@@ -329,6 +396,10 @@
 	<script src="js/google_map.js"></script>
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/win-style.css">
+	<link rel="stylesheet" type="" href="css/yim_style.css">
 
 </body>
 </html>

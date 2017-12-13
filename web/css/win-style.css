@@ -68,3 +68,8 @@ select.form-control:not([size]):not([multiple]) {
 .navbar{
     margin-bottom: 0px;
 }
+
+/*a:focus, a:hover {
+    color: white;
+    text-decoration: none;
+}*/
