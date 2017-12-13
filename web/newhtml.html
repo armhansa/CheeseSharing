@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <form action="UploadServlet" method="POST">
-            <input type="file" name="file_uploaded" /> <br>
+        <form action="UploadServlet" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file_uploaded" accept=".pdf" /> <br>
             <input type="submit" value="Login" />
         </form>
     </body>
