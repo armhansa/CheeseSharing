@@ -12,16 +12,16 @@
     <body>
         
         <%  
-            String id=(request.getParameter("id"));
+            String id = request.getParameter("id");
             
             Blob file = null;
-            byte[ ] fileData = null ;
+            byte[] fileData = null ;
 
-            try
-            {    
+            try {
                 Connection conn = (Connection) getServletContext().getAttribute("Connection");
             
-                String sqlString = "SELECT file FROM SHEETS WHERE idSheet = '"+id+"'";
+                String sqlString = "SELECT File FROM SHEETS WHERE idSheet = "+id;
+                out.println(sqlString);
                 Statement myStatement = conn.createStatement();
                 
                 ResultSet rs = myStatement.executeQuery(sqlString);
