@@ -14,52 +14,52 @@
             <ul class="nav navbar-brand ">
                 <a class="" href="homepage.html" style="margin-right: 0">
                     <img src="images/logo.png" class="logo_size"></a>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- Trigger the modal with a button -->
-                    <button type="button" class="btn btn_upload" data-toggle="modal" data-target="#myModal">Upload</button>
-                    <div class="dropdown">
-                        <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown"> --><img class="user_profile dropdown-toggle" data-toggle="dropdown" src="images/person2.jpg"></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Profile</a></li>
-                            <li class="divider"></li>
-                            <li><a href="/../LogoutServlet">Logout</a></li>
-                        </ul>
-                    </div>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn_upload" data-toggle="modal" data-target="#myModal">Upload</button>
+                <div class="dropdown">
+                    <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown"> --><img class="user_profile dropdown-toggle" data-toggle="dropdown" src="images/person2.jpg"></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Profile</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/../LogoutServlet">Logout</a></li>
+                    </ul>
+                </div>
 
-                </ul>
-            </div>
-        </nav>
-        <form action="UploadServlet" method="POST">
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
+            </ul>
+        </div>
+    </nav>
+    <form action="UploadServlet" method="POST">
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
 
-                  <!-- Modal content-->
-                  <div class="modal-content">
+                <!-- Modal content-->
+                <div class="modal-content">
                     <div class="modal-header">
-                      <h4 class="modal-title">Upload here!!</h4>
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Upload here!!</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
 
-                  </div>
-                  <div class="modal-body">
-                      <div class="form-group">
-                        <br>
-                        <input class="inputupload_win" id="uploadFile" placeholder="Choose File" disabled="disabled" />
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <br>
+                            <input class="inputupload_win" id="uploadFile" placeholder="Choose File" disabled="disabled" />
 
-                        <div class="fileUpload btn btn-sm">
-                            <span>Choose file</span>
-                            <input id="uploadBtn" type="file" class="upload" />
+                            <div class="fileUpload btn btn-sm">
+                                <span>Choose file</span>
+                                <input id="uploadBtn" type="file" class="upload" />
+                            </div>
+
                         </div>
 
-                    </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="usr" placeholder="ชื่อไฟล์" name="title">
+                        </div>
 
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="usr" placeholder="ชื่อไฟล์" name="title">
-                    </div>
-
-                    <div class="form-group">
-                        <select class="form-control" id="sel1" name="faculty">
+                        <div class="form-group">
+                            <select class="form-control" id="sel1" name="faculty">
                             <option value="" disabled selected>เลือกคณะ</option>
                             <option value="คณะวิศวกรรมศาสตร์">คณะวิศวกรรมศาสตร์</option>
                             <option value="คณะสถาปัตยกรรมศาสตร์">คณะสถาปัตยกรรมศาสตร์</option>
@@ -73,10 +73,10 @@
                             <option value="วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง">วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง</option>
                             <option value="วิทยาลัยอุตสาหกรรมการบินนานาชาติ">วิทยาลัยอุตสาหกรรมการบินนานาชาติ</option>
                         </select>
-                    </div>
+                        </div>
 
-                    <div class="form-group">
-                        <select class="form-control" id="sel1" name="category">
+                        <div class="form-group">
+                            <select class="form-control" id="sel1" name="category">
                             <option value="" disabled selected>เลือกหมวดหมู่</option>
                             <option value="วิทยาศาสตร์">วิทยาศาสตร์</option>
                             <option value="ภาษา">ภาษา</option>
@@ -91,40 +91,42 @@
                             <option value="เศรษฐศาสตร์">เศรษฐศาสตร์</option>
                             <option value="อื่นๆ">อื่นๆ</option>
                         </select>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" id="comment" placeholder="คำอธิบาย" name="description"></textarea>
+                        </div>
+                        <button id="button_win" class="btn btn-submit">Upload</button>
+                        <br>
                     </div>
 
-                    <div class="form-group">
-                        <textarea class="form-control" rows="5" id="comment" placeholder="คำอธิบาย" name="description"></textarea>
-                    </div>
-                    <button id="button_win" class="btn btn-submit">Upload</button>
-                    <br>
                 </div>
 
             </div>
-
         </div>
-    </div>
 
-</form>
+    </form>
 
-    <div class="row edit-mid">
-        <span class="col-6" style="margin-bottom: 5%;">
-            <h1 style="color: #edb91f; margin: 0;" class="col-9">USERNAME</h1>
-            <div  style="display: inline-flex; color: #868686">
-                <h3 class="col-6" style="padding-left: 10%" >Piyachanin</h3>
-                <h3 class="col-6" >Tadmorn</h3>
+    <div class="row edit-mid edit_margin-top">
+        <span class="col-6 Absolute-Center">
+            <div style="color: #edb91f; text-align: center">
+                <h1 style="" class="col-11 header-edit">USERNAME</h1>
+            <div  style="display: inline-flex;color: #868686;text-align:  center;margin: 2%;">
+                <h3 class="col-6" style="margin: 0;" >Piyachanin</h3>
+                <h3 class="col-6" style="margin: 0;">Tadmorn</h3>
             </div>
-            <div>
-                <img src="images/person3.jpg" class="col-12">
+            </div>
+            <div class="img-profile">
+                <img src="images/person3.jpg" style="" class="col-12">
             </div>
 
         </span>
-        <span class="col-5 bg_color" style="margin-left: 2%;margin: 3%;">
+        <span class="col-5 bg_color edit_margin-top">
             <div class="bg_color">
                 <form action="" method="post">
-                    <div style="margin-top: 10%">
+                    <div class="name-margin" style="margin-top: 10%">
                         <input type="text" name="firstname" placeholder="name" class="col-10 form-control margin_form"><br>
-                        <input type="text" name="lastname" placeholder="lastname"  class="col-10 form-control margin_form" style="margin-bottom: 5%">
+                        <input type="text" name="lastname" placeholder="lastname"  class="col-10 form-control margin_form">
                     </div>
                     <input type="text" name="username" placeholder="username" class="col-10 form-control margin_form"><br>
                     <input type="password" name="pasword" placeholder="password" class="col-10 form-control margin_form"><br>
