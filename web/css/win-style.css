@@ -1,9 +1,4 @@
-.user_profile{
-	width: 65px;
-	height: 65px;
-	border-radius: 35px; 
-	cursor: pointer;
-}
+
 .btn-outline-success:hover {
 	cursor: pointer;
 }
@@ -45,13 +40,7 @@ select.form-control:not([size]):not([multiple]) {
     -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
     transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
-.btn_upload{
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	transition: 0.3s;
-	margin-right: 20px;
-	background-color: #edb91f;
-}
+
 .btn-submit{
 	background-color: #edb91f;
 	letter-spacing: 2px;

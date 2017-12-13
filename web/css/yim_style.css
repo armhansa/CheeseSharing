@@ -71,7 +71,7 @@ img {
 
 .logo_size {
     width: 50%;
-}
+    float: left;
 
 .margin_form {
     margin-left: 9%
@@ -111,7 +111,7 @@ img {
 
 .col-9.header-edit{
     max-width: 0;
-}
+}}
 
 @keyframes colorize {
     0% {
