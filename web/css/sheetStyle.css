@@ -114,3 +114,10 @@ img {
 .h-line{
     border-bottom: 1px solid #ddd;
 }
+
+.click-open{
+    background-color: #ffffff00;
+    color: #edb91f;
+    border: 2px solid #edb91f;
+    
+}
