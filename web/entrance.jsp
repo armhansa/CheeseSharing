@@ -1,6 +1,10 @@
 <%@page import="tool.ThaiName"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
+<%String user = (String)session.getAttribute("Username");
+if(user!=null){
+    response.sendRedirect("homePage.jsp");
+}%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,7 +21,7 @@
     <body style="font-family: 'Kanit'">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div style="text-align: center">
-                <a class="navbar-brand" href="index.html"><img src="images/logo.png" style="width: 50%"></a>
+                <a class="navbar-brand" href="entrance.jsp"><img src="images/logo.png" style="width: 50%"></a>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
