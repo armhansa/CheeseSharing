@@ -3,21 +3,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<sql:setDataSource var="dataSource" driver="com.mysql.jdbc.Driver"
-                   url="jdbc:mysql://161.246.49.11:3306/cheet_sharing?autoReconnect=true&characterEncoding=UTF-8&useSSL=false"
-                   scope="session" user="root" password="Evosp1r1t"/>
-
-<%
-    int filter = Integer.parseInt(request.getParameter("value"));
-    if ("faculty".equals(request.getParameter("type"))) {        %>
-<sql:query var="filter" dataSource="${dataSource}">
-    SELECT * FROM SHEETS WHERE Faculty = '<%= ThaiName.getFaculty(filter)%>';
-</sql:query>
-<% } else {    %>
-<sql:query var="filter" dataSource="${dataSource}">
-    SELECT * FROM SHEETS WHERE Category = '<%= ThaiName.getCategory(filter)%>';
-</sql:query>
-<% } %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -39,6 +24,21 @@
     </head>
     <body style="font-family: 'Kanit'">
         <%@include file="header.jsp" %>
+        
+        <sql:setDataSource var="dataSource" driver="com.mysql.jdbc.Driver"
+                   url="jdbc:mysql://161.246.49.11:3306/cheet_sharing?autoReconnect=true&characterEncoding=UTF-8&useSSL=false"
+                   scope="session" user="root" password="Evosp1r1t"/>
+
+        <%  int filter = Integer.parseInt(request.getParameter("value"));
+            if ("faculty".equals(request.getParameter("type"))) {        %>
+        <sql:query var="filter" dataSource="${dataSource}">
+            SELECT * FROM SHEETS WHERE Faculty = '<%= thaiName.getFaculty(filter)%>';
+        </sql:query>
+        <% } else {    %>
+        <sql:query var="filter" dataSource="${dataSource}">
+            SELECT * FROM SHEETS WHERE Category = '<%= thaiName.getCategory(filter)%>';
+        </sql:query>
+        <% } %>
 
         <div class="type-subject">
             <img class="img-subject" src="images/header/header-art.png">

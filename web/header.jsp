@@ -7,6 +7,7 @@
 <%@page import="tool.ThaiName"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
+<%! ThaiName thaiName = ThaiName.getInstance(); %>
 
 <nav class="navbar navbar-expand-lg header Absolute-Center">
     <div id="navbar" class="navbar-collapse collapse">
@@ -63,8 +64,7 @@
                     <div class="form-group">
                         <select class="form-control" id="sel1" name="faculty" required>
                             <option value="" disabled selected>เลือกคณะ</option>
-                            <%  ThaiName thaiName = ThaiName.getInstance();
-                                for (int i = 0; i < thaiName.getFacultyCount(); i++) {%>
+                            <%  for (int i = 0; i < thaiName.getFacultyCount(); i++) {%>
                                 <option value="<%= i%>"><%= thaiName.getFaculty(i)%></option>
                             <% }%>
                         </select>

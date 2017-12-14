@@ -20,7 +20,9 @@
             try {
                 Connection conn = (Connection) getServletContext().getAttribute("Connection");
 
-                String sqlString = "SELECT File FROM SHEETS WHERE idSheet = " + id;
+                String sqlString = "SELECT File, ViewCount, USERS_Username FROM SHEETS WHERE idSheet = " + id;
+                int viewCount;
+                String uploader;
                 out.println(sqlString);
                 Statement myStatement = conn.createStatement();
 
@@ -29,6 +31,8 @@
                 if (rs.next()) {
                     file = rs.getBlob("File");
                     fileData = file.getBytes(1, (int) file.length());
+                    viewCount = rs.getInt("ViewCount");
+                    uploader = rs.getString("USERS_Username");
                 } else {
                     out.println("file not found!");
                     return;
@@ -42,6 +46,13 @@
                 output.write(fileData);
 
                 output.flush();
+                
+                if(!session.getAttribute("Username").equals(uploader)) {
+                    Statement stmt = conn.createStatement();
+                    stmt.executeUpdate("UPDATE SHEETS "
+                            + "SET ViewCount = "+(++viewCount)+" "
+                            + "WHERE idSheet = "+id);
+                }
 
             } catch (SQLException ex) {
                 Logger.getLogger(Logger.class.getName()).log(Level.SEVERE, null, ex);
