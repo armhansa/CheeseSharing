@@ -1,0 +1,30 @@
+*** Settings ***
+Library    Selenium2Library
+
+*** Variable ***
+${BROWSER}    chrome
+${DELAY}    0.5
+${HOME URL}    http://localhost:8084/CheeseSharing/
+# ${invalid_input}    http://localhost:8084/CheeseSharing/LoginServlet
+${homepage}    http://localhost:8084/CheeseSharing/homePage.jsp
+
+*** Test Cases ***
+open browser
+    Open Browser    ${HOME URL}    ${BROWSER}
+    Maximize Browser Window
+    Set Selenium Speed    ${DELAY}
+
+register Empty
+    Click Button    สร้างบัญชีผู้ใช้งาน
+    Location should be    ${HOME URL}
+
+full fill
+    Input Text    firstName    พงษ์ธัช
+    Input Text    lastName    แย้มสมพงษ์
+    Input Text    usr_test    5z3nnr8v
+    Input Text    pass_test    123456
+    Input Text    email    5z3nnr8c@gmail.com
+    Click Element    xpath=//select[@name="faculty"]
+    Click Element    xpath=//option[contains(text(),'คณะวิทยาศาสตร์')]
+    Click Button    สร้างบัญชีผู้ใช้งาน
+    Location should be    ${homepage}
