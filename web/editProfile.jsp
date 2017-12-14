@@ -38,13 +38,13 @@ SELECT * FROM USERS WHERE Username = '<%= session.getAttribute("Username") %>';
         </span>
         <span class="col-5 bg_color edit_margin-top Absolute-Center" style="/*margin: auto;*/">
             <div class="col-10" style="background-color: #edb91f; margin: auto;">
-                <form action="" method="post" var="list" item="query_profile.rows">
+                <form action="EditProfileServlet" method="post" var="list" item="query_profile.rows">
                     <div style="padding: 10%">
                         <h1 style="color:#fff; opacity: 0.3;">EDIT PROFILE</h1>
-                        <input type="text" name="firstname" value="<%= user.getFirstName()%>" class="col-12 form-control margin_form"><br>
-                        <input type="text" name="lastname" value="<%= user.getLastName()%>"  class="col-12 form-control margin_form"><br>
-                        <input type="password" name="pasword" placeholder="Password" class="col-12 form-control margin_form" pattern=".{6,}" title="กรุณากรอกรหัสผ่านมากกว่า 6 ตัว"><br>
-                        <input type="password" name="repassword" placeholder="New Password" class="col-12 form-control margin_form" pattern=".{6,}" title="กรุณากรอกรหัสผ่านมากกว่า 6 ตัว"><br>
+                        <input type="text" name="firstName" value="<%= user.getFirstName()%>" class="col-12 form-control margin_form"><br>
+                        <input type="text" name="lastName" value="<%= user.getLastName()%>"  class="col-12 form-control margin_form"><br>
+                        <input type="password" name="oldPassword" placeholder="Old Password" class="col-12 form-control margin_form" pattern=".{6,}" title="กรุณากรอกรหัสผ่านมากกว่า 6 ตัว"><br>
+                        <input type="password" name="newPassword" placeholder="New Password" class="col-12 form-control margin_form" pattern=".{6,}" title="กรุณากรอกรหัสผ่านมากกว่า 6 ตัว"><br>
                         <input type="Email" name="email" value="<%= user.getEmail() %>" class="col-12 form-control margin_form" disabled><br>
                         <select style="height: 35px" class="col-12 form-control margin_form" name="faculty">
                             <option value="" disabled selected> เลือกคณะ </option>

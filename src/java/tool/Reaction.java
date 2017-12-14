@@ -9,7 +9,7 @@ public class Reaction {
     private final String path[];
     
     private Reaction() {
-        String tmp[] = {"index.html", "homePage.jsp"};
+        String tmp[] = {"entrance.jsp", "homePage.jsp"};
         path = tmp;
     }
     
