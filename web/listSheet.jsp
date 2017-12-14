@@ -8,7 +8,7 @@
                    scope="session" user="root" password="Evosp1r1t"/>
 
 <%
-    int filter = Integer.parseInt(request.getParameter("filter"));
+    int filter = Integer.parseInt(request.getParameter("value"));
     if ("faculty".equals(request.getParameter("type"))) {        %>
 <sql:query var="filter" dataSource="${dataSource}">
     SELECT * FROM SHEETS WHERE Faculty = '<%= ThaiName.getFaculty(filter)%>';
@@ -25,7 +25,7 @@
 
         <title>CheeseSharing</title>
         <!-- Required meta tags -->
-        <meta charset="utf-8">
+        <meta charset="utf-8"
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- Bootstrap CSS -->

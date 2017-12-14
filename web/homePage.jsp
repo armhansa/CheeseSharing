@@ -186,24 +186,24 @@
                                     <label>คณะสถาปัตยกรรมศาสตร์</label>
                                 </a>
                                 <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=3">
-                                    <img src="images/logo-faculty/logo-sci.png">
-                                    <br>
-                                    <label>คณะวิทยาศาสตร์</label>
-                                </a>
-                                <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=4">
-                                    <img src="images/logo-faculty/logo-kras.png">
-                                    <br>
-                                    <label>คณะเทคโนโลยีการเกษตร</label>
-                                </a>
-                                <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=5">
                                     <img src="images/logo-faculty/logo-kharu.png">
                                     <br>
                                     <label>คณะครุศาสตร์<br>อุตสาหกรรม</label>
                                 </a>
-                                <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=6">
-                                    <img src="images/logo-faculty/logo-argo.png">
+                                <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=4">
+                                    <img src="images/logo-faculty/logo-sci.png">
                                     <br>
-                                    <label>คณะอุตสาหกรรมเกษตร</label>
+                                    <label>คณะวิทยาศาสตร์</label>
+                                </a>
+                                <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=5">
+                                    <img src="images/logo-faculty/logo-kras.png">
+                                    <br>
+                                    <label>คณะเทคโนโลยีการเกษตร</label>
+                                </a>
+                                <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=6">
+                                    <img  src="images/logo-faculty/logo-it.png">
+                                    <br>
+                                    <label>คณะเทคโนโลยีสารสนเทศ</label>
                                 </a>
 
                             </div>
@@ -211,26 +211,26 @@
                         <div class="carousel-item">
                             <div class="row row-set" style="padding-left: 15%">
                                 <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=7">
-                                    <img  src="images/logo-faculty/logo-it.png">
+                                    <img src="images/logo-faculty/logo-argo.png">
                                     <br>
-                                    <label>คณะเทคโนโลยีสารสนเทศ</label>
+                                    <label>คณะอุตสาหกรรมเกษตร</label>
                                 </a>
                                 <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=8">
                                     <img src="images/logo-faculty/logo-amc.png">
                                     <br>
                                     <label>คณะการบริหารและจัดการ</label>
                                 </a>
-                                <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=9">
+                                <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=10">
                                     <img src="images/logo-faculty/logo-inno.png">
                                     <br>
                                     <label>วิทยาลัยนวัตกรรม<br>การผลิตขั้นสูง</label>
                                 </a>
-                                <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=10">
+                                <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=11">
                                     <img src="images/logo-faculty/logo-inter.png">
                                     <br>
                                     <label>วิทยาลัยนานาชาติ</label>
                                 </a>
-                                <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=11">
+                                <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=12">
                                     <img src="images/logo-faculty/logo-nano.png">
                                     <br>
                                     <label>วิทยาลัยนาโนเทคโนโลยี</label>
