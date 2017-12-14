@@ -1,8 +1,8 @@
+.header{
+    border-radius: 0%;
+}
 .row-set{
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 1%;
-    padding-bottom: 2%;
+    padding: 1% 5% 2% 5%;
 }
 
 .col-2{
@@ -47,4 +47,18 @@
 
 .col-3 p{
     color: #edb91f;
+}
+
+
+
+/*upload modal*/
+
+.modal-header{
+    text-align: center;
+}
+.modal-header .close{
+    margin: 0% 0% 0% auto;
+    text-align: right;
+    align-items: right;
+    padding: 0%;
 }

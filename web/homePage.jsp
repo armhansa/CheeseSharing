@@ -17,7 +17,7 @@
         <%@include file="header.jsp" %></%@include>
 
         <img class="img-fluid" src="images/background1.jpg">
-        <div class="" style="padding-top: 10px; padding-bottom: 10px; background-color:  white">
+        <div class="row-container" style="padding-top: 10px; padding-bottom: 10px; background-color:  white">
             <h1 style="margin-left: 5%; margin-top: 3%; color: #edb91f">ใหม่ล่าสุด</h1>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -64,7 +64,7 @@
 
         </div>
 
-        <div class="" style="padding-top: 2%; padding-bottom: 2%; background-color: #f1f1f1">
+        <div class="row-container" style="padding-top: 2%; padding-bottom: 2%; background-color: #f1f1f1">
             <div class="row" style="align-items: center">
                 <div class="col-4">
                     <img style="width: 150px; height: 150px; float: right" src="images/icon-reading.png">
@@ -81,7 +81,7 @@
             </div>
         </div>
 
-        <div class="" style="padding-top: 10px; padding-bottom: 10px">
+        <div class="row-container" style="padding-top: 10px; padding-bottom: 10px">
             <h1 style="margin-left: 5%; margin-top: 3%; color: #aaa">หมวดหมู่วิชา</h1>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
@@ -172,7 +172,7 @@
             </div>
         </div>
 
-        <div class="faculty">
+        <div class="row-container faculty">
             <h1 style="margin-left: 5%; margin-right:5%; margin-top: 2%; color: white">คณะ</h1>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 

@@ -45,7 +45,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <br>
+                        
                         <input class="inputupload_win" id="uploadFile" placeholder="Choose File" disabled="disabled" />
 
                         <div class="fileUpload btn btn-sm" >
