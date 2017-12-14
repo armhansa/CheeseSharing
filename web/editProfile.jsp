@@ -8,52 +8,54 @@ url="jdbc:mysql://161.246.49.11:3306/cheet_sharing?autoReconnect=true&characterE
 scope="session" user="root" password="Evosp1r1t"/>
 
 <sql:query var="query_profile" dataSource="${dataSource}">
-    SELECT * FROM USERS WHERE Username = '<%= session.getAttribute("Username") %>';
+SELECT * FROM USERS WHERE Username = '<%= session.getAttribute("Username") %>';
 </sql:query>
 <% User user = (User) session.getAttribute("User"); %>
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>CheeseSharing</title>
-    </head>
-    <body>
-        <%@include file="header.jsp" %>
-        
-        <div class="row edit-mid edit_margin-top">
-        <span class="col-6 Absolute-Center">
-            <div style="color: #edb91f; text-align: center" var="list" item="query_profile.rows">
-                <h1 style="" class="col-11 header-edit"><%= user.getUserName()%></h1>
-            <div  style="display: inline-flex;color: #868686;text-align:  center;margin: 2%;">
-                <h3 class="col-6" style="margin: 0;" ><%= user.getFirstName()%></h3>
-                <h3 class="col-6" style="margin: 0;"><%= user.getLastName()%></h3>
-            </div>
-            </div>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>CheeseSharing</title>
+</head>
+<body>
+    <%@include file="header.jsp" %>
+
+    <div class="row edit-mid edit_margin-top" style="margin-top: 30px;">
+        <span class="col-5 Absolute-Center">
+
             <div class="img-profile">
-                <img src="images/icon-user-sq.png" style="" class="col-12">
+                <div style="font-family: 'Kanit'; color: #edb91f; text-align: right;" var="list" item="query_profile.rows">
+                    <label id="username" class="col-11 header-edit"><%= user.getUserName().toUpperCase()%></label>
+                    <div  style="display: inline-flex;color: #868686;text-align:  center;margin: 2%;">
+                        <h3 class="col-6" style="margin: 0;" ><%= user.getFirstName()%></h3>
+                        <h3 class="col-6" style="margin: 0;"><%= user.getLastName()%></h3>
+                    </div>
+                </div>
+                <img src="images/icon-user-sq.png" style="width: 40%; float: right; opacity: 0.3;" >
             </div>
 
         </span>
-        <span class="col-5 bg_color edit_margin-top">
-            <div class="bg_color">
+        <span class="col-5 bg_color edit_margin-top Absolute-Center" style="/*margin: auto;*/">
+            <div class="col-10" style="background-color: #edb91f; margin: auto;">
                 <form action="" method="post" var="list" item="query_profile.rows">
-                    <div class="name-margin" style="margin-top: 10%" >
-                        <input type="text" name="firstname" value="<%= user.getFirstName()%>" class="col-10 form-control margin_form"><br>
-                        <input type="text" name="lastname" value="<%= user.getLastName()%>"  class="col-10 form-control margin_form">
+                    <div style="padding: 10%">
+                        <h1 style="color:#fff; opacity: 0.3;">EDIT PROFILE</h1>
+                        <input type="text" name="firstname" value="<%= user.getFirstName()%>" class="col-12 form-control margin_form"><br>
+                        <input type="text" name="lastname" value="<%= user.getLastName()%>"  class="col-12 form-control margin_form"><br>
+                        <input type="password" name="pasword" placeholder="Password" class="col-12 form-control margin_form" pattern=".{6,}" title="กรุณากรอกรหัสผ่านมากกว่า 6 ตัว"><br>
+                        <input type="password" name="repassword" placeholder="New Password" class="col-12 form-control margin_form" pattern=".{6,}" title="กรุณากรอกรหัสผ่านมากกว่า 6 ตัว"><br>
+                        <input type="Email" name="email" value="<%= user.getEmail() %>" class="col-12 form-control margin_form" disabled><br>
+                        <select style="height: 35px" class="col-12 form-control margin_form" name="faculty">
+                            <option value="" disabled selected> เลือกคณะ </option>
+                            <%  for(int i=0; i<thaiName.getFacultyCount(); i++) { %>
+                            <option value="<%= i %>" <%= thaiName.getFaculty(i).equals(user.getFaculty()) ? "selected" : ""%>>
+                                <%= thaiName.getFaculty(i) %>
+                            </option>
+                            <% } %>
+                        </select>
+                        <button class="btn col-7" style="margin: 10% 20% 10% 20%; background-color: #848484; color:white;">Submit</button>
                     </div>
-                    <input type="password" name="pasword" placeholder="Password" class="col-10 form-control margin_form" pattern=".{6,}" title="กรุณากรอกรหัสผ่านมากกว่า 6 ตัว"><br>
-                    <input type="password" name="repassword" placeholder="New Password" class="col-10 form-control margin_form" pattern=".{6,}" title="กรุณากรอกรหัสผ่านมากกว่า 6 ตัว"><br>
-                    <input type="Email" name="email" value="<%= user.getEmail() %>" class="col-10 form-control margin_form" disabled><br>
-                    <select style="height: 35px" class="col-10 form-control margin_form" name="faculty">
-                                <option value="" disabled selected> เลือกคณะ </option>
-                                <%  for(int i=0; i<thaiName.getFacultyCount(); i++) { %>
-                                <option value="<%= i %>" <%= thaiName.getFaculty(i).equals(user.getFaculty()) ? "selected" : ""%>>
-                                    <%= thaiName.getFaculty(i) %>
-                                </option>
-                                <% } %>
-                    </select>
-                    <button class="btn col-7" style="margin: 20%">Submit</button>
                 </form>
             </div>
         </span>
@@ -78,5 +80,8 @@ scope="session" user="root" password="Evosp1r1t"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    </body>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Kanit:300" rel="stylesheet">
+</body>
 </html>

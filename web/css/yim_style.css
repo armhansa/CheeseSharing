@@ -76,25 +76,25 @@ img {
 .margin_form {
     margin-left: 9%
 }
-
-.name-margin {
+.name_margin{
     margin-bottom: 3%
 }
 
-.bg_color {
+.bgcolor {
     background-color: #edb91f;
 }
 
 .img-profile {
-    width: 60%;
+    
+    /*margin: auto;*/
+}
+
+.edit_margin_top {
     margin: auto;
 }
-
-.edit_margin-top {
-    margin-left: 2%;
-    margin: 3%;
+.margin_form{
+    margin: 10% 0%
 }
-
 .Absolute-Center {
     height: 50%;
     /* Set your own height: percents, ems, whatever! */
@@ -122,4 +122,14 @@ img {
         -webkit-filter: grayscale(0%);
         filter: grayscale(0%);
     }
+}
+
+.body{
+    font-family: "Kanit";
+}
+
+
+#username{
+    font-size: 50px;
+    
 }
