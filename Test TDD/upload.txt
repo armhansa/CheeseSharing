@@ -23,7 +23,7 @@ correct
     Location should be    ${homepage}
 
 go to profile
-    Click Element    btn_upload_test    user_profile
+    Click Element    xpath=//img[@id="profile_test"]
     Click Link    editProfile.jsp
     Location should be    http://localhost:8084/CheeseSharing/editProfile.jsp
 

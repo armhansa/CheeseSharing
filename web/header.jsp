@@ -21,7 +21,7 @@
             <button id="btn_upload_test" type="button" class="btn btn_upload" data-toggle="modal" data-target="#myModal">Upload</button>
             <div class="dropdown">
                 <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown"> -->
-                <img class="user_profile dropdown-toggle" data-toggle="dropdown" src="images/icon-user.png"></a>
+                <img id="profile_test" class="user_profile dropdown-toggle" data-toggle="dropdown" src="images/icon-user.png"></a>
                 <ul class="dropdown-menu">
                     <li><a href="editProfile.jsp">Profile</a></li>
                     <li class="divider"></li>
