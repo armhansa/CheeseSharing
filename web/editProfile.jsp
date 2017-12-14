@@ -24,14 +24,14 @@ scope="session" user="root" password="Evosp1r1t"/>
         <div class="row edit-mid edit_margin-top">
         <span class="col-6 Absolute-Center">
             <div style="color: #edb91f; text-align: center" var="list" item="query_profile.rows">
-                <h1 style="" class="col-11 header-edit">${list.Username}</h1>
+                <h1 style="" class="col-11 header-edit"><%= user.getUserName()%></h1>
             <div  style="display: inline-flex;color: #868686;text-align:  center;margin: 2%;">
-                <h3 class="col-6" style="margin: 0;" >${list.FirstName}</h3>
-                <h3 class="col-6" style="margin: 0;">${list.LastName}</h3>
+                <h3 class="col-6" style="margin: 0;" ><%= user.getFirstName()%></h3>
+                <h3 class="col-6" style="margin: 0;"><%= user.getLastName()%></h3>
             </div>
             </div>
             <div class="img-profile">
-                <img src="images/person3.jpg" style="" class="col-12">
+                <img src="images/icon-user-sq.png" style="" class="col-12">
             </div>
 
         </span>
@@ -39,14 +39,14 @@ scope="session" user="root" password="Evosp1r1t"/>
             <div class="bg_color">
                 <form action="" method="post" var="list" item="query_profile.rows">
                     <div class="name-margin" style="margin-top: 10%" >
-                        <input type="text" name="firstname" placeholder="<%= user.getFirstName()%>" class="col-10 form-control margin_form"><br>
-                        <input type="text" name="lastname" placeholder="<%= user.getLastName()%>"  class="col-10 form-control margin_form">
+                        <input type="text" name="firstname" value="<%= user.getFirstName()%>" class="col-10 form-control margin_form"><br>
+                        <input type="text" name="lastname" value="<%= user.getLastName()%>"  class="col-10 form-control margin_form">
                     </div>
                     <input type="password" name="pasword" placeholder="Password" class="col-10 form-control margin_form" pattern=".{6,}" title="กรุณากรอกรหัสผ่านมากกว่า 6 ตัว"><br>
-                    <input type="password" name="repassword" placeholder="RePassword" class="col-10 form-control margin_form" pattern=".{6,}" title="กรุณากรอกรหัสผ่านมากกว่า 6 ตัว"><br>
-                    <input type="Email" name="email" placeholder="<%= user.getEmail() %>" class="col-10 form-control margin_form" disabled><br>
+                    <input type="password" name="repassword" placeholder="New Password" class="col-10 form-control margin_form" pattern=".{6,}" title="กรุณากรอกรหัสผ่านมากกว่า 6 ตัว"><br>
+                    <input type="Email" name="email" value="<%= user.getEmail() %>" class="col-10 form-control margin_form" disabled><br>
                     <select style="height: 35px" class="col-10 form-control margin_form" name="faculty">
-                                <option value="" disabled selected>${list.Faculty}</option>
+                                <option value="" disabled selected>คณะ</option>
                                 <option value="1">คณะวิศวกรรมศาสตร์</option>
                                 <option value="2">คณะสถาปัตยกรรมศาสตร์</option>
                                 <option value="3">คณะครุศาสตร์อุตสาหกรรม</option>
@@ -54,10 +54,10 @@ scope="session" user="root" password="Evosp1r1t"/>
                                 <option value="5">คณะเทคโนโลยีการเกษตร</option>
                                 <option value="6">คณะเทคโนโลยีสารสนเทศ</option>
                                 <option value="7">คณะอุตสาหกรรมเกษตร</option>
-                                <option value="8">คณะการบริหารและจัดการวิทยาลัยนวัตกรรมการผลิตขั้นสูง</option>
-                                <option value="9">วิทยาลัยนานาชาติ</option>
-                                <option value="10">วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง</option>
-                                <option value="11">วิทยาลัยอุตสาหกรรมการบินนานาชาติ</option>
+                                <option value="8">คณะการบริหารและจัดการ</option>
+                                <option value="9">วิทยาลัยนวัตกรรมการผลิตขั้นสูง</option>
+                                <option value="10">วิทยาลัยนานาชาติ</option>
+                                <option value="11">วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง</option>
                     </select>
                     <button class="btn col-7" style="margin: 20%">Submit</button>
                 </form>
