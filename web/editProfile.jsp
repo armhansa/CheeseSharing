@@ -46,18 +46,12 @@ scope="session" user="root" password="Evosp1r1t"/>
                     <input type="password" name="repassword" placeholder="New Password" class="col-10 form-control margin_form" pattern=".{6,}" title="กรุณากรอกรหัสผ่านมากกว่า 6 ตัว"><br>
                     <input type="Email" name="email" value="<%= user.getEmail() %>" class="col-10 form-control margin_form" disabled><br>
                     <select style="height: 35px" class="col-10 form-control margin_form" name="faculty">
-                                <option value="" disabled selected>คณะ</option>
-                                <option value="1">คณะวิศวกรรมศาสตร์</option>
-                                <option value="2">คณะสถาปัตยกรรมศาสตร์</option>
-                                <option value="3">คณะครุศาสตร์อุตสาหกรรม</option>
-                                <option value="4">คณะวิทยาศาสตร์</option>
-                                <option value="5">คณะเทคโนโลยีการเกษตร</option>
-                                <option value="6">คณะเทคโนโลยีสารสนเทศ</option>
-                                <option value="7">คณะอุตสาหกรรมเกษตร</option>
-                                <option value="8">คณะการบริหารและจัดการ</option>
-                                <option value="9">วิทยาลัยนวัตกรรมการผลิตขั้นสูง</option>
-                                <option value="10">วิทยาลัยนานาชาติ</option>
-                                <option value="11">วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง</option>
+                                <option value="" disabled selected> เลือกคณะ </option>
+                                <%  for(int i=0; i<thaiName.getFacultyCount(); i++) { %>
+                                <option value="<%= i %>" <%= thaiName.getFaculty(i).equals(user.getFaculty()) ? "selected" : ""%>>
+                                    <%= thaiName.getFaculty(i) %>
+                                </option>
+                                <% } %>
                     </select>
                     <button class="btn col-7" style="margin: 20%">Submit</button>
                 </form>

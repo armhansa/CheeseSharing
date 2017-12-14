@@ -17,6 +17,9 @@
             30
         </session-timeout>
     </session-config>
+    <welcome-file-list>
+        <welcome-file>entrance.jsp</welcome-file>
+    </welcome-file-list>
     <resource-ref>
         <description>jdbc:mysql://161.246.49.11:3306/cheet_sharing?autoReconnect=true&amp;characterEncoding=UTF-8&amp;useSSL=false</description>
         <res-ref-name>cheets_sharing</res-ref-name>

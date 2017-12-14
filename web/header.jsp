@@ -4,6 +4,7 @@
     Author     : HP_PC01
 --%>
 
+<%@page import="tool.ThaiName"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 
@@ -45,7 +46,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        
+
                         <input class="inputupload_win" id="uploadFile" placeholder="Choose File" disabled="disabled" />
 
                         <div class="fileUpload btn btn-sm" >
@@ -62,35 +63,20 @@
                     <div class="form-group">
                         <select class="form-control" id="sel1" name="faculty" required>
                             <option value="" disabled selected>เลือกคณะ</option>
-                            <option value="1">คณะวิศวกรรมศาสตร์</option>
-                            <option value="2">คณะสถาปัตยกรรมศาสตร์</option>
-                            <option value="3">คณะครุศาสตร์อุตสาหกรรม</option>
-                            <option value="4">คณะวิทยาศาสตร์</option>
-                            <option value="5">คณะเทคโนโลยีการเกษตร</option>
-                            <option value="6">คณะเทคโนโลยีสารสนเทศ</option>
-                            <option value="7">คณะอุตสาหกรรมเกษตร</option>
-                            <option value="8">คณะการบริหารและจัดการวิทยาลัยนวัตกรรมการผลิตขั้นสูง</option>
-                            <option value="9">วิทยาลัยนานาชาติ</option>
-                            <option value="10">วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง</option>
-                            <option value="11">วิทยาลัยอุตสาหกรรมการบินนานาชาติ</option>
+                            <%  ThaiName thaiName = ThaiName.getInstance();
+                                for (int i = 0; i < thaiName.getFacultyCount(); i++) {%>
+                                <option value="<%= i%>"><%= thaiName.getFaculty(i)%></option>
+                            <% }%>
                         </select>
                     </div>
 
                     <div class="form-group">
                         <select class="form-control" id="sel1" name="category" required>
                             <option value="" disabled selected>เลือกหมวดหมู่</option>
-                            <option value="วิทยาศาสตร์">วิทยาศาสตร์</option>
-                            <option value="ภาษา">ภาษา</option>
-                            <option value="คณิตศาสตร์">คณิตศาสตร์</option>
-                            <option value="Computer and Technology">Computer and Technology</option>
-                            <option value="มนุษยศาสตร์">มนุษยศาสตร์</option>
-                            <option value="สังคม,การเมืองและการปกครอง">สังคม,การเมืองและการปกครอง</option>
-                            <option value="ศิลปะ">ศิลปะ</option>
-                            <option value="ธุรกิจ">ธุรกิจ</option>
-                            <option value="ประวัติศาสตร์">ประวัติศาสตร์</option>
-                            <option value="วิศวกรรมศาสตร์">วิศวกรรมศาสตร์</option>
-                            <option value="เศรษฐศาสตร์">เศรษฐศาสตร์</option>
-                            <option value="อื่นๆ">อื่นๆ</option>
+                            <%  for(int i=0; i<thaiName.getCategoryCount(); i++) { %>
+                                <option value="<%= i %>"><%= thaiName.getCategory(i) %></option>
+                            <% } %>
+                            
                         </select>
                     </div>
 

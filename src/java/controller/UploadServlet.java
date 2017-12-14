@@ -18,6 +18,7 @@ import javax.servlet.http.Part;
 import model.Sheets;
 import tool.DBConnection;
 import tool.Reaction;
+import tool.ThaiName;
 
 @MultipartConfig(maxFileSize = 999999999) // config file size 
 @WebServlet(name = "UploadServlet", urlPatterns = {"/UploadServlet"})
@@ -41,23 +42,15 @@ public class UploadServlet extends HttpServlet {
             String title = request.getParameter("title");
             out.println("<h1>2</h1>");
             Part filePart = request.getPart("file_uploaded");
-            String category = request.getParameter("category");
-            String faculty = null;
-            switch(Integer.parseInt(request.getParameter("faculty"))) {
-                case 1: faculty = "คณะวิศวกรรมศาสตร์";break;
-                case 2: faculty = "คณะสถาปัตยกรรมศาสตร์";break;
-                case 3: faculty = "คณะครุศาสตร์อุตสาหกรรม";break;
-                case 4: faculty = "คณะวิทยาศาสตร์";break;
-                case 5: faculty = "คณะเทคโนโลยีการเกษตร";break;
-                case 6: faculty = "คณะเทคโนโลยีสารสนเทศ";break;
-                case 7: faculty = "คณะอุตสาหกรรมเกษตร";break;
-                case 8: faculty = "คณะการบริหารและจัดการวิทยาลัยนวัตกรรมการผลิตขั้นสูง";break;
-                case 9: faculty = "วิทยาลัยนานาชาติ";break;
-                case 10: faculty = "วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง";break;
-                case 11: faculty = "วิทยาลัยอุตสาหกรรมการบินนานาชาติ";break;
-                default: faculty = "";
-                
-            }
+            
+            ThaiName thaiName = ThaiName.getInstance();
+            
+            int facultyIndex = Integer.parseInt(request.getParameter("faculty"));
+            String faculty = thaiName.getFaculty(facultyIndex);
+            
+            int categoryIndex = Integer.parseInt(request.getParameter("category"));
+            String category = thaiName.getCategory(categoryIndex);
+            
             String description = request.getParameter("description");
             String username = (String) session.getAttribute("Username");
             

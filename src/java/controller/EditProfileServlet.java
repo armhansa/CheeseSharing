@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import tool.DBConnection;
+import tool.ThaiName;
 
 @WebServlet(name = "EditProfileServlet", urlPatterns = {"/EditProfileServlet"})
 public class EditProfileServlet extends HttpServlet {
@@ -29,13 +30,18 @@ public class EditProfileServlet extends HttpServlet {
             throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            request.setCharacterEncoding("UTF-8");
             
             // get Parameter
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");
             String password = request.getParameter("password");
             String repassword = request.getParameter("repassword");
-            String faculty = request.getParameter("faculty");
+            
+            ThaiName thaiName = ThaiName.getInstance();
+            
+            int facultyIndex = Integer.parseInt(request.getParameter("faculty"));
+            String faculty = thaiName.getFaculty(facultyIndex);
             
             // Session
             HttpSession session = request.getSession();

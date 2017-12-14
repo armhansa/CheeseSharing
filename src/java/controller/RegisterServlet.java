@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import tool.DBConnection;
 import tool.Reaction;
+import tool.ThaiName;
 
 @WebServlet(name = "RegisterServlet", urlPatterns = {"/RegisterServlet"})
 public class RegisterServlet extends HttpServlet {
@@ -39,7 +40,10 @@ public class RegisterServlet extends HttpServlet {
             String username = request.getParameter("username");
             String password = request.getParameter("password");
             String email = request.getParameter("email");
-            String faculty = request.getParameter("faculty");
+            
+            int facultyIndex = Integer.parseInt(request.getParameter("faculty"));
+            ThaiName thaiName = ThaiName.getInstance();
+            String faculty = thaiName.getFaculty(facultyIndex);
             
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM USERS "+
