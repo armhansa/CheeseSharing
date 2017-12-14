@@ -10,7 +10,16 @@ scope="session" user="root" password="Evosp1r1t"/>
 <sql:query var="query_profile" dataSource="${dataSource}">
 SELECT * FROM USERS WHERE Username = '<%= session.getAttribute("Username") %>';
 </sql:query>
-<% User user = (User) session.getAttribute("User"); %>
+
+<% String username = (String)session.getAttribute("Username");
+if(username==null){
+    response.sendRedirect("entrance.jsp");
+}%>
+
+<% User user = (User) session.getAttribute("User"); 
+%>
+
+
 
 <!DOCTYPE html>
 <html>

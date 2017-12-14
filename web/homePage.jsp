@@ -3,6 +3,11 @@
 <%@page import="model.Sheet"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
+<%String user = (String)session.getAttribute("Username");
+if(user==null){
+    response.sendRedirect("entrance.jsp");
+}%>
+
 <!DOCTYPE html>
 <html>
 
