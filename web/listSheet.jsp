@@ -29,19 +29,24 @@
                    url="jdbc:mysql://161.246.49.11:3306/cheet_sharing?autoReconnect=true&characterEncoding=UTF-8&useSSL=false"
                    scope="session" user="root" password="Evosp1r1t"/>
 
-        <%  int filter = Integer.parseInt(request.getParameter("value"));
-            if ("faculty".equals(request.getParameter("type"))) {        %>
+        <%  int filterIndex = Integer.parseInt(request.getParameter("value"));
+            String type = request.getParameter("type");
+            String filter;
+            String iconFilter;
+            if ("faculty".equals(type)) {
+                filter = thaiName.getFaculty(filterIndex);
+                iconFilter = thaiName.getFacultyIcon(filterIndex);
+            } else {
+                filter = thaiName.getCategory(filterIndex);
+                iconFilter = thaiName.getCategoryIcon(filterIndex);
+            }%>
+            
         <sql:query var="filter" dataSource="${dataSource}">
-            SELECT * FROM SHEETS WHERE Faculty = '<%= thaiName.getFaculty(filter)%>';
+            SELECT * FROM SHEETS WHERE Faculty = '<%= filter %>';
         </sql:query>
-        <% } else {    %>
-        <sql:query var="filter" dataSource="${dataSource}">
-            SELECT * FROM SHEETS WHERE Category = '<%= thaiName.getCategory(filter)%>';
-        </sql:query>
-        <% } %>
 
         <div class="type-subject">
-            <img class="img-subject" src="images/header/header-art.png">
+            <img class="img-subject" src="images/header/header-<%= type %>-<%= iconFilter %>.png">
         </div>
         <div class="list-sheet">
             <!--  loop very loop  -->
@@ -55,7 +60,7 @@
                         <p style="margin-left: 10px">ลงโดย : ${list.USERS_Username}</p>
                     </div>
                     <div class="open-file">
-                        ผู้เข้าชม ${list.ViewCount} คน
+                        จำนวนครั้งที่เข้าชม : ${list.ViewCount} ครั้ง
                         <a href="viewFile.jsp?id=${list.idSheet}" class="btn click-open" style="margin-left: 20px; width: 70px;" >เปิด</a>
                     </div>
                 </div>
