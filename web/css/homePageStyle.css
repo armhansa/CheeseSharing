@@ -47,6 +47,7 @@
 
 .col-3 p{
     color: #edb91f;
+    height: 10px;
 }
 
 
@@ -65,4 +66,40 @@
 
 .carousel-control-prev, .carousel-control-next{
     width: 5%;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    
+    background: #ddd;
+}
+
+.icon-arrow{
+    color: #edb91f;
+}
+
+
+#new{
+    margin-left: 5%; 
+    margin-top: 3%; 
+    color: #edb91f;
+    border-bottom: 1px solid #b4b4b4;
+}
+#cate{
+    margin-left: 5%;
+    margin-top: 3%;
+    color: #aaa;
+    border-bottom: 1px solid #edb91f;
+}
+
+#fac{
+    margin-left: 5%;
+    margin-top: 2%;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+#new-container{
+    padding-top: 10px;
+    padding-bottom: 30px;
+    background-color:  white;
 }
