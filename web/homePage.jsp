@@ -17,14 +17,9 @@
         <%@include file="header.jsp" %></%@include>
 
         <img class="img-fluid" src="images/background1.jpg">
-        <div class="row-container" style="padding-top: 10px; padding-bottom: 10px; background-color:  white">
-            <h1 style="margin-left: 5%; margin-top: 3%; color: #edb91f">ใหม่ล่าสุด</h1>
+        <div id="new-container" class="row-container">
+            <h1 id="new">ใหม่ล่าสุด</h1>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row row-set">
@@ -52,11 +47,11 @@
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <!--<span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+                    <span id="new-prev-icon" class="icon- carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <!--<span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>  
             </div>
@@ -82,7 +77,7 @@
         </div>
 
         <div class="row-container" style="padding-top: 10px; padding-bottom: 10px">
-            <h1 style="margin-left: 5%; margin-top: 3%; color: #aaa">หมวดหมู่วิชา</h1>
+            <h1 id="cate">หมวดหมู่วิชา</h1>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
                 <div class="carousel-inner">
@@ -161,11 +156,11 @@
                 </div>
 
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <!--<span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <!--<span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
 
@@ -173,7 +168,7 @@
         </div>
 
         <div class="row-container faculty">
-            <h1 style="margin-left: 5%; margin-right:5%; margin-top: 2%; color: white">คณะ</h1>
+            <h1 id="fac">คณะ</h1>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
 <<<<<<< HEAD
@@ -311,11 +306,11 @@
 
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <!--<span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <!--<span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
             </div>
