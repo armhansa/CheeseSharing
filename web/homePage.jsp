@@ -153,7 +153,7 @@
                                 <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=<%= i %>">
                                     <img  src="images/logo-faculty/logo-<%= thaiName.getFacultyIcon(i) %>.png">
                                     <br>
-                                    <% if(i == 4) { %>
+                                    <% if(i == 2) { %>
                                         <label>คณะครุศาสตร์<br>อุตสาหกรรม</label>
                                     <% } else {%>
                                         <label ><%= thaiName.getFaculty(i) %></label>
@@ -170,7 +170,7 @@
                                 <a class="item-f col-2" href="listSheet.jsp?type=faculty&value=<%= i %>">
                                     <img  src="images/logo-faculty/logo-<%= thaiName.getFacultyIcon(i) %>.png">
                                     <br>
-                                    <% if(i == 9) { %>
+                                    <% if(i == 8) { %>
                                         <label>วิทยาลัยนวัตกรรม<br>การผลิตขั้นสูง</label>
                                     <% } else {%>
                                         <label ><%= thaiName.getFaculty(i) %></label>
