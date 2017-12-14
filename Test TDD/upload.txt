@@ -22,18 +22,29 @@ correct
     Click Button    เข้าสู่ระบบ
     Location should be    ${homepage}
 
-click button upload
-    Click Button    btn_upload_test
-    Wait Until Page Contains Element    id=uploadBtn
-    Choose File    id=uploadBtn    ${file_path}
-    Input Text    title    ${title}
-    Click Element    xpath=//select[@name="faculty"]
-    Click Element    xpath=//option[contains(text(),'คณะวิทยาศาสตร์')]
+go to profile
+    Click Element    btn_upload_test    user_profile
+    Click Link    editProfile.jsp
+    Location should be    http://localhost:8084/CheeseSharing/editProfile.jsp
 
-    Click Element    xpath=//select[@name="category"]
-    Click Element    xpath=//option[contains(text(),'คณิตศาสตร์')]
+    Click Link    homePage.jsp
 
-    Click Button    button_win
+# click button upload
+#     Click Button    btn_upload_test
+#     Wait Until Page Contains Element    id=uploadBtn
+#     Choose File    id=uploadBtn    ${file_path}
+#     Input Text    title    ${title}
+#     Click Element    xpath=//select[@name="faculty"]
+#     Click Element    xpath=//option[contains(text(),'คณะวิทยาศาสตร์')]
+
+#     Click Element    xpath=//select[@name="category"]
+#     Click Element    xpath=//option[contains(text(),'คณิตศาสตร์')]
+
+#     Click Button    button_win
+
+Clink category
+    Click Link    listSheet.jsp?type=category&value=0
+    Location should be    http://localhost:8084/CheeseSharing/listSheet.jsp?type=category&value=0
 
 
 *** Keyword ***
