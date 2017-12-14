@@ -47,11 +47,15 @@
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span id="new-prev-icon" class="icon- carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span id="new-prev-icon" class="" aria-hidden="true">
+                        <image style="width: 50px; opacity: 0.5" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-left-128.png"/>
+                    </span>
                     <span class="sr-only">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="" aria-hidden="true">
+                            <image style="width: 50px;opacity: 0.5" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-right-128.png"/>
+                    </span>
                     <span class="sr-only">Next</span>
                 </a>  
             </div>
@@ -78,7 +82,7 @@
 
         <div class="row-container" style="padding-top: 10px; padding-bottom: 10px">
             <h1 id="cate">หมวดหมู่วิชา</h1>
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
 
                 <div class="carousel-inner">
                     <div class="carousel-item active" style="color: #edb91f">
@@ -118,12 +122,17 @@
                     </div>
                 </div>
 
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                    <span class="" aria-hidden="true">
+                        <image style="width: 50px;opacity: 0.5" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-left-128.png"/>
+                        
+                    </span>
                     <span class="sr-only">Previous</span>
                 </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
+                    <span class="" aria-hidden="true">
+                            <image style="width: 50px; opacity: 0.5" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-right-128.png"/>
+                    </span>
                     <span class="sr-only">Next</span>
                 </a>
 
@@ -132,7 +141,7 @@
 
         <div class="row-container faculty">
             <h1 id="fac">คณะ</h1>
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel">
 
 
 
@@ -173,12 +182,17 @@
 
 
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators3" role="button" data-slide="prev">
+                        <span class="" aria-hidden="true">
+                            
+                        <image style="width: 50px;opacity: 0.5" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-left-128.png"/>
+                        </span>
                         <span class="sr-only">Previous</span>
                     </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators3" role="button" data-slide="next">
+                        <span class="" aria-hidden="true">
+                            <image style="width: 50px;opacity: 0.5" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-right-128.png"/>
+                        </span>
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
