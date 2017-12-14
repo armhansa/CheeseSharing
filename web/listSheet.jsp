@@ -39,15 +39,19 @@ if(user==null){
             String iconFilter;
             if ("faculty".equals(type)) {
                 filter = thaiName.getFaculty(filterIndex);
-                iconFilter = thaiName.getFacultyIcon(filterIndex);
-            } else {
+                iconFilter = thaiName.getFacultyIcon(filterIndex); %>
+                <sql:query var="filter" dataSource="${dataSource}">
+                    SELECT * FROM SHEETS WHERE Faculty = '<%= filter %>';
+                </sql:query>
+            <% } else {
                 filter = thaiName.getCategory(filterIndex);
-                iconFilter = thaiName.getCategoryIcon(filterIndex);
-            }%>
+                iconFilter = thaiName.getCategoryIcon(filterIndex); %>
+                <sql:query var="filter" dataSource="${dataSource}">
+                    SELECT * FROM SHEETS WHERE Category = '<%= filter %>';
+                </sql:query>
+            <% }%>
             
-        <sql:query var="filter" dataSource="${dataSource}">
-            SELECT * FROM SHEETS WHERE Faculty = '<%= filter %>';
-        </sql:query>
+        
 
         <div class="type-subject">
             <img class="img-subject" src="images/header/header-<%= type %>-<%= iconFilter %>.png">

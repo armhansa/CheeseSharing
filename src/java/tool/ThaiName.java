@@ -98,5 +98,14 @@ public class ThaiName {
     public int getCategoryCount() {
         return category.length;
     }
+    
+    public String getIconFromCategory(String categoryPath) {
+        for(int i=0; i<category.length; i++) {
+            if(categoryPath.equals(category[i])) {
+                return iconCategory[i];
+            }
+        }
+        return iconCategory[0];
+    }
 
 }

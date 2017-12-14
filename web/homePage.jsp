@@ -36,7 +36,7 @@ if(user==null){
                             %>
                             <a class="item col-3" href="viewFile.jsp?id=<%= sheets.get(index).getIdSheet()%>">
                                 <h2><%=(sheets.size() - index) + ". " + sheets.get(index).getTitle()%></h2>
-                                <img src="images/icon_yellow/yellow-law.png"> <br>
+                                <img src="images/icon_yellow/yellow-<%= thaiName.getIconFromCategory(sheets.get(index).getCategory()) %>.png"> <br>
                                 <p><%= sheets.get(index).getDescription()%></p>
                             </a>
                             <% if ((sheets.size() - index) % 4 == 0
