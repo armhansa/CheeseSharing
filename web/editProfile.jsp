@@ -1,21 +1,16 @@
-<%-- 
-    Document   : editProfile
-    Created on : Dec 14, 2017, 1:34:06 AM
-    Author     : student
---%>
-
+<%@page import="model.User"%>
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 
 <sql:setDataSource var="dataSource" driver="com.mysql.jdbc.Driver"
 url="jdbc:mysql://161.246.49.11:3306/cheet_sharing?autoReconnect=true&characterEncoding=UTF-8&useSSL=false"
 scope="session" user="root" password="Evosp1r1t"/>
 
 <sql:query var="query_profile" dataSource="${dataSource}">
-    SELECT * FROM USERS WHERE Username = '<%= request.getParameter("filter") %>';
+    SELECT * FROM USERS WHERE Username = '<%= session.getAttribute("Username") %>';
 </sql:query>
+<% User user = (User) session.getAttribute("User"); %>
 
 <!DOCTYPE html>
 <html>
@@ -44,12 +39,12 @@ scope="session" user="root" password="Evosp1r1t"/>
             <div class="bg_color">
                 <form action="" method="post" var="list" item="query_profile.rows">
                     <div class="name-margin" style="margin-top: 10%" >
-                        <input type="text" name="firstname" placeholder=${list.FirstName} class="col-10 form-control margin_form"><br>
-                        <input type="text" name="lastname" placeholder=${list.LastName}  class="col-10 form-control margin_form">
+                        <input type="text" name="firstname" placeholder="<%= user.getFirstName()%>" class="col-10 form-control margin_form"><br>
+                        <input type="text" name="lastname" placeholder="<%= user.getLastName()%>"  class="col-10 form-control margin_form">
                     </div>
-                    <input type="password" name="pasword" placeholder=${list.Password} class="col-10 form-control margin_form" pattern=".{6,}" title="กรุณากรอกรหัสผ่านมากกว่า 6 ตัว"><br>
-                    <input type="password" name="repassword" placeholder=${list.Password} class="col-10 form-control margin_form" pattern=".{6,}" title="กรุณากรอกรหัสผ่านมากกว่า 6 ตัว"><br>
-                    <input type="Email" name="email" placeholder="${list.Email}" class="col-10 form-control margin_form" disabled><br>
+                    <input type="password" name="pasword" placeholder="Password" class="col-10 form-control margin_form" pattern=".{6,}" title="กรุณากรอกรหัสผ่านมากกว่า 6 ตัว"><br>
+                    <input type="password" name="repassword" placeholder="RePassword" class="col-10 form-control margin_form" pattern=".{6,}" title="กรุณากรอกรหัสผ่านมากกว่า 6 ตัว"><br>
+                    <input type="Email" name="email" placeholder="<%= user.getEmail() %>" class="col-10 form-control margin_form" disabled><br>
                     <select style="height: 35px" class="col-10 form-control margin_form" name="faculty">
                                 <option value="" disabled selected>${list.Faculty}</option>
                                 <option value="1">คณะวิศวกรรมศาสตร์</option>
