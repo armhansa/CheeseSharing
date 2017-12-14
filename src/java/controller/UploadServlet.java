@@ -40,7 +40,7 @@ public class UploadServlet extends HttpServlet {
             HttpSession session = request.getSession();
             
             String title = request.getParameter("title");
-            out.println("<h1>2</h1>");
+            
             Part filePart = request.getPart("file_uploaded");
             
             ThaiName thaiName = ThaiName.getInstance();
@@ -58,21 +58,17 @@ public class UploadServlet extends HttpServlet {
             
             InputStream inputStream = null;
             if (filePart != null) {
-                out.println("<h1>has file path</h1>");
-                out.println(filePart.getName());
-                out.println(filePart.getSize());
-                out.println(filePart.getContentType());
 
                 inputStream = filePart.getInputStream();
                 try {
-                    out.println("<h1>4</h1>");
+                    
                     String sql = "INSERT INTO SHEETS (Title, File, Faculty, Category, Description, USERS_Username) VALUES(?, ?, ?, ?, ?, ?)";
                     
                     Statement stmt = conn.createStatement();
                     stmt.execute("SET GLOBAL max_allowed_packet = 1024*1024*14;");
                     
                     PreparedStatement prStmt = conn.prepareStatement(sql);
-                    out.println("<h1>5</h1>");
+                    
                     prStmt.setString(1, title);
                     
                     prStmt.setString(3, faculty);
@@ -81,23 +77,17 @@ public class UploadServlet extends HttpServlet {
                     prStmt.setString(6, username);
                     
                     if (inputStream != null) {
-                        out.println("<h1>6</h1>");
                         prStmt.setBlob(2, inputStream);
-                        out.println("<h1>7</h1>");
-                        out.println(title+filePart.getName()+faculty+category+description+username);
+                        
                         int row = prStmt.executeUpdate();
-                        out.println(row);
-                        out.println("<h1>8</h1>");
                         if (row > 0) {
                             Sheets sheets = Sheets.getInstance();
                             sheets.update();
                             reaction.alert(out, "File uploaded!!!", 1);
                         } else {
-                            out.println("<h1>Upload Failed</h1>");
                             reaction.alert(out, "Couldn't upload your file!!!", 1);
                         }
                     } else {
-                        out.println("<h1>inputStream is null</h1>");
                         reaction.alert(out, "Couldn't upload your file!!!", 1);
                     }
                 } catch(SQLException e) {

@@ -3,6 +3,7 @@ package controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import tool.DBConnection;
+import tool.Reaction;
 import tool.ThaiName;
 
 @WebServlet(name = "EditProfileServlet", urlPatterns = {"/EditProfileServlet"})
@@ -35,8 +37,8 @@ public class EditProfileServlet extends HttpServlet {
             // get Parameter
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");
-            String password = request.getParameter("password");
-            String repassword = request.getParameter("repassword");
+            String oldPassword = request.getParameter("oldPassword");
+            String newPassword = request.getParameter("newPassword");
             
             ThaiName thaiName = ThaiName.getInstance();
             
@@ -48,12 +50,39 @@ public class EditProfileServlet extends HttpServlet {
             String userName = (String) session.getAttribute("Username");
             
             Statement stmt = conn.createStatement();
-            int row = stmt.executeUpdate("UPDATE USERS "
+            String sql = "SELECT Password FROM USERS WHERE Username = '"+userName+"' "
+                    + "AND Password = '"+oldPassword+"'";
+            
+            ResultSet rs = stmt.executeQuery(sql);
+            if(rs.next()) {
+                Statement stmt2 = conn.createStatement();
+                if(newPassword != null && !"".equals(newPassword)) {
+                    sql = "UPDATE USERS "
                     + "SET FirstName = '"+firstName
                     +"', LastName = '"+lastName
-                    +"', Password = '"+password
+                    +"', Password = '"+newPassword
                     +"', Faculty = '"+faculty+"' "
-                    + "WHERE Username = '"+userName+"'");
+                    + "WHERE Username = '"+userName+"'";
+                } else {
+                    sql = "UPDATE USERS "
+                    + "SET FirstName = '"+firstName
+                    +"', LastName = '"+lastName
+                    +"', Faculty = '"+faculty+"' "
+                    + "WHERE Username = '"+userName+"'";
+                }
+                out.println(sql);
+                
+                int row = stmt2.executeUpdate(sql);
+                if(row > 0) {
+                    Reaction.getInstance().alert(out, "Update Successful!", 2);
+                } else {
+                    Reaction.getInstance().alert(out, "Update Failed1!!!", 2);
+                }
+            } else {
+                Reaction.getInstance().alert(out, "Update Failed2!!!", 2);
+            }
+            
+            
             
         }
     }
