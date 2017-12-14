@@ -35,7 +35,7 @@
                                 while (--index >= 0 && sheets.size() - index <= 12) {
                             %>
                             <a class="item col-3" href="viewFile.jsp?id=<%= sheets.get(index).getIdSheet()%>">
-                                <h2><%= (sheets.size() - index) + ". " + sheets.get(index).getTitle()%></h2>
+                                <h2><%=(sheets.size() - index) + ". " +  sheets.get(index).getTitle()%></h2>
                                 <img src="images/icon_yellow/yellow-law.png"> <br>
                                 <p><%= sheets.get(index).getDescription()%></p>
                             </a>
